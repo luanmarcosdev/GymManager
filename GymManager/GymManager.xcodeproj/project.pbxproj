@@ -13,6 +13,7 @@
 		CA24B43F2BE12B6B0035C4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA24B43D2BE12B6B0035C4AD /* Main.storyboard */; };
 		CA24B4412BE12B6C0035C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4402BE12B6C0035C4AD /* Assets.xcassets */; };
 		CA24B4442BE12B6C0035C4AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4422BE12B6C0035C4AD /* LaunchScreen.storyboard */; };
+		CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8B9F72BE45CD700506275 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CA24B4402BE12B6C0035C4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA24B4432BE12B6C0035C4AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA24B4452BE12B6C0035C4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD8B9F72BE45CD700506275 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		CA24B4362BE12B6B0035C4AD /* GymManager */ = {
 			isa = PBXGroup;
 			children = (
+				CAD8B9F62BE45CC500506275 /* Utils */,
 				CA24B4372BE12B6B0035C4AD /* AppDelegate.swift */,
 				CA24B4392BE12B6B0035C4AD /* SceneDelegate.swift */,
 				CA24B43B2BE12B6B0035C4AD /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				CA24B4452BE12B6C0035C4AD /* Info.plist */,
 			);
 			path = GymManager;
+			sourceTree = "<group>";
+		};
+		CAD8B9F62BE45CC500506275 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAD8B9F72BE45CD700506275 /* CustomColor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				CA24B43C2BE12B6B0035C4AD /* ViewController.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
+				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
