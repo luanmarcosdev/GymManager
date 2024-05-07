@@ -28,7 +28,7 @@ class IndexViewController: UIViewController {
 extension IndexViewController: IndexViewDelegate {
     
     func actionLogin() {
-        // to do coordinator
+        self.coordinator?.navigationToLoginScreen()
     }
     
     func actionRegister() {

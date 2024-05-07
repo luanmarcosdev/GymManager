@@ -8,10 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    var coordinator: LoginCoordinator?
+    
+    var loginView: LoginView?
+    
+    override func loadView() {
+        self.loginView = LoginView()
+        self.view = loginView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 

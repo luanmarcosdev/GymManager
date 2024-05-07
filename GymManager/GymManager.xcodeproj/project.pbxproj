@@ -30,6 +30,8 @@
 		CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FA72BEAA2EB00D03161 /* AboutViewDelegate.swift */; };
 		CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAA2BEAA76C00D03161 /* LoginViewController.swift */; };
 		CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAC2BEAA78400D03161 /* LoginView.swift */; };
+		CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */; };
+		CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */; };
 		CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC219512BE97C3E0023EB1C /* CustomFont.swift */; };
 		CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8B9F72BE45CD700506275 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		CA971FA72BEAA2EB00D03161 /* AboutViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewDelegate.swift; sourceTree = "<group>"; };
 		CA971FAA2BEAA76C00D03161 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA971FAC2BEAA78400D03161 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
+		CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		CAC219512BE97C3E0023EB1C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		CAD8B9F72BE45CD700506275 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,7 @@
 				CA4D22532BEA547E00DD7D06 /* CoordinatorProtocol.swift */,
 				CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */,
 				CA971FA12BEA92D400D03161 /* AboutCoordinator.swift */,
+				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			children = (
 				CA971FAC2BEAA78400D03161 /* LoginView.swift */,
 				CA971FAA2BEAA76C00D03161 /* LoginViewController.swift */,
+				CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
 				CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */,
 				CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */,
+				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,
 				CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
@@ -273,6 +280,7 @@
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
+				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

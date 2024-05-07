@@ -27,5 +27,10 @@ class IndexCoordinator: CoordinatorProtocol {
         aboutCoordinator.start()
     }
     
+    func navigationToLoginScreen() {
+        let loginCoordinator = LoginCoordinator(navigationController: self.navigationController)
+        loginCoordinator.start()
+    }
+    
     
 }
