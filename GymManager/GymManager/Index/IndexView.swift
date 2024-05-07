@@ -9,6 +9,14 @@ import UIKit
 
 class IndexView: UIView {
     
+    //MARK: Delegate
+    
+    private weak var delegate: IndexViewDelegate?
+    
+    func setDelegate(delegate: IndexViewDelegate?) {
+        self.delegate = delegate
+    }
+    
     //MARK: Elements
     
     lazy var backgroundImage: UIImageView = {
@@ -41,6 +49,7 @@ class IndexView: UIView {
         bt.backgroundColor = CustomColor.green
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
+        bt.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return bt
     }()
     
@@ -53,6 +62,7 @@ class IndexView: UIView {
         bt.backgroundColor = CustomColor.blue
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
+        bt.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         return bt
     }()
     
@@ -63,8 +73,23 @@ class IndexView: UIView {
         bt.setTitleColor(CustomColor.white, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotRegular, size: 14)
         bt.backgroundColor = .none
+        bt.addTarget(self, action: #selector(self.tappedAboutButton), for: .touchUpInside)
         return bt
     }()
+    
+    //MARK: Action Buttons
+    
+    @objc func tappedLoginButton() {
+        delegate?.actionLogin()
+    }
+    
+    @objc func tappedRegisterButton() {
+        delegate?.actionRegister()
+    }
+    
+    @objc func tappedAboutButton() {
+        delegate?.actionAbout()
+    }
     
     //MARK: Init
 

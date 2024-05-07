@@ -20,7 +20,23 @@ class IndexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        indexView?.setDelegate(delegate: self)
     }
 
+}
+
+extension IndexViewController: IndexViewDelegate {
+    
+    func actionLogin() {
+        // to do coordinator
+    }
+    
+    func actionRegister() {
+        // to do coordinator
+    }
+    
+    func actionAbout() {
+        self.coordinator?.navigationToAboutScreen()
+    }
+    
 }

@@ -1,5 +1,5 @@
 //
-//  IndexCoordinator.swift
+//  AboutCoordinator.swift
 //  GymManager
 //
 //  Created by Luan Arruda on 07/05/24.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class IndexCoordinator: CoordinatorProtocol {
+class AboutCoordinator: CoordinatorProtocol {
     
     var navigationController: UINavigationController
     
@@ -17,14 +17,14 @@ class IndexCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = IndexViewController()
+        let vc = AboutViewController()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
-    func navigationToAboutScreen() {
-        let aboutCoordinator = AboutCoordinator(navigationController: self.navigationController)
-        aboutCoordinator.start()
+    func back() {
+        self.navigationController.popViewController(animated: true)
     }
     
     
