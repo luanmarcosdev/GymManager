@@ -35,7 +35,7 @@
 		CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC219512BE97C3E0023EB1C /* CustomFont.swift */; };
 		CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */; };
 		CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E52BEBD64F00B2FCFA /* ForgotViewController.swift */; };
-		CACAC1E82BEBD66500B2FCFA /* ForgotDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E72BEBD66500B2FCFA /* ForgotDelegate.swift */; };
+		CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E72BEBD66500B2FCFA /* ForgotViewDelegate.swift */; };
 		CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */; };
 		CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8B9F72BE45CD700506275 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +71,7 @@
 		CAC219512BE97C3E0023EB1C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 		CACAC1E52BEBD64F00B2FCFA /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
-		CACAC1E72BEBD66500B2FCFA /* ForgotDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotDelegate.swift; sourceTree = "<group>"; };
+		CACAC1E72BEBD66500B2FCFA /* ForgotViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewDelegate.swift; sourceTree = "<group>"; };
 		CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotCoordinator.swift; sourceTree = "<group>"; };
 		CAD8B9F72BE45CD700506275 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,7 +189,7 @@
 			children = (
 				CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */,
 				CACAC1E52BEBD64F00B2FCFA /* ForgotViewController.swift */,
-				CACAC1E72BEBD66500B2FCFA /* ForgotDelegate.swift */,
+				CACAC1E72BEBD66500B2FCFA /* ForgotViewDelegate.swift */,
 			);
 			path = Forgot;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
-				CACAC1E82BEBD66500B2FCFA /* ForgotDelegate.swift in Sources */,
+				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
 				CA971F9D2BEA908C00D03161 /* IndexViewDelegate.swift in Sources */,
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,

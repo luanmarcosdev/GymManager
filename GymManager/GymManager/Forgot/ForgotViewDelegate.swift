@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol ForgotViewDelegate: AnyObject {
+    func actionBack()
+    func actionRecovery()
+}
