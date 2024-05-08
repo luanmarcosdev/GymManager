@@ -20,8 +20,24 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginView?.setDelegate(delegate: self)
+    }
+
+}
+
+extension LoginViewController: LoginViewDelegate {
+   
+    func registerButton() {
+        print("to do register button")
     }
     
-
-
+    func forgotButton() {
+        self.coordinator?.navigationToForgotScreen()
+    }
+    
+    func loginButton() {
+        print("to do login button")
+    }
+    
+    
 }

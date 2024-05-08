@@ -87,7 +87,7 @@ class LoginView: UIView {
         bt.setTitleColor(CustomColor.green, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotRegular, size: 13)
         bt.backgroundColor = .none
-//        bt.addTarget(self, action: #selector(self.tappedAboutButton), for: .touchUpInside)
+        bt.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         return bt
     }()
     
@@ -98,7 +98,7 @@ class LoginView: UIView {
         bt.setTitleColor(CustomColor.green, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotRegular, size: 13)
         bt.backgroundColor = .none
-//        bt.addTarget(self, action: #selector(self.tappedAboutButton), for: .touchUpInside)
+        bt.addTarget(self, action: #selector(self.tappedForgotButton), for: .touchUpInside)
         return bt
     }()
     
@@ -111,9 +111,23 @@ class LoginView: UIView {
         bt.backgroundColor = CustomColor.green
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
-//        bt.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
+        bt.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return bt
     }()
+    
+    //MARK: Action Buttons
+    
+    @objc func tappedRegisterButton(){
+        self.delegate?.registerButton()
+    }
+    
+    @objc func tappedForgotButton(){
+        self.delegate?.forgotButton()
+    }
+    
+    @objc func tappedLoginButton(){
+        self.delegate?.loginButton()
+    }
 
     //MARK: Init
 

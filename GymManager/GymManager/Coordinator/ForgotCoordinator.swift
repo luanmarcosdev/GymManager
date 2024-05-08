@@ -1,14 +1,14 @@
 //
-//  LoginCoordinator.swift
+//  ForgotCoordinator.swift
 //  GymManager
 //
-//  Created by Luan Arruda on 07/05/24.
+//  Created by Luan Arruda on 08/05/24.
 //
 
 import Foundation
 import UIKit
 
-class LoginCoordinator: CoordinatorProtocol {
+class ForgotCoordinator: CoordinatorProtocol {
     
     var navigationController: UINavigationController
     
@@ -17,15 +17,14 @@ class LoginCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = LoginViewController()
+        let vc = ForgotViewController()
         vc.coordinator = self
         self.navigationController.pushViewController(vc, animated: true)
         self.navigationController.isNavigationBarHidden = true
     }
     
-    func navigationToForgotScreen() {
-        let forgotCoordinator = ForgotCoordinator(navigationController: self.navigationController)
-        forgotCoordinator.start()
+    func back() {
+        navigationController.popViewController(animated: true)
     }
     
     
