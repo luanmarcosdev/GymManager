@@ -57,9 +57,9 @@ class IndexView: UIView {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Cadastrar", for: .normal)
-        bt.setTitleColor(CustomColor.black, for: .normal)
+        bt.setTitleColor(CustomColor.green, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.blue
+        bt.backgroundColor = CustomColor.darkSecondary
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
         bt.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)

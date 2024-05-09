@@ -10,7 +10,6 @@ import Foundation
 
 struct CustomColor {
     static let green = UIColor(red: 208/255, green: 253/255, blue: 62/255, alpha: 1)
-    static let blue = UIColor(red: 94/255, green: 152/255, blue: 166/255, alpha: 1)
     static let white = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     static let red = UIColor(red: 255/255, green: 36/255, blue: 36/255, alpha: 1)
     static let black = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)

@@ -20,6 +20,10 @@
 		CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */; };
 		CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */; };
 		CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */; };
+		CA67B92F2BED2A7800221906 /* RegisterGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B92E2BED2A7800221906 /* RegisterGenderViewController.swift */; };
+		CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9302BED2A8B00221906 /* RegisterGenderView.swift */; };
+		CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */; };
+		CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -60,6 +64,10 @@
 		CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewController.swift; sourceTree = "<group>"; };
 		CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewDelegate.swift; sourceTree = "<group>"; };
 		CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexCoordinator.swift; sourceTree = "<group>"; };
+		CA67B92E2BED2A7800221906 /* RegisterGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderViewController.swift; sourceTree = "<group>"; };
+		CA67B9302BED2A8B00221906 /* RegisterGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderView.swift; sourceTree = "<group>"; };
+		CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderDelegate.swift; sourceTree = "<group>"; };
+		CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderCoordinator.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
+				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				CA67B9282BED0A4E00221906 /* RegisterIndex */,
+				CA67B92D2BED2A2600221906 /* RegisterGender */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -166,6 +176,16 @@
 				CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */,
 			);
 			path = RegisterIndex;
+			sourceTree = "<group>";
+		};
+		CA67B92D2BED2A2600221906 /* RegisterGender */ = {
+			isa = PBXGroup;
+			children = (
+				CA67B9302BED2A8B00221906 /* RegisterGenderView.swift */,
+				CA67B92E2BED2A7800221906 /* RegisterGenderViewController.swift */,
+				CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */,
+			);
+			path = RegisterGender;
 			sourceTree = "<group>";
 		};
 		CA971F8F2BEA756900D03161 /* Fonts */ = {
@@ -312,10 +332,13 @@
 			files = (
 				CA971FA22BEA92D400D03161 /* AboutCoordinator.swift in Sources */,
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
+				CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */,
+				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
+				CA67B92F2BED2A7800221906 /* RegisterGenderViewController.swift in Sources */,
 				CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */,
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
@@ -334,6 +357,7 @@
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
+				CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,

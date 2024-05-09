@@ -32,8 +32,7 @@ extension RegisterIndexViewController: RegisterIndexViewDelegate {
     }
     
     func actionRegister() {
-        print("register button")
-        //to do
+        self.coordinator?.navigationToRegisterGender()
     }
     
     
