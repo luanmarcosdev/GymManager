@@ -32,6 +32,7 @@ extension ForgotViewController: ForgotViewDelegate {
     }
     
     func actionRecovery() {
+        // to do recovery
         print("recuperando")
     }
     

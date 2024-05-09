@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewDelegate {
    
     func registerButton() {
-        print("to do register button")
+        self.coordinator?.navigationToRegisterScreen()
     }
     
     func forgotButton() {
@@ -36,7 +36,8 @@ extension LoginViewController: LoginViewDelegate {
     }
     
     func loginButton() {
-        print("to do login button")
+        //to do
+        print("login button")
     }
     
     

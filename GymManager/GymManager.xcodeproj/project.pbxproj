@@ -16,6 +16,10 @@
 		CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */; };
 		CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22572BEA551D00DD7D06 /* IndexViewController.swift */; };
 		CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */; };
+		CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9242BED09F800221906 /* RegisterIndexView.swift */; };
+		CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */; };
+		CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */; };
+		CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -52,6 +56,10 @@
 		CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCoordinator.swift; sourceTree = "<group>"; };
 		CA4D22572BEA551D00DD7D06 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CA67B9242BED09F800221906 /* RegisterIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexView.swift; sourceTree = "<group>"; };
+		CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewController.swift; sourceTree = "<group>"; };
+		CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewDelegate.swift; sourceTree = "<group>"; };
+		CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexCoordinator.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 				CA971F9E2BEA91C700D03161 /* About */,
 				CA971FA92BEAA74500D03161 /* Login */,
 				CACAC1E22BEBD49F00B2FCFA /* Forgot */,
+				CA67B9232BED09CE00221906 /* Register */,
 				CA24B4452BE12B6C0035C4AD /* Info.plist */,
 			);
 			path = GymManager;
@@ -136,8 +145,27 @@
 				CA971FA12BEA92D400D03161 /* AboutCoordinator.swift */,
 				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
+				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CA67B9232BED09CE00221906 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA67B9282BED0A4E00221906 /* RegisterIndex */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CA67B9282BED0A4E00221906 /* RegisterIndex */ = {
+			isa = PBXGroup;
+			children = (
+				CA67B9242BED09F800221906 /* RegisterIndexView.swift */,
+				CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */,
+				CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */,
+			);
+			path = RegisterIndex;
 			sourceTree = "<group>";
 		};
 		CA971F8F2BEA756900D03161 /* Fonts */ = {
@@ -284,9 +312,11 @@
 			files = (
 				CA971FA22BEA92D400D03161 /* AboutCoordinator.swift in Sources */,
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
+				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
+				CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */,
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
@@ -294,6 +324,7 @@
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
 				CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */,
 				CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */,
+				CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */,
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,
 				CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
@@ -301,6 +332,7 @@
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
+				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,

@@ -32,7 +32,7 @@ extension IndexViewController: IndexViewDelegate {
     }
     
     func actionRegister() {
-        // to do coordinator
+        self.coordinator?.navigationToRegisterScreen()
     }
     
     func actionAbout() {

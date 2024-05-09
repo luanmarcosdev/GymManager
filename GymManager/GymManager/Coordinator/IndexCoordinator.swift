@@ -32,5 +32,10 @@ class IndexCoordinator: CoordinatorProtocol {
         loginCoordinator.start()
     }
     
+    func navigationToRegisterScreen() {
+        let indexRegisterCoordinator = RegisterIndexCoordinator(navigationController: self.navigationController)
+        indexRegisterCoordinator.start()
+    }
+    
     
 }

@@ -28,5 +28,9 @@ class LoginCoordinator: CoordinatorProtocol {
         forgotCoordinator.start()
     }
     
+    func navigationToRegisterScreen() {
+        let indexRegisterCoordinator = RegisterIndexCoordinator(navigationController: self.navigationController)
+        indexRegisterCoordinator.start()
+    }
     
 }
