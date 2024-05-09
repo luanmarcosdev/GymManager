@@ -24,6 +24,10 @@
 		CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9302BED2A8B00221906 /* RegisterGenderView.swift */; };
 		CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */; };
 		CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */; };
+		CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9372BED455C00221906 /* RegisterAgeView.swift */; };
+		CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */; };
+		CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */; };
+		CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -68,6 +72,10 @@
 		CA67B9302BED2A8B00221906 /* RegisterGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderView.swift; sourceTree = "<group>"; };
 		CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderDelegate.swift; sourceTree = "<group>"; };
 		CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderCoordinator.swift; sourceTree = "<group>"; };
+		CA67B9372BED455C00221906 /* RegisterAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeView.swift; sourceTree = "<group>"; };
+		CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewController.swift; sourceTree = "<group>"; };
+		CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewDelegate.swift; sourceTree = "<group>"; };
+		CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeCoordinator.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
 				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
+				CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 			children = (
 				CA67B9282BED0A4E00221906 /* RegisterIndex */,
 				CA67B92D2BED2A2600221906 /* RegisterGender */,
+				CA67B9362BED453800221906 /* RegisterAge */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -186,6 +196,16 @@
 				CA67B9322BED2A9E00221906 /* RegisterGenderDelegate.swift */,
 			);
 			path = RegisterGender;
+			sourceTree = "<group>";
+		};
+		CA67B9362BED453800221906 /* RegisterAge */ = {
+			isa = PBXGroup;
+			children = (
+				CA67B9372BED455C00221906 /* RegisterAgeView.swift */,
+				CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */,
+				CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */,
+			);
+			path = RegisterAge;
 			sourceTree = "<group>";
 		};
 		CA971F8F2BEA756900D03161 /* Fonts */ = {
@@ -334,6 +354,7 @@
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
 				CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */,
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
+				CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
@@ -343,6 +364,7 @@
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
+				CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */,
 				CA971F9D2BEA908C00D03161 /* IndexViewDelegate.swift in Sources */,
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
 				CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */,
@@ -352,6 +374,7 @@
 				CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
+				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
@@ -359,6 +382,7 @@
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
 				CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
+				CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
 			);

@@ -122,7 +122,7 @@ class RegisterIndexView: UIView {
     lazy var registerButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setTitle("Registrar", for: .normal)
+        bt.setTitle("Continuar", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
         bt.backgroundColor = CustomColor.green

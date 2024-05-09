@@ -23,5 +23,14 @@ class RegisterGenderCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
+    func back() {
+        self.navigationController.popViewController(animated: true)
+    }
+    
+    func navigationToRegisterAgeScreen() {
+        let registerAgeCoordinator = RegisterAgeCoordinator(navigationController: self.navigationController)
+        registerAgeCoordinator.start()
+    }
+    
     
 }

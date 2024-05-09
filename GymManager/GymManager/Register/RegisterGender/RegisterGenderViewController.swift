@@ -28,21 +28,23 @@ class RegisterGenderViewController: UIViewController {
 extension RegisterGenderViewController: RegisterGenderDelegate {
    
     func actionNext() {
-        print("next")
+        self.coordinator?.navigationToRegisterAgeScreen()
+    }
+    
+    func actionBack() {
+        self.coordinator?.back()
     }
     
     func actionMan() {
         //just example - to do in ViewModel
         self.registerGenderView?.manButton.setImage(UIImage(named: "ManSelected"), for: .normal)
         self.registerGenderView?.womanButton.setImage(UIImage(named: "Woman"), for: .normal)
-        print("man tapped")
     }
     
     func actionWoman() {
         //just example - to do in ViewModel
         self.registerGenderView?.womanButton.setImage(UIImage(named: "WomanSelected"), for: .normal)
         self.registerGenderView?.manButton.setImage(UIImage(named: "Man"), for: .normal)
-        print("woman tapped")
     }
     
 }
