@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol RegisterIndexViewDelegate: AnyObject {
+    func actionBack()
+    func actionRegister()
+}
