@@ -1,19 +1,19 @@
 //
-//  RegisterAgeView.swift
+//  RegisterHeightView.swift
 //  GymManager
 //
-//  Created by Luan Arruda on 09/05/24.
+//  Created by Luan Arruda on 10/05/24.
 //
 
 import UIKit
 
-class RegisterAgeView: UIView {
-    
+class RegisterHeightView: UIView {
+
     //MARK: Delegate
     
-    private weak var delegate: RegisterAgeViewDelegate?
+    private weak var delegate: RegisterHeightViewDelegate?
     
-    func setDelegate(delegate: RegisterAgeViewDelegate?){
+    func setDelegate(delegate: RegisterHeightViewDelegate?){
         self.delegate = delegate
     }
     
@@ -22,7 +22,7 @@ class RegisterAgeView: UIView {
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Quantos anos você tem?"
+        lb.text = "Qual é a sua altura?"
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
         lb.font = UIFont(name: CustomFont.robotBold, size: 24)
@@ -120,4 +120,5 @@ class RegisterAgeView: UIView {
             
         ])
     }
+    
 }

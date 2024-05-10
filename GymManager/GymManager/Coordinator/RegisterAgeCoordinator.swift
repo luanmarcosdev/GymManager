@@ -27,4 +27,9 @@ class RegisterAgeCoordinator: CoordinatorProtocol {
         self.navigationController.popViewController(animated: true)
     }
     
+    func navigationToRegisterHeightScreen() {
+        let registerHeightCoordinator = RegisterHeightCoordinator(navigationController: self.navigationController)
+        registerHeightCoordinator.start()
+    }
+    
 }

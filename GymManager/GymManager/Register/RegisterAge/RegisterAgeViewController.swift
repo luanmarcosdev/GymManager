@@ -28,8 +28,7 @@ class RegisterAgeViewController: UIViewController {
 extension RegisterAgeViewController: RegisterAgeViewDelegate {
     
     func actionNext() {
-        //to do
-        print("next")
+        self.coordinator?.navigationToRegisterHeightScreen()
     }
     
     func actionBack() {

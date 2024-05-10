@@ -50,6 +50,10 @@
 		CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E72BEBD66500B2FCFA /* ForgotViewDelegate.swift */; };
 		CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */; };
 		CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8B9F72BE45CD700506275 /* CustomColor.swift */; };
+		CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F52BEE8F1F000C3649 /* RegisterHeightViewController.swift */; };
+		CAF066F82BEE8F3B000C3649 /* RegisterHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */; };
+		CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */; };
+		CAF066FC2BEE902E000C3649 /* RegisterHeightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +102,10 @@
 		CACAC1E72BEBD66500B2FCFA /* ForgotViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewDelegate.swift; sourceTree = "<group>"; };
 		CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotCoordinator.swift; sourceTree = "<group>"; };
 		CAD8B9F72BE45CD700506275 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		CAF066F52BEE8F1F000C3649 /* RegisterHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightViewController.swift; sourceTree = "<group>"; };
+		CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightView.swift; sourceTree = "<group>"; };
+		CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightViewDelegate.swift; sourceTree = "<group>"; };
+		CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
 				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
 				CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */,
+				CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 				CA67B9282BED0A4E00221906 /* RegisterIndex */,
 				CA67B92D2BED2A2600221906 /* RegisterGender */,
 				CA67B9362BED453800221906 /* RegisterAge */,
+				CAF066F42BEE8EEB000C3649 /* RegisterHeight */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -272,6 +282,16 @@
 				CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CAF066F42BEE8EEB000C3649 /* RegisterHeight */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */,
+				CAF066F52BEE8F1F000C3649 /* RegisterHeightViewController.swift */,
+				CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */,
+			);
+			path = RegisterHeight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,8 +400,12 @@
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
+				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
+				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,
 				CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
+				CAF066FC2BEE902E000C3649 /* RegisterHeightCoordinator.swift in Sources */,
+				CAF066F82BEE8F3B000C3649 /* RegisterHeightView.swift in Sources */,
 				CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
