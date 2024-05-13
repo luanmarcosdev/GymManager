@@ -28,8 +28,7 @@ class RegisterHeightViewController: UIViewController {
 extension RegisterHeightViewController: RegisterHeightViewDelegate {
     
     func actionNext() {
-        //to do
-        print("next button")
+        self.coordinator?.navigationToRegisterWeightScreen()
     }
     
     func actionBack() {

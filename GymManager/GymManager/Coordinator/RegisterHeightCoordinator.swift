@@ -27,4 +27,9 @@ class RegisterHeightCoordinator: CoordinatorProtocol {
         self.navigationController.popViewController(animated: true)
     }
     
+    func navigationToRegisterWeightScreen() {
+        let registerWeightCoordinator = RegisterWeightCoordinator(navigationController: self.navigationController)
+        registerWeightCoordinator.start()
+    }
+    
 }

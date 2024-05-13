@@ -28,6 +28,10 @@
 		CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */; };
 		CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */; };
 		CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */; };
+		CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8462BF23A7400A5DA33 /* RegisterWeightViewController.swift */; };
+		CA7AA8492BF23A8900A5DA33 /* RegisterWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8482BF23A8900A5DA33 /* RegisterWeightView.swift */; };
+		CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA84A2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift */; };
+		CA7AA84D2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA84C2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -80,6 +84,10 @@
 		CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewController.swift; sourceTree = "<group>"; };
 		CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewDelegate.swift; sourceTree = "<group>"; };
 		CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeCoordinator.swift; sourceTree = "<group>"; };
+		CA7AA8462BF23A7400A5DA33 /* RegisterWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightViewController.swift; sourceTree = "<group>"; };
+		CA7AA8482BF23A8900A5DA33 /* RegisterWeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightView.swift; sourceTree = "<group>"; };
+		CA7AA84A2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightViewDelegate.swift; sourceTree = "<group>"; };
+		CA7AA84C2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightCoordinator.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
 				CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */,
 				CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */,
+				CA7AA84C2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 				CA67B92D2BED2A2600221906 /* RegisterGender */,
 				CA67B9362BED453800221906 /* RegisterAge */,
 				CAF066F42BEE8EEB000C3649 /* RegisterHeight */,
+				CA7AA8452BF23A2700A5DA33 /* RegisterWeight */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -216,6 +226,16 @@
 				CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */,
 			);
 			path = RegisterAge;
+			sourceTree = "<group>";
+		};
+		CA7AA8452BF23A2700A5DA33 /* RegisterWeight */ = {
+			isa = PBXGroup;
+			children = (
+				CA7AA8482BF23A8900A5DA33 /* RegisterWeightView.swift */,
+				CA7AA8462BF23A7400A5DA33 /* RegisterWeightViewController.swift */,
+				CA7AA84A2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift */,
+			);
+			path = RegisterWeight;
 			sourceTree = "<group>";
 		};
 		CA971F8F2BEA756900D03161 /* Fonts */ = {
@@ -371,10 +391,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA971FA22BEA92D400D03161 /* AboutCoordinator.swift in Sources */,
+				CA7AA8492BF23A8900A5DA33 /* RegisterWeightView.swift in Sources */,
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
 				CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */,
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
 				CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */,
+				CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
@@ -392,6 +414,7 @@
 				CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */,
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,
 				CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */,
+				CA7AA84D2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
 				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
@@ -399,6 +422,7 @@
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
+				CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
 				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
 				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,
