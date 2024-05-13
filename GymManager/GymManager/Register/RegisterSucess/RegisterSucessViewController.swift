@@ -20,6 +20,15 @@ class RegisterSucessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registerSucessView?.setDelegate(delegate: self)
+    }
+    
+}
+
+extension RegisterSucessViewController: RegisterSucessViewDelegate {
+    
+    func actionSucess() {
+        self.coordinator?.navigationToHomeScreen()
     }
     
 }

@@ -33,4 +33,9 @@ class LoginCoordinator: CoordinatorProtocol {
         indexRegisterCoordinator.start()
     }
     
+    func navigationToHomeScreen() {
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        homeCoordinator.start()
+    }
+    
 }

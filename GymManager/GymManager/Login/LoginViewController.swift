@@ -36,8 +36,7 @@ extension LoginViewController: LoginViewDelegate {
     }
     
     func loginButton() {
-        //to do
-        print("login button")
+        self.coordinator?.navigationToHomeScreen()
     }
     
     

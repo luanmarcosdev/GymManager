@@ -11,9 +11,9 @@ class RegisterSucessView: UIView {
 
     //MARK: Delegate
     
-    private weak var delegate: RegisterGoalViewDelegate?
+    private weak var delegate: RegisterSucessViewDelegate?
     
-    func setDelegate(delegate: RegisterGoalViewDelegate?){
+    func setDelegate(delegate: RegisterSucessViewDelegate?){
         self.delegate = delegate
     }
     
@@ -83,11 +83,7 @@ class RegisterSucessView: UIView {
     //MARK: Action Buttons
     
     @objc func tappedFinishButton(){
-        self.delegate?.actionFinish()
-    }
-    
-    @objc func tappedBackButton(){
-        self.delegate?.actionBack()
+        self.delegate?.actionSucess()
     }
 
     //MARK: Init

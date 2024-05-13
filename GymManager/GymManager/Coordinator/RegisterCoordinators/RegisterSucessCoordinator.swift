@@ -22,5 +22,10 @@ class RegisterSucessCoordinator: CoordinatorProtocol {
         self.navigationController.pushViewController(registerSucessVC, animated: true)
         self.navigationController.isNavigationBarHidden = true
     }
+    
+    func navigationToHomeScreen() {
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        homeCoordinator.start()
+    }
 
 }
