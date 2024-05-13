@@ -28,7 +28,7 @@ class RegisterWeightViewController: UIViewController {
 extension RegisterWeightViewController: RegisterWeightViewDelegate {
     
     func actionNext() {
-        print("to do next")
+        self.coordinator?.navigationToRegisterGoalScreen()
     }
     
     func actionBack() {

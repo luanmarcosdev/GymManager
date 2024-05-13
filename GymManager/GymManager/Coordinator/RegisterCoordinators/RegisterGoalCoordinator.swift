@@ -1,5 +1,5 @@
 //
-//  RegisterWeightCoordinator.swift
+//  RegisterGoalCoordinator.swift
 //  GymManager
 //
 //  Created by Luan Arruda on 13/05/24.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterWeightCoordinator: CoordinatorProtocol {
+class RegisterGoalCoordinator: CoordinatorProtocol {
     
     var navigationController: UINavigationController
     
@@ -17,15 +17,14 @@ class RegisterWeightCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let registerWeightVC = RegisterWeightViewController()
-        registerWeightVC.coordinator = self
-        self.navigationController.pushViewController(registerWeightVC, animated: true)
+        let registerGoalVC = RegisterGoalViewController()
+        registerGoalVC.coordinator = self
+        self.navigationController.pushViewController(registerGoalVC, animated: true)
         self.navigationController.isNavigationBarHidden = true
     }
     
     func back() {
         self.navigationController.popViewController(animated: true)
     }
-    
     
 }
