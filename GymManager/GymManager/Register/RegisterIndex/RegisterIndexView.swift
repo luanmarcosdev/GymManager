@@ -40,7 +40,7 @@ class RegisterIndexView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Bem-vindo!"
-        lb.font = UIFont(name: CustomFont.robotRegular, size: 32)
+        lb.font = UIFont(name: CustomFont.robotBold, size: 32)
         lb.textColor = CustomColor.white
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
@@ -51,7 +51,7 @@ class RegisterIndexView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Entre com suas informações para criar uma nova conta."
-        lb.font = UIFont(name: CustomFont.robotRegular, size: 12)
+        lb.font = UIFont(name: CustomFont.robotRegular, size: 14)
         lb.textColor = CustomColor.white
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping

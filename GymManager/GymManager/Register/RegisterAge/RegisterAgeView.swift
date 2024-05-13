@@ -34,7 +34,7 @@ class RegisterAgeView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Isso nos ajuda a personalizar sua conta."
-        lb.font = UIFont(name: CustomFont.robotExtraLight, size: 12)
+        lb.font = UIFont(name: CustomFont.robotExtraLight, size: 14)
         lb.textColor = CustomColor.white
         lb.textAlignment = .center
         lb.numberOfLines = 0

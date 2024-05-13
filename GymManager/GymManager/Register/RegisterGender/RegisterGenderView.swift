@@ -34,7 +34,7 @@ class RegisterGenderView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Para proporcionarmos uma melhor experiência precisamos saber algumas coisas sobre você. Isso nos ajuda a personalizar sua conta."
-        lb.font = UIFont(name: CustomFont.robotExtraLight, size: 12)
+        lb.font = UIFont(name: CustomFont.robotExtraLight, size: 14)
         lb.textColor = CustomColor.white
         lb.textAlignment = .center
         lb.numberOfLines = 0
@@ -133,7 +133,7 @@ class RegisterGenderView: UIView {
             
             self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 12),
             self.subtitleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.subtitleLabel.widthAnchor.constraint(equalToConstant: 271),
+            self.subtitleLabel.widthAnchor.constraint(equalToConstant: 340),
             
             self.nextButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
