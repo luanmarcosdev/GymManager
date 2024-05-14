@@ -61,6 +61,7 @@
 		CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAC2BEAA78400D03161 /* LoginView.swift */; };
 		CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */; };
 		CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */; };
+		CABB76462BF3964A00C946BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB76452BF3964A00C946BC /* User.swift */; };
 		CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC219512BE97C3E0023EB1C /* CustomFont.swift */; };
 		CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */; };
 		CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E52BEBD64F00B2FCFA /* ForgotViewController.swift */; };
@@ -130,6 +131,7 @@
 		CA971FAC2BEAA78400D03161 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CABB76452BF3964A00C946BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAC219512BE97C3E0023EB1C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 		CACAC1E52BEBD64F00B2FCFA /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				CAC219502BE97BC80023EB1C /* Source */,
 				CAD8B9F62BE45CC500506275 /* Utils */,
 				CA4D22522BEA543700DD7D06 /* Coordinator */,
+				CABB76442BF3962E00C946BC /* Models */,
 				CA4D224F2BEA53C900DD7D06 /* Index */,
 				CA971F9E2BEA91C700D03161 /* About */,
 				CA971FA92BEAA74500D03161 /* Login */,
@@ -340,6 +343,14 @@
 				CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CABB76442BF3962E00C946BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CABB76452BF3964A00C946BC /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CAC219502BE97BC80023EB1C /* Source */ = {
@@ -517,6 +528,7 @@
 				CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
+				CABB76462BF3964A00C946BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
