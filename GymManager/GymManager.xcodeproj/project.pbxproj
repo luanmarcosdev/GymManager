@@ -15,6 +15,7 @@
 		CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */; };
 		CA486E272BF2B5260097FAA7 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */; };
 		CA486E292BF2BDC80097FAA7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */; };
+		CA486E2B2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E2A2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift */; };
 		CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22502BEA53EF00DD7D06 /* IndexView.swift */; };
 		CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22532BEA547E00DD7D06 /* CoordinatorProtocol.swift */; };
 		CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */; };
@@ -83,6 +84,7 @@
 		CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CA486E2A2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorksheetCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA4D22502BEA53EF00DD7D06 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		CA4D22532BEA547E00DD7D06 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCoordinator.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				CA486E222BF2B50B0097FAA7 /* HomeView.swift */,
 				CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */,
 				CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */,
+				CA486E2A2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				CA971F9D2BEA908C00D03161 /* IndexViewDelegate.swift in Sources */,
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
 				CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */,
+				CA486E2B2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift in Sources */,
 				CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */,
 				CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */,
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,

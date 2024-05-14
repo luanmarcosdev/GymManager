@@ -35,15 +35,15 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func actionEditGoal() {
-        // to do
+        print("tapped edit goal")
     }
     
     func actionAddActivity() {
-        // to do
+        print("tapped add activity")
     }
     
     func actionAssessments() {
-        // to do
+        print("tapped assessments")
     }
     
     

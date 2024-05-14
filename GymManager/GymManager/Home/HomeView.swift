@@ -65,18 +65,39 @@ class HomeView: UIView {
         return bt
     }()
     
-    // to do fichas
+    // teste collection view
+    
+    lazy var collectionView: UICollectionView = {
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsHorizontalScrollIndicator = true
+        cv.delaysContentTouches = false
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        cv.setCollectionViewLayout(layout, animated: false)
+        cv.register(HomeWorksheetCollectionViewCell.self, forCellWithReuseIdentifier: HomeWorksheetCollectionViewCell.identifier)
+        return cv
+        }()
+    
+    //fim teste
     
     lazy var goalLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Meta"
+        lb.font = UIFont(name: CustomFont.robotRegular, size: 17)
+        lb.textColor = CustomColor.white
         return lb
     }()
     
     lazy var editGoalButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Editar meta", for: .normal)
+        bt.setTitleColor(CustomColor.green, for: .normal)
+        bt.titleLabel?.font = UIFont(name: CustomFont.robotRegular, size: 13)
+        bt.backgroundColor = .none
+        bt.addTarget(self, action: #selector(self.tappedEditGoalButton), for: .touchUpInside)
         return bt
     }()
     
@@ -84,6 +105,8 @@ class HomeView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "É preciso impor a si mesmo algumas metas para se ter a coragem de alcançá-las."
+        lb.font = UIFont(name: CustomFont.robotRegular, size: 15)
+        lb.textColor = CustomColor.white
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
         return lb
@@ -92,6 +115,9 @@ class HomeView: UIView {
     lazy var emphasisGoalView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 12
+        view.backgroundColor = CustomColor.darkSecondary
         return view
     }()
     
@@ -99,6 +125,8 @@ class HomeView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Treinos concluídos"
+        lb.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
+        lb.textColor = CustomColor.white
         return lb
     }()
     
@@ -106,6 +134,8 @@ class HomeView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Você já bateu 25% da sua meta (12). Faltam 9 treinos para completá-la."
+        lb.font = UIFont(name: CustomFont.robotRegular, size: 13)
+        lb.textColor = CustomColor.green
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
         return lb
@@ -114,6 +144,9 @@ class HomeView: UIView {
     lazy var emphasisNumberView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.green
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 12
         return view
     }()
     
@@ -121,16 +154,34 @@ class HomeView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "3"
+        lb.textColor = CustomColor.black
+        lb.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
         return lb
     }()
     
     lazy var addActivityButton: UIButton = {
         let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Registrar treino", for: .normal)
+        bt.setTitleColor(CustomColor.black, for: .normal)
+        bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
+        bt.backgroundColor = CustomColor.green
+        bt.clipsToBounds = true
+        bt.layer.cornerRadius = 24
+        bt.addTarget(self, action: #selector(self.tappedAddActivityButton), for: .touchUpInside)
         return bt
     }()
     
     lazy var assessmentsButton: UIButton = {
         let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Avaliações", for: .normal)
+        bt.setTitleColor(CustomColor.green, for: .normal)
+        bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
+        bt.backgroundColor = CustomColor.darkSecondary
+        bt.clipsToBounds = true
+        bt.layer.cornerRadius = 24
+        bt.addTarget(self, action: #selector(self.tappedAssessmentButton), for: .touchUpInside)
         return bt
     }()
     
@@ -142,6 +193,18 @@ class HomeView: UIView {
     
     @objc func tappedAddWorksheetButton() {
         self.delegate?.actionAddWorksheets()
+    }
+    
+    @objc func tappedEditGoalButton() {
+        self.delegate?.actionEditGoal()
+    }
+    
+    @objc func tappedAddActivityButton () {
+        self.delegate?.actionAddActivity()
+    }
+    
+    @objc func tappedAssessmentButton() {
+        self.delegate?.actionAssessments()
     }
     
     //MARK: Init
@@ -169,6 +232,17 @@ class HomeView: UIView {
         self.addSubview(self.userButton)
         self.addSubview(self.worksheetsLabel)
         self.addSubview(self.addWorksheetsButton)
+        self.addSubview(self.collectionView)
+        self.addSubview(self.goalLabel)
+        self.addSubview(self.editGoalButton)
+        self.addSubview(self.descriptionGoalLabel)
+        self.addSubview(self.emphasisGoalView)
+        self.emphasisGoalView.addSubview(self.emphasisTitleGoalLabel)
+        self.emphasisGoalView.addSubview(self.emphasisSubtitleGoalLabel)
+        self.emphasisGoalView.addSubview(self.emphasisNumberView)
+        self.emphasisNumberView.addSubview(self.emphasisNumberLabel)
+        self.addSubview(self.addActivityButton)
+        self.addSubview(self.assessmentsButton)
     }
     
     func configConstraints() {
@@ -188,7 +262,53 @@ class HomeView: UIView {
             self.worksheetsLabel.topAnchor.constraint(equalTo: self.subtitleLabel.bottomAnchor, constant: 32),
             
             self.addWorksheetsButton.trailingAnchor.constraint(equalTo: self.userButton.trailingAnchor),
-            self.addWorksheetsButton.centerYAnchor.constraint(equalTo: self.worksheetsLabel.centerYAnchor)
+            self.addWorksheetsButton.centerYAnchor.constraint(equalTo: self.worksheetsLabel.centerYAnchor),
+            
+            self.collectionView.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: self.userButton.trailingAnchor),
+            self.collectionView.topAnchor.constraint(equalTo: self.worksheetsLabel.bottomAnchor, constant: 15),
+            self.collectionView.heightAnchor.constraint(equalToConstant: 160),
+            
+            self.goalLabel.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
+            self.goalLabel.topAnchor.constraint(equalTo: self.collectionView.bottomAnchor, constant: 32),
+            
+            self.editGoalButton.trailingAnchor.constraint(equalTo: self.userButton.trailingAnchor),
+            self.editGoalButton.centerYAnchor.constraint(equalTo: self.goalLabel.centerYAnchor),
+            
+            self.descriptionGoalLabel.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
+            self.descriptionGoalLabel.trailingAnchor.constraint(equalTo: self.userButton.trailingAnchor),
+            self.descriptionGoalLabel.topAnchor.constraint(equalTo: self.goalLabel.bottomAnchor, constant: 15),
+            
+            self.emphasisGoalView.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
+            self.emphasisGoalView.trailingAnchor.constraint(equalTo: self.userButton.trailingAnchor),
+            self.emphasisGoalView.heightAnchor.constraint(equalToConstant: 100),
+            self.emphasisGoalView.topAnchor.constraint(equalTo: self.descriptionGoalLabel.bottomAnchor, constant: 40),
+            
+            self.emphasisTitleGoalLabel.leadingAnchor.constraint(equalTo: self.emphasisGoalView.leadingAnchor, constant: 16),
+            self.emphasisTitleGoalLabel.topAnchor.constraint(equalTo: self.emphasisGoalView.topAnchor, constant: 16),
+
+            self.emphasisSubtitleGoalLabel.leadingAnchor.constraint(equalTo: self.emphasisTitleGoalLabel.leadingAnchor),
+            self.emphasisSubtitleGoalLabel.topAnchor.constraint(equalTo: self.emphasisTitleGoalLabel.bottomAnchor, constant: 8),
+            self.emphasisSubtitleGoalLabel.widthAnchor.constraint(equalToConstant: 222),
+            
+            self.emphasisNumberView.centerYAnchor.constraint(equalTo: self.emphasisGoalView.centerYAnchor),
+            self.emphasisNumberView.trailingAnchor.constraint(equalTo: self.emphasisGoalView.trailingAnchor, constant: -16),
+            self.emphasisNumberView.widthAnchor.constraint(equalToConstant: 44),
+            self.emphasisNumberView.heightAnchor.constraint(equalToConstant: 44),
+            
+            self.emphasisNumberLabel.centerXAnchor.constraint(equalTo: self.emphasisNumberView.centerXAnchor),
+            self.emphasisNumberLabel.centerYAnchor.constraint(equalTo: self.emphasisNumberView.centerYAnchor),
+            
+            self.addActivityButton.topAnchor.constraint(equalTo: self.emphasisGoalView.bottomAnchor,constant: 40),
+            self.addActivityButton.heightAnchor.constraint(equalToConstant: 48),
+            self.addActivityButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
+            self.addActivityButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
+            
+            self.assessmentsButton.topAnchor.constraint(equalTo: self.addActivityButton.bottomAnchor,constant: 18),
+            self.assessmentsButton.heightAnchor.constraint(equalToConstant: 48),
+            self.assessmentsButton.leadingAnchor.constraint(equalTo: self.addActivityButton.leadingAnchor),
+            self.assessmentsButton.trailingAnchor.constraint(equalTo: self.addActivityButton.trailingAnchor)
+        
             
         ])
     }
