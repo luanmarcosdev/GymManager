@@ -45,6 +45,9 @@
 		CA7AA85C2BF2495500A5DA33 /* RegisterSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85B2BF2495500A5DA33 /* RegisterSucessView.swift */; };
 		CA7AA85E2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85D2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift */; };
 		CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */; };
+		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
+		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
+		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -115,6 +118,9 @@
 		CA7AA85B2BF2495500A5DA33 /* RegisterSucessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessView.swift; sourceTree = "<group>"; };
 		CA7AA85D2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewDelegate.swift; sourceTree = "<group>"; };
 		CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessCoordinator.swift; sourceTree = "<group>"; };
+		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
+		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
+		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				CAD8B9F62BE45CC500506275 /* Utils */,
 				CA4D22522BEA543700DD7D06 /* Coordinator */,
 				CABB76442BF3962E00C946BC /* Models */,
+				CA940B7E2BF4DAAA00548C36 /* Builder */,
 				CA4D224F2BEA53C900DD7D06 /* Index */,
 				CA971F9E2BEA91C700D03161 /* About */,
 				CA971FA92BEAA74500D03161 /* Login */,
@@ -312,6 +319,14 @@
 			path = RegisterSucess;
 			sourceTree = "<group>";
 		};
+		CA940B7E2BF4DAAA00548C36 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		CA971F8F2BEA756900D03161 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				CABB76452BF3964A00C946BC /* User.swift */,
+				CA940B812BF4DB5600548C36 /* Worksheet.swift */,
+				CA940B832BF4DB7500548C36 /* Assessment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,8 +498,10 @@
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
 				CA7AA8542BF2438900A5DA33 /* RegisterGoalViewDelegate.swift in Sources */,
 				CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */,
+				CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */,
 				CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */,
 				CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */,
+				CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
@@ -528,6 +547,7 @@
 				CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
+				CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */,
 				CABB76462BF3964A00C946BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

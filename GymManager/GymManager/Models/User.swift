@@ -13,12 +13,17 @@ enum Gender {
 }
 
 struct User {
+    
+    var worksheets: [Worksheet] = []
+    var assessments: [Assessment] = []
+    
     var name: String
     var email: String
-    var senha: String
+    var password: String
     var gender: Gender
     var age: Int
     var height: Double
     var weight: Double
     var goal: Int
+
 }
