@@ -30,18 +30,6 @@ class RegisterGoalView: UIView {
         return lb
     }()
     
-    lazy var subtitleLabel: UILabel = {
-        let lb = UILabel()
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Isso nos ajuda a personalizar sua conta."
-        lb.font = UIFont(name: CustomFont.robotExtraLight, size: 14)
-        lb.textColor = CustomColor.white
-        lb.textAlignment = .center
-        lb.numberOfLines = 0
-        lb.lineBreakMode = .byWordWrapping
-        return lb
-    }()
-    
     lazy var backButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +41,7 @@ class RegisterGoalView: UIView {
     lazy var finishButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setTitle("Proximo", for: .normal)
+        bt.setTitle("Finalizar", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
         bt.backgroundColor = CustomColor.green
@@ -94,7 +82,6 @@ class RegisterGoalView: UIView {
     
     func configSuperView() {
         self.addSubview(self.titleLabel)
-        self.addSubview(self.subtitleLabel)
         self.addSubview(self.backButton)
         self.addSubview(self.finishButton)
     }
@@ -104,11 +91,7 @@ class RegisterGoalView: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            
-            self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 12),
-            self.subtitleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.subtitleLabel.widthAnchor.constraint(equalToConstant: 271),
-            
+                        
             self.finishButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.finishButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             self.finishButton.widthAnchor.constraint(equalToConstant: 132),

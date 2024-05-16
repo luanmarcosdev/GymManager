@@ -22,7 +22,8 @@ class RegisterGenderView: UIView {
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Nos conte sobre você, Fulano"
+        lb.text = "Olá, Luan Marcos Arruda Silva"
+        lb.textAlignment = .center
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
         lb.font = UIFont(name: CustomFont.robotBold, size: 24)
@@ -57,15 +58,7 @@ class RegisterGenderView: UIView {
         bt.addTarget(self, action: #selector(self.tappedWomanButton), for: .touchUpInside)
         return bt
     }()
-    
-    lazy var backButton: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setImage(UIImage(named: "BackRegisterButton"), for: .normal)
-        bt.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
-        return bt
-    }()
-    
+        
     lazy var nextButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
@@ -93,9 +86,6 @@ class RegisterGenderView: UIView {
         self.delegate?.actionWoman()
     }
     
-    @objc func tappedBackButton(){
-        self.delegate?.actionBack()
-    }
 
     //MARK: Init
 
@@ -121,7 +111,6 @@ class RegisterGenderView: UIView {
         self.addSubview(self.subtitleLabel)
         self.addSubview(self.manButton)
         self.addSubview(self.womanButton)
-        self.addSubview(self.backButton)
         self.addSubview(self.nextButton)
     }
     
@@ -130,6 +119,7 @@ class RegisterGenderView: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.titleLabel.widthAnchor.constraint(equalToConstant: 320),
             
             self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 12),
             self.subtitleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -139,9 +129,6 @@ class RegisterGenderView: UIView {
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             self.nextButton.widthAnchor.constraint(equalToConstant: 132),
             self.nextButton.heightAnchor.constraint(equalToConstant: 48),
-            
-            self.backButton.centerYAnchor.constraint(equalTo: self.nextButton.centerYAnchor),
-            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32),
             
             self.manButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -90),
             self.manButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),

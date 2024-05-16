@@ -233,12 +233,12 @@
 			isa = PBXGroup;
 			children = (
 				CA67B9282BED0A4E00221906 /* RegisterIndex */,
+				CA7AA8582BF2491900A5DA33 /* RegisterSucess */,
 				CA67B92D2BED2A2600221906 /* RegisterGender */,
 				CA67B9362BED453800221906 /* RegisterAge */,
 				CAF066F42BEE8EEB000C3649 /* RegisterHeight */,
 				CA7AA8452BF23A2700A5DA33 /* RegisterWeight */,
 				CA7AA84E2BF2433100A5DA33 /* RegisterGoal */,
-				CA7AA8582BF2491900A5DA33 /* RegisterSucess */,
 			);
 			path = Register;
 			sourceTree = "<group>";

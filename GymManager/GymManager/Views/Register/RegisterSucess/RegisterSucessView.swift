@@ -58,7 +58,7 @@ class RegisterSucessView: UIView {
     lazy var subtitleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "O primeiro passo pode ser o mais difícil, mas também é o mais corajoso."
+        lb.text = "Antes de continuar preencha mais algumas informações para personalizar sua conta."
         lb.font = UIFont(name: CustomFont.robotRegular, size: 14)
         lb.textColor = CustomColor.green
         lb.textAlignment = .center
@@ -136,7 +136,7 @@ class RegisterSucessView: UIView {
             
             self.subtitleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.subtitleLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 8),
-            self.subtitleLabel.widthAnchor.constraint(equalToConstant: 265),
+            self.subtitleLabel.widthAnchor.constraint(equalToConstant: 300),
             
             self.finishButton.topAnchor.constraint(equalTo: self.subtitleLabel.bottomAnchor, constant: 16),
             self.finishButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),

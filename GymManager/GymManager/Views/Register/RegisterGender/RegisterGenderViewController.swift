@@ -30,11 +30,7 @@ extension RegisterGenderViewController: RegisterGenderDelegate {
     func actionNext() {
         self.coordinator?.navigationToRegisterAgeScreen()
     }
-    
-    func actionBack() {
-        self.coordinator?.back()
-    }
-    
+        
     func actionMan() {
         //just example - to do in ViewModel
         self.registerGenderView?.manButton.setImage(UIImage(named: "ManSelected"), for: .normal)

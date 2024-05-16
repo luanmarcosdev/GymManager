@@ -11,5 +11,4 @@ protocol RegisterGenderDelegate: AnyObject {
     func actionNext()
     func actionMan()
     func actionWoman()
-    func actionBack()
 }
