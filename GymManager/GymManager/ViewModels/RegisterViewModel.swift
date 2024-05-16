@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class RegisterViewModel {
-            
+    
     func validateTextField (name: String, email: String, password: String, button: UIButton) {
         
         if name.isEmpty || email.isEmpty || password.isEmpty {
@@ -31,6 +31,8 @@ class RegisterViewModel {
         }
         
     }
+    
+    //private func 
     
 
     

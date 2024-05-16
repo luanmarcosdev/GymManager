@@ -23,9 +23,9 @@ class RegisterSucessCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
-    func navigationToHomeScreen() {
-        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
-        homeCoordinator.start()
+    func navigationToRegisterGenderScreen() {
+        let registerGenderCoordinator = RegisterGenderCoordinator(navigationController: self.navigationController)
+        registerGenderCoordinator.start()
     }
 
 }

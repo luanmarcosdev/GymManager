@@ -15,6 +15,8 @@ class RegisterIndexViewController: UIViewController {
     
     var registerViewModel: RegisterViewModel?
     
+    let userBuilder = UserBuilder.shared
+    
     override func loadView() {
         self.registerIndexView = RegisterIndexView()
         self.view = self.registerIndexView
@@ -35,7 +37,18 @@ extension RegisterIndexViewController: RegisterIndexViewDelegate {
     }
     
     func actionRegister() {
-        self.coordinator?.navigationToRegisterGender()
+        
+        // to do firebase se der certo fazer o que está abaixo
+    
+        let name = registerIndexView!.nameTextField.text!
+        let email = registerIndexView!.emailTextField.text!
+        let password = registerIndexView!.passwordTextField.text!
+        
+        self.userBuilder.setMainInfos(name: name, email: email, password: password)
+        self.coordinator?.navigationToRegisterSucess()
+        
+        // to do se nao apresentar mensagem de erro
+        
     }
     
     

@@ -32,7 +32,7 @@ extension RegisterGoalViewController: RegisterGoalViewDelegate {
     }
     
     func actionFinish() {
-        self.coordinator?.navigationToRegisterSucessScreen()
+        self.coordinator?.navigationToHomeScreen()
     }
     
 }

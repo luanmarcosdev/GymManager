@@ -27,9 +27,9 @@ class RegisterGoalCoordinator: CoordinatorProtocol {
         self.navigationController.popViewController(animated: true)
     }
     
-    func navigationToRegisterSucessScreen() {
-        let registerSucessCoordinator = RegisterSucessCoordinator(navigationController: self.navigationController)
-        registerSucessCoordinator.start()
+    func navigationToHomeScreen() {
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        homeCoordinator.start()
     }
     
 }

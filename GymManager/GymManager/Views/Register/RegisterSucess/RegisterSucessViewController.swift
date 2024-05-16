@@ -28,7 +28,7 @@ class RegisterSucessViewController: UIViewController {
 extension RegisterSucessViewController: RegisterSucessViewDelegate {
     
     func actionSucess() {
-        self.coordinator?.navigationToHomeScreen()
+        self.coordinator?.navigationToRegisterGenderScreen()
     }
     
 }

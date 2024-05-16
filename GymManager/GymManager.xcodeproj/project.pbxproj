@@ -297,12 +297,12 @@
 			isa = PBXGroup;
 			children = (
 				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
+				CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */,
 				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
 				CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */,
 				CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */,
 				CA7AA84C2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift */,
 				CA7AA8552BF244EC00A5DA33 /* RegisterGoalCoordinator.swift */,
-				CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */,
 			);
 			path = RegisterCoordinators;
 			sourceTree = "<group>";
