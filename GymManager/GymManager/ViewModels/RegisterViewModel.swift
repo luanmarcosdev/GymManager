@@ -9,8 +9,30 @@ import Foundation
 import UIKit
 
 class RegisterViewModel {
+            
+    func validateTextField (name: String, email: String, password: String, button: UIButton) {
+        
+        if name.isEmpty || email.isEmpty || password.isEmpty {
+            self.configButton(button: button, enable: false)
+        } else {
+            self.configButton(button: button, enable: true)
+        }
+        
+    }
     
-    // RegisterIndex - to do func validar campos de tf Name, Email e Password / func enviar dados validados para o Builder (setMainInfos)
+    private func configButton(button: UIButton, enable: Bool) {
+        
+        if enable {
+            button.backgroundColor = CustomColor.green
+            button.isEnabled = enable
+        } else {
+            button.backgroundColor = CustomColor.gray
+            button.isEnabled = enable
+        }
+        
+    }
+    
+
     
     // RegisterGender - to do func validar se selecionou algum gender button / func enviar botao clicado para o Builder (setGender)
     

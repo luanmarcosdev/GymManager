@@ -14,8 +14,11 @@ class RegisterIndexView: UIView {
     
     private weak var delegate: RegisterIndexViewDelegate?
     
-    func setDelegate(delegate: RegisterIndexViewDelegate?){
+    func setDelegate(delegate: RegisterIndexViewDelegate?, tfDelegate: UITextFieldDelegate){
         self.delegate = delegate
+        self.nameTextField.delegate = tfDelegate
+        self.emailTextField.delegate = tfDelegate
+        self.passwordTextField.delegate = tfDelegate
     }
     
     //MARK: Elements
@@ -67,7 +70,7 @@ class RegisterIndexView: UIView {
         tf.font = UIFont(name: CustomFont.robotExtraLight, size: 17)
         tf.textColor = CustomColor.white
         tf.borderStyle = .none
-        tf.keyboardType = .emailAddress
+        tf.keyboardType = .default
         return tf
     }()
     
@@ -125,7 +128,8 @@ class RegisterIndexView: UIView {
         bt.setTitle("Continuar", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.green
+        bt.backgroundColor = CustomColor.gray
+        bt.isEnabled = false
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
         bt.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
@@ -141,7 +145,7 @@ class RegisterIndexView: UIView {
     @objc func tappedBackButton(){
         self.delegate?.actionBack()
     }
-
+    
     //MARK: Init
 
     override init(frame: CGRect) {
