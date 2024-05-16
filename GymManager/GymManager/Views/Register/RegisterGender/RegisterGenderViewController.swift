@@ -13,6 +13,12 @@ class RegisterGenderViewController: UIViewController {
     
     var registerGenderView: RegisterGenderView?
     
+    var registerViewModel: RegisterViewModel?
+    
+    let userBuilder = UserBuilder.shared
+    
+    var genderSelected: Gender?
+    
     override func loadView() {
         self.registerGenderView = RegisterGenderView()
         self.view = self.registerGenderView
@@ -21,6 +27,8 @@ class RegisterGenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerGenderView?.setDelegate(delegate: self)
+        self.registerViewModel = RegisterViewModel()
+        self.registerViewModel?.insertUserNameInLabel(label: self.registerGenderView!.titleLabel, userName: userBuilder.getName())
     }
 
 }
@@ -28,19 +36,20 @@ class RegisterGenderViewController: UIViewController {
 extension RegisterGenderViewController: RegisterGenderDelegate {
    
     func actionNext() {
+        self.userBuilder.setGender(gender: genderSelected!)
         self.coordinator?.navigationToRegisterAgeScreen()
     }
         
     func actionMan() {
-        //just example - to do in ViewModel
-        self.registerGenderView?.manButton.setImage(UIImage(named: "ManSelected"), for: .normal)
-        self.registerGenderView?.womanButton.setImage(UIImage(named: "Woman"), for: .normal)
+        let genderSelected = self.registerViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .man, enableButton: registerGenderView!.nextButton)
+        
+        self.genderSelected = genderSelected
     }
     
     func actionWoman() {
-        //just example - to do in ViewModel
-        self.registerGenderView?.womanButton.setImage(UIImage(named: "WomanSelected"), for: .normal)
-        self.registerGenderView?.manButton.setImage(UIImage(named: "Man"), for: .normal)
+        let genderSelected = self.registerViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .woman, enableButton: registerGenderView!.nextButton)
+        
+        self.genderSelected = genderSelected
     }
     
 }

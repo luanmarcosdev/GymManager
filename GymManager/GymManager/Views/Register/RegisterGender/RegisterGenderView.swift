@@ -65,7 +65,8 @@ class RegisterGenderView: UIView {
         bt.setTitle("Proximo", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.green
+        bt.backgroundColor = CustomColor.gray
+        bt.isEnabled = false
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
         bt.addTarget(self, action: #selector(self.tappedNextButton), for: .touchUpInside)

@@ -48,6 +48,10 @@ class UserBuilder {
         self.goal = goal
     }
     
+    func getName() -> String {
+        return name ?? ""
+    }
+    
     func reset() {
         self.name = nil
         self.email = nil
