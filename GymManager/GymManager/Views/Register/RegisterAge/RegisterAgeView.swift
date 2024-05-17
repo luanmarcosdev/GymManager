@@ -13,8 +13,10 @@ class RegisterAgeView: UIView {
     
     private weak var delegate: RegisterAgeViewDelegate?
     
-    func setDelegate(delegate: RegisterAgeViewDelegate?){
+    func setDelegate(delegate: RegisterAgeViewDelegate?, pvDataSource: UIPickerViewDataSource, pvDelegate: UIPickerViewDelegate){
         self.delegate = delegate
+        self.agePickerView.delegate = pvDelegate
+        self.agePickerView.dataSource = pvDataSource
     }
     
     //MARK: Elements
@@ -37,6 +39,27 @@ class RegisterAgeView: UIView {
         bt.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
         return bt
     }()
+    
+    lazy var agePickerView: UIPickerView = {
+        let pv = UIPickerView()
+        pv.translatesAutoresizingMaskIntoConstraints = false
+        return pv
+    }()
+    
+    lazy var lineTop: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.green
+        return view
+    }()
+    
+    lazy var lineBot: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.green
+        return view
+    }()
+
     
     lazy var nextButton: UIButton = {
         let bt = UIButton()
@@ -83,6 +106,9 @@ class RegisterAgeView: UIView {
     func configSuperView() {
         self.addSubview(self.titleLabel)
         self.addSubview(self.backButton)
+        self.addSubview(self.agePickerView)
+        self.addSubview(self.lineTop)
+        self.addSubview(self.lineBot)
         self.addSubview(self.nextButton)
     }
     
@@ -96,6 +122,21 @@ class RegisterAgeView: UIView {
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             self.nextButton.widthAnchor.constraint(equalToConstant: 132),
             self.nextButton.heightAnchor.constraint(equalToConstant: 48),
+            
+            self.agePickerView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.agePickerView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.agePickerView.heightAnchor.constraint(equalToConstant: 350),
+            self.agePickerView.widthAnchor.constraint(equalToConstant: 113),
+            
+            self.lineTop.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.lineTop.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -39),
+            self.lineTop.heightAnchor.constraint(equalToConstant: 1),
+            self.lineTop.widthAnchor.constraint(equalToConstant: 113),
+            
+            self.lineBot.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.lineBot.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 39),
+            self.lineBot.heightAnchor.constraint(equalToConstant: 1),
+            self.lineBot.widthAnchor.constraint(equalToConstant: 113),
             
             self.backButton.centerYAnchor.constraint(equalTo: self.nextButton.centerYAnchor),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32)
