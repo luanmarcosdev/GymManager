@@ -13,8 +13,10 @@ class RegisterHeightView: UIView {
     
     private weak var delegate: RegisterHeightViewDelegate?
     
-    func setDelegate(delegate: RegisterHeightViewDelegate?){
+    func setDelegate(delegate: RegisterHeightViewDelegate?, pvDataSource: UIPickerViewDataSource, pvDelegate: UIPickerViewDelegate){
         self.delegate = delegate
+        self.heightPickerView.delegate = pvDelegate
+        self.heightPickerView.dataSource = pvDataSource
     }
     
     //MARK: Elements
@@ -48,6 +50,15 @@ class RegisterHeightView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = CustomColor.green
         return view
+    }()
+    
+    lazy var cmLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.text = "cm"
+        lb.font = UIFont(name: CustomFont.robotBlack, size: 17)
+        lb.textColor = CustomColor.white
+        return lb
     }()
     
     lazy var backButton: UIButton = {
@@ -102,6 +113,10 @@ class RegisterHeightView: UIView {
     
     func configSuperView() {
         self.addSubview(self.titleLabel)
+        self.addSubview(self.heightPickerView)
+        self.addSubview(self.lineTop)
+        self.addSubview(self.lineBot)
+        self.addSubview(self.cmLabel)
         self.addSubview(self.backButton)
         self.addSubview(self.nextButton)
     }
@@ -112,14 +127,31 @@ class RegisterHeightView: UIView {
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
+            self.heightPickerView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.heightPickerView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.heightPickerView.heightAnchor.constraint(equalToConstant: 350),
+            self.heightPickerView.widthAnchor.constraint(equalToConstant: 113),
+            
+            self.lineTop.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.lineTop.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -39),
+            self.lineTop.heightAnchor.constraint(equalToConstant: 1),
+            self.lineTop.widthAnchor.constraint(equalToConstant: 113),
+            
+            self.lineBot.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.lineBot.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 39),
+            self.lineBot.heightAnchor.constraint(equalToConstant: 1),
+            self.lineBot.widthAnchor.constraint(equalToConstant: 113),
+            
             self.nextButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             self.nextButton.widthAnchor.constraint(equalToConstant: 132),
             self.nextButton.heightAnchor.constraint(equalToConstant: 48),
             
+            self.cmLabel.bottomAnchor.constraint(equalTo: self.lineBot.topAnchor, constant: -13),
+            self.cmLabel.leadingAnchor.constraint(equalTo: self.heightPickerView.trailingAnchor),
+            
             self.backButton.centerYAnchor.constraint(equalTo: self.nextButton.centerYAnchor),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32)
-            
             
         ])
     }

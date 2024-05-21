@@ -13,7 +13,7 @@ class RegisterAgeViewController: UIViewController {
     
     var registerAgeView: RegisterAgeView?
     
-    let numbers = Array(12...70)
+    let ageNumbers = Array(12...70)
     
     override func loadView() {
         self.registerAgeView = RegisterAgeView()
@@ -23,13 +23,18 @@ class RegisterAgeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerAgeView?.setDelegate(delegate: self, pvDataSource: self, pvDelegate: self)
+        self.registerAgeView?.agePickerView.selectRow(8, inComponent: 0, animated: false)
     }
 
 }
 
 extension RegisterAgeViewController: RegisterAgeViewDelegate {
     
-    func actionNext() {
+    func actionNext() {   
+        let selectedRow = self.registerAgeView?.agePickerView.selectedRow(inComponent: 0)
+        // to do chamar builder
+        print(ageNumbers[selectedRow!])
+        //fim todo
         self.coordinator?.navigationToRegisterHeightScreen()
     }
     
@@ -46,7 +51,7 @@ extension RegisterAgeViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numbers.count
+        return ageNumbers.count
     }
     
 }
@@ -62,18 +67,18 @@ extension RegisterAgeViewController : UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let rowTitle = "\(numbers[row])"
+        let rowTitle = "\(ageNumbers[row])"
         let pickerLabel = UILabel()
         pickerLabel.text = rowTitle
         pickerLabel.textAlignment = .center
+        pickerLabel.backgroundColor = .clear
+        pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 48)
         
         if row == pickerView.selectedRow(inComponent: component) {
             pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 58)
             pickerLabel.textColor = CustomColor.white
         }else {
-            pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 34)
             pickerLabel.textColor = CustomColor.darkSecondary
-
         }
 
         return pickerLabel

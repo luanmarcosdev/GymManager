@@ -43,6 +43,7 @@ class RegisterAgeView: UIView {
     lazy var agePickerView: UIPickerView = {
         let pv = UIPickerView()
         pv.translatesAutoresizingMaskIntoConstraints = false
+        pv.backgroundColor = .none
         return pv
     }()
     
