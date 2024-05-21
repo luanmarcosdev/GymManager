@@ -62,7 +62,7 @@ extension RegisterAgeViewController : UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var rowTitle = "\(numbers[row])"
+        let rowTitle = "\(numbers[row])"
         let pickerLabel = UILabel()
         pickerLabel.text = rowTitle
         pickerLabel.textAlignment = .center

@@ -30,6 +30,26 @@ class RegisterHeightView: UIView {
         return lb
     }()
     
+    lazy var heightPickerView: UIPickerView = {
+        let pv = UIPickerView()
+        pv.translatesAutoresizingMaskIntoConstraints = false
+        return pv
+    }()
+    
+    lazy var lineTop: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.green
+        return view
+    }()
+    
+    lazy var lineBot: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.green
+        return view
+    }()
+    
     lazy var backButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
