@@ -52,7 +52,7 @@ class RegisterHeightView: UIView {
         return view
     }()
     
-    lazy var cmLabel: UILabel = {
+    lazy var selectedRowLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "cm"
@@ -116,7 +116,7 @@ class RegisterHeightView: UIView {
         self.addSubview(self.heightPickerView)
         self.addSubview(self.lineTop)
         self.addSubview(self.lineBot)
-        self.addSubview(self.cmLabel)
+        self.addSubview(self.selectedRowLabel)
         self.addSubview(self.backButton)
         self.addSubview(self.nextButton)
     }
@@ -142,13 +142,13 @@ class RegisterHeightView: UIView {
             self.lineBot.heightAnchor.constraint(equalToConstant: 1),
             self.lineBot.widthAnchor.constraint(equalToConstant: 113),
             
+            self.selectedRowLabel.bottomAnchor.constraint(equalTo: self.lineBot.topAnchor, constant: -13),
+            self.selectedRowLabel.leadingAnchor.constraint(equalTo: self.heightPickerView.trailingAnchor),
+            
             self.nextButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             self.nextButton.widthAnchor.constraint(equalToConstant: 132),
             self.nextButton.heightAnchor.constraint(equalToConstant: 48),
-            
-            self.cmLabel.bottomAnchor.constraint(equalTo: self.lineBot.topAnchor, constant: -13),
-            self.cmLabel.leadingAnchor.constraint(equalTo: self.heightPickerView.trailingAnchor),
             
             self.backButton.centerYAnchor.constraint(equalTo: self.nextButton.centerYAnchor),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32)
