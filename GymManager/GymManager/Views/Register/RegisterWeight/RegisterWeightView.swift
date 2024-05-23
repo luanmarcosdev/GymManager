@@ -13,8 +13,10 @@ class RegisterWeightView: UIView {
     
     private weak var delegate: RegisterWeightViewDelegate?
     
-    func setDelegate(delegate: RegisterWeightViewDelegate?){
+    func setDelegate(delegate: RegisterWeightViewDelegate?, pvDataSource: UIPickerViewDataSource, pvDelegate: UIPickerViewDelegate){
         self.delegate = delegate
+        self.weightPickerView.delegate = pvDelegate
+        self.weightPickerView.dataSource = pvDataSource
     }
     
     //MARK: Elements
@@ -22,12 +24,26 @@ class RegisterWeightView: UIView {
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Qual é o seu peso?"
+        lb.text = "Qual é o seu peso? (kg)"
         lb.numberOfLines = 0
         lb.lineBreakMode = .byWordWrapping
         lb.font = UIFont(name: CustomFont.robotBold, size: 24)
         lb.textColor = CustomColor.white
         return lb
+    }()
+    
+    lazy var weightPickerView: HorizontalPickerView = {
+        let pv = HorizontalPickerView()
+        pv.translatesAutoresizingMaskIntoConstraints = false
+        return pv
+    }()
+    
+    lazy var weightImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Weight")
+        image.contentMode = .scaleAspectFit
+        return image
     }()
     
     lazy var backButton: UIButton = {
@@ -82,6 +98,8 @@ class RegisterWeightView: UIView {
     
     func configSuperView() {
         self.addSubview(self.titleLabel)
+        self.addSubview(self.weightPickerView)
+        self.addSubview(self.weightImage)
         self.addSubview(self.backButton)
         self.addSubview(self.nextButton)
     }
@@ -91,6 +109,15 @@ class RegisterWeightView: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            self.weightPickerView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.weightPickerView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.weightPickerView.heightAnchor.constraint(equalToConstant: 300),
+            self.weightPickerView.widthAnchor.constraint(equalToConstant: 113),
+            
+            self.weightImage.topAnchor.constraint(equalTo: self.weightPickerView.bottomAnchor, constant: -90),
+            self.weightImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.weightImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
             self.nextButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
