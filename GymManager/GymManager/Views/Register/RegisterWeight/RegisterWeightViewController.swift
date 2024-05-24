@@ -13,6 +13,8 @@ class RegisterWeightViewController: UIViewController {
     
     var registerWeightView: RegisterWeightView?
     
+    let userBuilder = UserBuilder.shared
+    
     let weightNumbers = Array(40...220)
     
     override func loadView() {
@@ -32,9 +34,7 @@ extension RegisterWeightViewController: RegisterWeightViewDelegate {
     
     func actionNext() {
         let selectedRow = self.registerWeightView?.weightPickerView.selectedRow(inComponent: 0)
-        // to do chamar builder
-        print(weightNumbers[selectedRow!])
-        //fim todo
+        self.userBuilder.setWeight(weight: self.weightNumbers[selectedRow!])
         self.coordinator?.navigationToRegisterGoalScreen()
     }
     

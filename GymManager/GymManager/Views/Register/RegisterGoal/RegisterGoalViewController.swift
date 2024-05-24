@@ -13,6 +13,8 @@ class RegisterGoalViewController: UIViewController {
     
     var registerGoalView: RegisterGoalView?
     
+    let userBuilder = UserBuilder.shared
+    
     var goalNumbers = Array(1...31)
     
     override func loadView() {
@@ -23,6 +25,7 @@ class RegisterGoalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerGoalView?.setDelegate(delegate: self, pvDataSource: self, pvDelegate: self)
+        self.registerGoalView?.goalPickerView.selectRow(11, inComponent: 0, animated: false)
     }
 
 }
@@ -35,9 +38,9 @@ extension RegisterGoalViewController: RegisterGoalViewDelegate {
     
     func actionFinish() {
         let selectedRow = self.registerGoalView?.goalPickerView.selectedRow(inComponent: 0)
-        // to do chamar builder
-        print(goalNumbers[selectedRow!])
-        //fim todo
+        self.userBuilder.setGoal(goal: self.goalNumbers[selectedRow!])
+        let user = self.userBuilder.build()
+        print(user!)
         self.coordinator?.navigationToHomeScreen()
     }
     

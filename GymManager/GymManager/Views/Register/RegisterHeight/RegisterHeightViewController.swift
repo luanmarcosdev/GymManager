@@ -13,6 +13,8 @@ class RegisterHeightViewController: UIViewController {
     
     var registerHeightView: RegisterHeightView?
     
+    let userBuilder = UserBuilder.shared
+    
     let heightNumbers = Array(100...220)
     
     override func loadView() {
@@ -32,9 +34,7 @@ extension RegisterHeightViewController: RegisterHeightViewDelegate {
     
     func actionNext() {
         let selectedRow = self.registerHeightView?.heightPickerView.selectedRow(inComponent: 0)
-        // to do chamar builder
-        print(heightNumbers[selectedRow!])
-        //fim todo
+        self.userBuilder.setHeight(height: self.heightNumbers[selectedRow!])
         self.coordinator?.navigationToRegisterWeightScreen()
     }
     

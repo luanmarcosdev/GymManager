@@ -22,8 +22,8 @@ struct User {
     var password: String
     var gender: Gender
     var age: Int
-    var height: Double
-    var weight: Double
+    var height: Int
+    var weight: Int
     var goal: Int
 
 }

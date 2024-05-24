@@ -36,7 +36,7 @@ class RegisterGenderViewController: UIViewController {
 extension RegisterGenderViewController: RegisterGenderDelegate {
    
     func actionNext() {
-        self.userBuilder.setGender(gender: genderSelected!)
+        self.userBuilder.setGender(gender: self.genderSelected!)
         self.coordinator?.navigationToRegisterAgeScreen()
     }
         

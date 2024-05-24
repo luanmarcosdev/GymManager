@@ -52,9 +52,6 @@ class RegisterViewModel {
         label.text = "Olá, \(userName)"
     }
     
-
-    
-    // RegisterGender - to do func validar se selecionou algum gender button / func enviar botao clicado para o Builder (setGender)
     
     // RegisterAge - to do func validar se age é valida / func enviar age selecionada para o Builder (setAge)
     

@@ -18,8 +18,8 @@ class UserBuilder {
     private var password: String?
     private var gender: Gender?
     private var age: Int?
-    private var height: Double?
-    private var weight: Double?
+    private var height: Int?
+    private var weight: Int?
     private var goal: Int?
     
     func setMainInfos(name: String, email: String, password: String) {
@@ -36,11 +36,11 @@ class UserBuilder {
         self.age = age
     }
     
-    func setHeight(height: Double) {
+    func setHeight(height: Int) {
         self.height = height
     }
     
-    func setWeight(weight: Double) {
+    func setWeight(weight: Int) {
         self.weight = weight
     }
     

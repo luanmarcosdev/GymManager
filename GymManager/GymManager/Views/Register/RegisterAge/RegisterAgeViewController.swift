@@ -13,6 +13,8 @@ class RegisterAgeViewController: UIViewController {
     
     var registerAgeView: RegisterAgeView?
     
+    let userBuilder = UserBuilder.shared
+    
     let ageNumbers = Array(12...70)
     
     override func loadView() {
@@ -32,9 +34,7 @@ extension RegisterAgeViewController: RegisterAgeViewDelegate {
     
     func actionNext() {   
         let selectedRow = self.registerAgeView?.agePickerView.selectedRow(inComponent: 0)
-        // to do chamar builder
-        print(ageNumbers[selectedRow!])
-        //fim todo
+        self.userBuilder.setAge(age: self.ageNumbers[selectedRow!])
         self.coordinator?.navigationToRegisterHeightScreen()
     }
     
