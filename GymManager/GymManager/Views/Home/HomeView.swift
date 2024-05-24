@@ -13,8 +13,10 @@ class HomeView: UIView {
     
     private weak var delegate: HomeViewDelegate?
     
-    func setDelegate(delegate: HomeViewDelegate?) {
+    func setDelegate(delegate: HomeViewDelegate?, collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource) {
         self.delegate = delegate
+        self.collectionView.delegate = collectionViewDelegate
+        self.collectionView.dataSource = collectionViewDataSource
     }
     
     //MARK: Elements
@@ -65,21 +67,18 @@ class HomeView: UIView {
         return bt
     }()
     
-    // teste collection view
-    
     lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = true
         cv.delaysContentTouches = false
+        cv.backgroundColor = .none
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         cv.setCollectionViewLayout(layout, animated: false)
         cv.register(HomeWorksheetCollectionViewCell.self, forCellWithReuseIdentifier: HomeWorksheetCollectionViewCell.identifier)
         return cv
         }()
-    
-    //fim teste
     
     lazy var goalLabel: UILabel = {
         let lb = UILabel()

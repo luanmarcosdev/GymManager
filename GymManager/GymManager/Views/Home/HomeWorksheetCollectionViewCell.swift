@@ -24,6 +24,7 @@ class HomeWorksheetCollectionViewCell: UICollectionViewCell {
 
     lazy var worksheetTitleLabel: UILabel = {
         let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Ficha A"
         lb.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
         lb.textColor = CustomColor.white
@@ -32,6 +33,7 @@ class HomeWorksheetCollectionViewCell: UICollectionViewCell {
     
     lazy var worksheetDescriptionLabel: UILabel = {
         let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "Membros superiores"
         lb.font = UIFont(name: CustomFont.robotSemiBold, size: 13)
         lb.textColor = CustomColor.green

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA0185992C00FE6600F1ADF0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */; };
 		CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24B4372BE12B6B0035C4AD /* AppDelegate.swift */; };
 		CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24B4392BE12B6B0035C4AD /* SceneDelegate.swift */; };
 		CA24B4412BE12B6C0035C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4402BE12B6C0035C4AD /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA24B4342BE12B6B0035C4AD /* GymManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24B4372BE12B6B0035C4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA24B4392BE12B6B0035C4AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				CA940B872BF4E40200548C36 /* RegisterViewModel.swift */,
+				CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,
 				CA4D22542BEA547E00DD7D06 /* CoordinatorProtocol.swift in Sources */,
 				CA486E292BF2BDC80097FAA7 /* HomeCoordinator.swift in Sources */,
+				CA0185992C00FE6600F1ADF0 /* HomeViewModel.swift in Sources */,
 				CA7AA84D2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,

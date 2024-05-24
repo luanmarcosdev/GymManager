@@ -10,6 +10,8 @@ import UIKit
 
 class RegisterViewModel {
     
+    let userBuilder = UserBuilder.shared
+    
     func validateTextField (name: String, email: String, password: String, button: UIButton) {
         
         if name.isEmpty || email.isEmpty || password.isEmpty {
@@ -52,16 +54,18 @@ class RegisterViewModel {
         label.text = "Olá, \(userName)"
     }
     
+    func createNewUser() {
+        let newUser = self.userBuilder.build()
+        print(newUser!)
+        // to do enviar para firebase newUser
+        self.clearUserBuilder()
+    }
     
-    // RegisterAge - to do func validar se age é valida / func enviar age selecionada para o Builder (setAge)
+    private func clearUserBuilder () {
+        self.userBuilder.reset()
+    }
     
-    // RegisterHeight -  to do func validar se height é valida / func enviar height selecionada para o Builder (setHeight)
-    
-    // RegisterWeight -  to do func validar se weight é valida / func enviar weight selecionada para o Builder (setWeight)
-    
-    // RegisterGoal -  to do func validar se goal é valida / func enviar goal selecionada para o Builder (setGoal)
-    
-    // TO DO criar um user passando as informaçoes coletadas para o UserBuilder e chamando o metodo build() e dps reset() após isso usar chamar outra classe a ser definida para salvar o usuário na API do firebase
+    // TO DO criar um user passando as informaçoes coletadas para o UserBuilder e chamando o metodo build() e dps reset() após isso chamar outra classe a ser definida para salvar o usuário na API do firebase
     
     
 }

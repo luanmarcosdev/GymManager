@@ -13,6 +13,8 @@ class RegisterGoalViewController: UIViewController {
     
     var registerGoalView: RegisterGoalView?
     
+    var registerViewModel: RegisterViewModel?
+    
     let userBuilder = UserBuilder.shared
     
     var goalNumbers = Array(1...31)
@@ -39,8 +41,7 @@ extension RegisterGoalViewController: RegisterGoalViewDelegate {
     func actionFinish() {
         let selectedRow = self.registerGoalView?.goalPickerView.selectedRow(inComponent: 0)
         self.userBuilder.setGoal(goal: self.goalNumbers[selectedRow!])
-        let user = self.userBuilder.build()
-        print(user!)
+        self.registerViewModel?.createNewUser()
         self.coordinator?.navigationToHomeScreen()
     }
     
