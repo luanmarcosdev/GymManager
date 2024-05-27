@@ -15,8 +15,6 @@ class RegisterIndexViewModel {
     var alert: Alert?
     let userBuilder = UserBuilder.shared
     
-    // MARK: RegisterIndexViewModel
-    
     func validateTextField (name: String, email: String, password: String, button: UIButton) {
         
         if name.isEmpty || email.isEmpty || password.isEmpty {
@@ -80,28 +78,6 @@ class RegisterIndexViewModel {
                 onSucess()
             }
         }
-    }
-    
-    // MARK: END
-    
-    func selectedGenderButton(manButton: UIButton, womanButton: UIButton ,gender: Gender, enableButton: UIButton) -> Gender {
-        
-        self.configButton(button: enableButton, enable: true)
-        
-        if gender == .man {
-            manButton.setImage(UIImage(named: "ManSelected"), for: .normal)
-            womanButton.setImage(UIImage(named: "Woman"), for: .normal)
-            return .man
-        } else {
-            womanButton.setImage(UIImage(named: "WomanSelected"), for: .normal)
-            manButton.setImage(UIImage(named: "Man"), for: .normal)
-            return .woman
-        }
-        
-    }
-    
-    func insertUserNameInLabel(label: UILabel, userName: String) {
-        label.text = "Olá, \(userName)"
     }
     
     func createNewUser() {

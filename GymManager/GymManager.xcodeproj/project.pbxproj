@@ -77,6 +77,7 @@
 		CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8B9F72BE45CD700506275 /* CustomColor.swift */; };
 		CAEE3B032BFED97F00034F1D /* HorizontalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE3B022BFED97F00034F1D /* HorizontalPickerView.swift */; };
 		CAEFA5632C04C5E600E7BA95 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFA5622C04C5E600E7BA95 /* Alert.swift */; };
+		CAEFA5652C0509BC00E7BA95 /* RegisterGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFA5642C0509BC00E7BA95 /* RegisterGenderViewModel.swift */; };
 		CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F52BEE8F1F000C3649 /* RegisterHeightViewController.swift */; };
 		CAF066F82BEE8F3B000C3649 /* RegisterHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */; };
 		CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */; };
@@ -158,6 +159,7 @@
 		CAD8B9F72BE45CD700506275 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		CAEE3B022BFED97F00034F1D /* HorizontalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPickerView.swift; sourceTree = "<group>"; };
 		CAEFA5622C04C5E600E7BA95 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CAEFA5642C0509BC00E7BA95 /* RegisterGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderViewModel.swift; sourceTree = "<group>"; };
 		CAF066F52BEE8F1F000C3649 /* RegisterHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightViewController.swift; sourceTree = "<group>"; };
 		CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightView.swift; sourceTree = "<group>"; };
 		CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightViewDelegate.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				CA940B872BF4E40200548C36 /* RegisterIndexViewModel.swift */,
+				CAEFA5642C0509BC00E7BA95 /* RegisterGenderViewModel.swift */,
 				CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -637,6 +640,7 @@
 				CA940B882BF4E40200548C36 /* RegisterIndexViewModel.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
+				CAEFA5652C0509BC00E7BA95 /* RegisterGenderViewModel.swift in Sources */,
 				CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */,
 				CA7AA8502BF2436E00A5DA33 /* RegisterGoalView.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,

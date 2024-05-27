@@ -10,13 +10,8 @@ import UIKit
 class RegisterGenderViewController: UIViewController {
     
     var coordinator: RegisterGenderCoordinator?
-    
     var registerGenderView: RegisterGenderView?
-    
-    var registerViewModel: RegisterIndexViewModel?
-    
-    let userBuilder = UserBuilder.shared
-    
+    var registerGenderViewModel: RegisterGenderViewModel?
     var genderSelected: Gender?
     
     override func loadView() {
@@ -27,8 +22,8 @@ class RegisterGenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerGenderView?.setDelegate(delegate: self)
-        self.registerViewModel = RegisterIndexViewModel()
-        self.registerViewModel?.insertUserNameInLabel(label: self.registerGenderView!.titleLabel, userName: userBuilder.getName())
+        self.registerGenderViewModel = RegisterGenderViewModel()
+        self.registerGenderViewModel?.insertUserNameInLabel(label: self.registerGenderView!.titleLabel)
     }
 
 }
@@ -36,18 +31,21 @@ class RegisterGenderViewController: UIViewController {
 extension RegisterGenderViewController: RegisterGenderDelegate {
    
     func actionNext() {
-        self.userBuilder.setGender(gender: self.genderSelected!)
-        self.coordinator?.navigationToRegisterAgeScreen()
+        guard let gender = self.genderSelected else {return}
+        
+        self.registerGenderViewModel?.buildGender(gender: gender, OnSucess: {
+            self.coordinator?.navigationToRegisterAgeScreen()
+        })
     }
         
     func actionMan() {
-        let genderSelected = self.registerViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .man, enableButton: registerGenderView!.nextButton)
+        let genderSelected = self.registerGenderViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .man, enableButton: registerGenderView!.nextButton)
         
         self.genderSelected = genderSelected
     }
     
     func actionWoman() {
-        let genderSelected = self.registerViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .woman, enableButton: registerGenderView!.nextButton)
+        let genderSelected = self.registerGenderViewModel?.selectedGenderButton(manButton: self.registerGenderView!.manButton, womanButton: self.registerGenderView!.womanButton, gender: .woman, enableButton: registerGenderView!.nextButton)
         
         self.genderSelected = genderSelected
     }
