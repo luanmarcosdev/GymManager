@@ -7,10 +7,16 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewModel {
     
+    var alert: Alert?
     let userBuilder = UserBuilder.shared
+    var coordinator: RegisterIndexCoordinator?
+    
+    // MARK: RegisterIndexViewModel
     
     func validateTextField (name: String, email: String, password: String, button: UIButton) {
         
@@ -33,6 +39,53 @@ class RegisterViewModel {
         }
         
     }
+    
+    func validateEmailAndPassword(email: String, password: String, viewController: UIViewController) -> Bool {
+        
+        self.alert = Alert(controller: viewController)
+        
+        if !email.contains("@") || !email.contains(".com"){
+            self.alert?.getAlert(titulo: "Atenção", mensagem: "E-mail inválido.")
+            return false
+        }
+        
+        if password.count < 8 {
+            self.alert?.getAlert(titulo: "Atenção", mensagem: "Insira uma senha válida. Mínimo de 8 caracteres.")
+            return false
+        }
+        
+        return true
+            
+    }
+    
+    func createNewUser(name: String, email: String, password: String, viewController: UIViewController) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            
+            if error != nil {
+                
+                self.alert?.getAlert(titulo: "Atenção", mensagem: "Erro ao cadastrar, tente novamente.")
+                
+                
+            } else {
+                
+                if let idUser = result?.user.uid {
+                    Firestore.firestore().collection("users").document(idUser).setData([
+                        "name": name,
+                        "email": email,
+                        "idUser": idUser
+                    ])
+                }
+                
+                self.userBuilder.setMainInfos(name: name, email: email, password: password)
+                DispatchQueue.main.async {
+                    self.coordinator?.navigationToRegisterSucess()
+                }
+            }
+        }
+    }
+    
+    // MARK: END
     
     func selectedGenderButton(manButton: UIButton, womanButton: UIButton ,gender: Gender, enableButton: UIButton) -> Gender {
         

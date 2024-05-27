@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterIndexViewController: UIViewController {
     
     var coordinator: RegisterIndexCoordinator?
-    
     var registerIndexView: RegisterIndexView?
-    
     var registerViewModel: RegisterViewModel?
-    
     let userBuilder = UserBuilder.shared
+    var alert: Alert?
+    var auth: Auth?
+    var firestore: Firestore?
     
     override func loadView() {
         self.registerIndexView = RegisterIndexView()
@@ -26,6 +28,9 @@ class RegisterIndexViewController: UIViewController {
         super.viewDidLoad()
         self.registerViewModel = RegisterViewModel()
         self.registerIndexView?.setDelegate(delegate: self, tfDelegate: self)
+        self.auth = Auth.auth()
+        self.firestore = Firestore.firestore()
+        self.alert = Alert(controller: self)
     }
 
 }
@@ -38,16 +43,43 @@ extension RegisterIndexViewController: RegisterIndexViewDelegate {
     
     func actionRegister() {
         
-        // to do firebase se der certo fazer o que está abaixo
-    
-        let name = registerIndexView!.nameTextField.text!
-        let email = registerIndexView!.emailTextField.text!
-        let password = registerIndexView!.passwordTextField.text!
+        guard let name = registerIndexView?.nameTextField.text, let email = registerIndexView?.emailTextField.text, let password = registerIndexView?.passwordTextField.text else { return }
         
-        self.userBuilder.setMainInfos(name: name, email: email, password: password)
-        self.coordinator?.navigationToRegisterSucess()
         
-        // to do se nao apresentar mensagem de erro
+        let validate = self.registerViewModel?.validateEmailAndPassword(email: email, password: password, viewController: self) ?? false
+        
+        if validate {
+            self.registerViewModel?.createNewUser(name: name, email: email, password: password, viewController: self)
+        } 
+//
+//        if validate {
+//            
+//            self.auth?.createUser(withEmail: email, password: password) { result, error in
+//                
+//                if error != nil {
+//                    
+//                    self.alert?.getAlert(titulo: "Atenção", mensagem: "Erro ao cadastrar, tente novamente.")
+//                    
+//                } else {
+//                    
+//                    if let idUser = result?.user.uid {
+//                        self.firestore?.collection("users").document(idUser).setData([
+//                            "name": name,
+//                            "email": email,
+//                            "idUser": idUser
+//                        ])
+//                    }
+//                    
+//                    self.userBuilder.setMainInfos(name: name, email: email, password: password)
+//                    self.coordinator?.navigationToRegisterSucess()
+//                    
+//                }
+//                
+//            }
+//            
+//        } else {
+//            self.alert?.getAlert(titulo: "Atenção", mensagem: "E-mail ou senha invalidos.")
+//        }
         
     }
     
