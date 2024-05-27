@@ -13,11 +13,9 @@ class RegisterIndexViewController: UIViewController {
     
     var coordinator: RegisterIndexCoordinator?
     var registerIndexView: RegisterIndexView?
-    var registerViewModel: RegisterViewModel?
+    var registerIndexViewModel: RegisterIndexViewModel?
     let userBuilder = UserBuilder.shared
     var alert: Alert?
-    var auth: Auth?
-    var firestore: Firestore?
     
     override func loadView() {
         self.registerIndexView = RegisterIndexView()
@@ -26,10 +24,8 @@ class RegisterIndexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerViewModel = RegisterViewModel()
+        self.registerIndexViewModel = RegisterIndexViewModel()
         self.registerIndexView?.setDelegate(delegate: self, tfDelegate: self)
-        self.auth = Auth.auth()
-        self.firestore = Firestore.firestore()
         self.alert = Alert(controller: self)
     }
 
@@ -46,40 +42,13 @@ extension RegisterIndexViewController: RegisterIndexViewDelegate {
         guard let name = registerIndexView?.nameTextField.text, let email = registerIndexView?.emailTextField.text, let password = registerIndexView?.passwordTextField.text else { return }
         
         
-        let validate = self.registerViewModel?.validateEmailAndPassword(email: email, password: password, viewController: self) ?? false
+        let validate = self.registerIndexViewModel?.validateEmailAndPassword(email: email, password: password, viewController: self) ?? false
         
         if validate {
-            self.registerViewModel?.createNewUser(name: name, email: email, password: password, viewController: self)
-        } 
-//
-//        if validate {
-//            
-//            self.auth?.createUser(withEmail: email, password: password) { result, error in
-//                
-//                if error != nil {
-//                    
-//                    self.alert?.getAlert(titulo: "Atenção", mensagem: "Erro ao cadastrar, tente novamente.")
-//                    
-//                } else {
-//                    
-//                    if let idUser = result?.user.uid {
-//                        self.firestore?.collection("users").document(idUser).setData([
-//                            "name": name,
-//                            "email": email,
-//                            "idUser": idUser
-//                        ])
-//                    }
-//                    
-//                    self.userBuilder.setMainInfos(name: name, email: email, password: password)
-//                    self.coordinator?.navigationToRegisterSucess()
-//                    
-//                }
-//                
-//            }
-//            
-//        } else {
-//            self.alert?.getAlert(titulo: "Atenção", mensagem: "E-mail ou senha invalidos.")
-//        }
+            self.registerIndexViewModel?.createNewUser(name: name, email: email, password: password, viewController: self, onSucess: {
+                self.coordinator?.navigationToRegisterSucess()
+            })
+        }
         
     }
     
@@ -98,7 +67,7 @@ extension RegisterIndexViewController: UITextFieldDelegate {
               let email = registerIndexView?.emailTextField.text,
               let password = registerIndexView?.passwordTextField.text else {return}
         
-        self.registerViewModel?.validateTextField(name: name, email: email, password: password, button: self.registerIndexView!.registerButton)
+        self.registerIndexViewModel?.validateTextField(name: name, email: email, password: password, button: self.registerIndexView!.registerButton)
         
     }
     

@@ -13,7 +13,7 @@ class RegisterGoalViewController: UIViewController {
     
     var registerGoalView: RegisterGoalView?
     
-    var registerViewModel: RegisterViewModel?
+    var registerViewModel: RegisterIndexViewModel?
     
     let userBuilder = UserBuilder.shared
     

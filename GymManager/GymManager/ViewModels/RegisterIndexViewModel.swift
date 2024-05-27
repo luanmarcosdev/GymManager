@@ -10,11 +10,10 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class RegisterViewModel {
+class RegisterIndexViewModel {
     
     var alert: Alert?
     let userBuilder = UserBuilder.shared
-    var coordinator: RegisterIndexCoordinator?
     
     // MARK: RegisterIndexViewModel
     
@@ -58,7 +57,7 @@ class RegisterViewModel {
             
     }
     
-    func createNewUser(name: String, email: String, password: String, viewController: UIViewController) {
+    func createNewUser(name: String, email: String, password: String, viewController: UIViewController, onSucess: @escaping () -> Void?) {
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
@@ -78,9 +77,7 @@ class RegisterViewModel {
                 }
                 
                 self.userBuilder.setMainInfos(name: name, email: email, password: password)
-                DispatchQueue.main.async {
-                    self.coordinator?.navigationToRegisterSucess()
-                }
+                onSucess()
             }
         }
     }

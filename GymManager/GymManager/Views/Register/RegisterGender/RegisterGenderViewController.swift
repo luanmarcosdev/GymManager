@@ -13,7 +13,7 @@ class RegisterGenderViewController: UIViewController {
     
     var registerGenderView: RegisterGenderView?
     
-    var registerViewModel: RegisterViewModel?
+    var registerViewModel: RegisterIndexViewModel?
     
     let userBuilder = UserBuilder.shared
     
@@ -27,7 +27,7 @@ class RegisterGenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerGenderView?.setDelegate(delegate: self)
-        self.registerViewModel = RegisterViewModel()
+        self.registerViewModel = RegisterIndexViewModel()
         self.registerViewModel?.insertUserNameInLabel(label: self.registerGenderView!.titleLabel, userName: userBuilder.getName())
     }
 

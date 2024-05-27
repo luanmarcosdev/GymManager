@@ -50,7 +50,7 @@
 		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
 		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
 		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
-		CA940B882BF4E40200548C36 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B872BF4E40200548C36 /* RegisterViewModel.swift */; };
+		CA940B882BF4E40200548C36 /* RegisterIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B872BF4E40200548C36 /* RegisterIndexViewModel.swift */; };
 		CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */; };
 		CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */; };
 		CA971F982BEA757C00D03161 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */; };
@@ -131,7 +131,7 @@
 		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
-		CA940B872BF4E40200548C36 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		CA940B872BF4E40200548C36 /* RegisterIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewModel.swift; sourceTree = "<group>"; };
 		CA971F902BEA757C00D03161 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		CA971F912BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CA971F922BEA757C00D03161 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 		CA940B862BF4E35300548C36 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CA940B872BF4E40200548C36 /* RegisterViewModel.swift */,
+				CA940B872BF4E40200548C36 /* RegisterIndexViewModel.swift */,
 				CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -634,7 +634,7 @@
 				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
-				CA940B882BF4E40200548C36 /* RegisterViewModel.swift in Sources */,
+				CA940B882BF4E40200548C36 /* RegisterIndexViewModel.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
 				CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */,
