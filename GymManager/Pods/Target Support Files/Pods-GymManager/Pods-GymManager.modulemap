@@ -1,0 +1,6 @@
+framework module Pods_GymManager {
+  umbrella header "Pods-GymManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

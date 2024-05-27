@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27F7E3977105D77D0B82C6A2 /* Pods_GymManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6939868286C4B867AA76925 /* Pods_GymManager.framework */; };
 		CA0185992C00FE6600F1ADF0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */; };
 		CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24B4372BE12B6B0035C4AD /* AppDelegate.swift */; };
 		CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24B4392BE12B6B0035C4AD /* SceneDelegate.swift */; };
@@ -66,6 +67,7 @@
 		CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAC2BEAA78400D03161 /* LoginView.swift */; };
 		CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */; };
 		CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */; };
+		CAA9740C2C04B0670064E246 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA9740B2C04B0670064E246 /* GoogleService-Info.plist */; };
 		CABB76462BF3964A00C946BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB76452BF3964A00C946BC /* User.swift */; };
 		CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC219512BE97C3E0023EB1C /* CustomFont.swift */; };
 		CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */; };
@@ -81,6 +83,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44D715590FB565B9930C66FE /* Pods-GymManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymManager.release.xcconfig"; path = "Target Support Files/Pods-GymManager/Pods-GymManager.release.xcconfig"; sourceTree = "<group>"; };
+		9FCC5D21A41C617CAC098BC2 /* Pods-GymManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymManager.debug.xcconfig"; path = "Target Support Files/Pods-GymManager/Pods-GymManager.debug.xcconfig"; sourceTree = "<group>"; };
+		B6939868286C4B867AA76925 /* Pods_GymManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA24B4342BE12B6B0035C4AD /* GymManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24B4372BE12B6B0035C4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 		CA971FAC2BEAA78400D03161 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CA971FAE2BEAA83400D03161 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CAA9740B2C04B0670064E246 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CABB76452BF3964A00C946BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAC219512BE97C3E0023EB1C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		CACAC1E32BEBD64300B2FCFA /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
@@ -161,17 +167,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F7E3977105D77D0B82C6A2 /* Pods_GymManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91EFCC6A7B6B29717781910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6939868286C4B867AA76925 /* Pods_GymManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA24B42B2BE12B6B0035C4AD = {
 			isa = PBXGroup;
 			children = (
 				CA24B4362BE12B6B0035C4AD /* GymManager */,
 				CA24B4352BE12B6B0035C4AD /* Products */,
+				EF81001D67BAA0968004CDE5 /* Pods */,
+				A91EFCC6A7B6B29717781910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +211,7 @@
 				CA940B862BF4E35300548C36 /* ViewModels */,
 				CA940B852BF4E2F900548C36 /* Views */,
 				CA24B4452BE12B6C0035C4AD /* Info.plist */,
+				CAA9740B2C04B0670064E246 /* GoogleService-Info.plist */,
 			);
 			path = GymManager;
 			sourceTree = "<group>";
@@ -438,6 +456,15 @@
 			path = RegisterHeight;
 			sourceTree = "<group>";
 		};
+		EF81001D67BAA0968004CDE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC5D21A41C617CAC098BC2 /* Pods-GymManager.debug.xcconfig */,
+				44D715590FB565B9930C66FE /* Pods-GymManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,9 +472,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA24B4482BE12B6C0035C4AD /* Build configuration list for PBXNativeTarget "GymManager" */;
 			buildPhases = (
+				69CDBC79C5C09DC40C97D0C9 /* [CP] Check Pods Manifest.lock */,
 				CA24B4302BE12B6B0035C4AD /* Sources */,
 				CA24B4312BE12B6B0035C4AD /* Frameworks */,
 				CA24B4322BE12B6B0035C4AD /* Resources */,
+				0C89AEEE67BBC48915BCF838 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -498,6 +527,7 @@
 			files = (
 				CA971F9B2BEA757C00D03161 /* RobotoSlab-Regular.ttf in Resources */,
 				CA24B4442BE12B6C0035C4AD /* LaunchScreen.storyboard in Resources */,
+				CAA9740C2C04B0670064E246 /* GoogleService-Info.plist in Resources */,
 				CA971F972BEA757C00D03161 /* RobotoSlab-ExtraLight.ttf in Resources */,
 				CA971F9A2BEA757C00D03161 /* RobotoSlab-Bold.ttf in Resources */,
 				CA971F962BEA757C00D03161 /* RobotoSlab-Black.ttf in Resources */,
@@ -508,6 +538,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C89AEEE67BBC48915BCF838 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymManager/Pods-GymManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymManager/Pods-GymManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GymManager/Pods-GymManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69CDBC79C5C09DC40C97D0C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA24B4302BE12B6B0035C4AD /* Sources */ = {
@@ -715,12 +787,14 @@
 		};
 		CA24B4492BE12B6C0035C4AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FCC5D21A41C617CAC098BC2 /* Pods-GymManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVS74PN984;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -747,12 +821,14 @@
 		};
 		CA24B44A2BE12B6C0035C4AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D715590FB565B9930C66FE /* Pods-GymManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVS74PN984;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
