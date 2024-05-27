@@ -10,11 +10,8 @@ import UIKit
 class RegisterWeightViewController: UIViewController {
     
     var coordinator: RegisterWeightCoordinator?
-    
     var registerWeightView: RegisterWeightView?
-    
     let userBuilder = UserBuilder.shared
-    
     let weightNumbers = Array(40...220)
     
     override func loadView() {
@@ -77,7 +74,7 @@ extension RegisterWeightViewController : UIPickerViewDelegate {
         if row == pickerView.selectedRow(inComponent: component) {
             pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 58)
             pickerLabel.textColor = CustomColor.white
-        }else {
+        } else {
             pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 34)
             pickerLabel.textColor = CustomColor.darkSecondary
         }

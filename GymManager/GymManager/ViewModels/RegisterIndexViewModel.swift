@@ -66,32 +66,13 @@ class RegisterIndexViewModel {
                 
             } else {
                 
-                if let idUser = result?.user.uid {
-                    Firestore.firestore().collection("users").document(idUser).setData([
-                        "name": name,
-                        "email": email,
-                        "idUser": idUser
-                    ])
-                }
+                guard let idUser = result?.user.uid else {return}
+            
+                self.userBuilder.setMainInfos(name: name, email: email, password: password, idUser: idUser)
                 
-                self.userBuilder.setMainInfos(name: name, email: email, password: password)
                 onSucess()
             }
         }
     }
-    
-    func createNewUser() {
-        let newUser = self.userBuilder.build()
-        print(newUser!)
-        // to do enviar para firebase newUser
-        self.clearUserBuilder()
-    }
-    
-    private func clearUserBuilder () {
-        self.userBuilder.reset()
-    }
-    
-    // TO DO criar um user passando as informaçoes coletadas para o UserBuilder e chamando o metodo build() e dps reset() após isso chamar outra classe a ser definida para salvar o usuário na API do firebase
-    
     
 }

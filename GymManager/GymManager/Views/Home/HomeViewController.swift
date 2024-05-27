@@ -23,10 +23,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeView?.setDelegate(delegate: self, collectionViewDelegate: self, collectionViewDataSource: self)
-        
-        // apenas para teste
-        let newUser = User(name: "Luan", email: "luanmarcos00@live.com", password: "1234", gender: .man, age: 24, height: 184, weight: 82, goal: 10)
-        self.user = newUser
     }
 
 }

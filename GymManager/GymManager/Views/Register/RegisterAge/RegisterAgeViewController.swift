@@ -10,11 +10,8 @@ import UIKit
 class RegisterAgeViewController: UIViewController {
     
     var coordinator: RegisterAgeCoordinator?
-    
     var registerAgeView: RegisterAgeView?
-    
     let userBuilder = UserBuilder.shared
-    
     let ageNumbers = Array(12...70)
     
     override func loadView() {
@@ -77,7 +74,7 @@ extension RegisterAgeViewController : UIPickerViewDelegate {
         if row == pickerView.selectedRow(inComponent: component) {
             pickerLabel.font = UIFont(name: CustomFont.robotBlack, size: 58)
             pickerLabel.textColor = CustomColor.white
-        }else {
+        } else {
             pickerLabel.textColor = CustomColor.darkSecondary
         }
 

@@ -10,13 +10,9 @@ import UIKit
 class RegisterGoalViewController: UIViewController {
     
     var coordinator: RegisterGoalCoordinator?
-    
     var registerGoalView: RegisterGoalView?
-    
-    var registerViewModel: RegisterIndexViewModel?
-    
+    var registerGoalViewModel: RegisterGoalViewModel?
     let userBuilder = UserBuilder.shared
-    
     var goalNumbers = Array(1...31)
     
     override func loadView() {
@@ -26,6 +22,7 @@ class RegisterGoalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registerGoalViewModel = RegisterGoalViewModel()
         self.registerGoalView?.setDelegate(delegate: self, pvDataSource: self, pvDelegate: self)
         self.registerGoalView?.goalPickerView.selectRow(11, inComponent: 0, animated: false)
     }
@@ -41,7 +38,7 @@ extension RegisterGoalViewController: RegisterGoalViewDelegate {
     func actionFinish() {
         let selectedRow = self.registerGoalView?.goalPickerView.selectedRow(inComponent: 0)
         self.userBuilder.setGoal(goal: self.goalNumbers[selectedRow!])
-        self.registerViewModel?.createNewUser()
+        self.registerGoalViewModel?.createNewUser()
         self.coordinator?.navigationToHomeScreen()
     }
     

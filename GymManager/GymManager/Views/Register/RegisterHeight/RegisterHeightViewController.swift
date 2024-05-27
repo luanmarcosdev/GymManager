@@ -10,11 +10,8 @@ import UIKit
 class RegisterHeightViewController: UIViewController {
     
     var coordinator: RegisterHeightCoordinator?
-    
     var registerHeightView: RegisterHeightView?
-    
     let userBuilder = UserBuilder.shared
-    
     let heightNumbers = Array(100...220)
     
     override func loadView() {
