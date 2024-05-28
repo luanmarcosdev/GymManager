@@ -10,10 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var homeView: HomeView?
-    
     var coordinator: HomeCoordinator?
-    
-    var user: User?
+    var homeViewModel: HomeViewModel?
+    var user: User? // ver se precisa dessa propriedade aqui
     
     override func loadView() {
         self.homeView = HomeView()
@@ -23,6 +22,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeView?.setDelegate(delegate: self, collectionViewDelegate: self, collectionViewDataSource: self)
+        self.homeViewModel = HomeViewModel()
+        //to do carregar as informacoes do usuario logado
     }
 
 }

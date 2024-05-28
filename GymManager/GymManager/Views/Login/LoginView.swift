@@ -13,8 +13,10 @@ class LoginView: UIView {
     
     private weak var delegate: LoginViewDelegate?
     
-    func setDelegate(delegate: LoginViewDelegate?){
+    func setDelegate(delegate: LoginViewDelegate?, TFDelegate: UITextFieldDelegate?){
         self.delegate = delegate
+        self.emailTextField.delegate = TFDelegate
+        self.passwordTextField.delegate = TFDelegate
     }
     
     //MARK: Elements
@@ -108,7 +110,8 @@ class LoginView: UIView {
         bt.setTitle("Entrar", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.green
+        bt.backgroundColor = CustomColor.gray
+        bt.isEnabled = false
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
         bt.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)

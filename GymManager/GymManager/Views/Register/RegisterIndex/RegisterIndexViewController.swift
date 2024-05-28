@@ -63,11 +63,12 @@ extension RegisterIndexViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        guard let name = registerIndexView?.nameTextField.text,
-              let email = registerIndexView?.emailTextField.text,
-              let password = registerIndexView?.passwordTextField.text else {return}
+        guard let name = self.registerIndexView?.nameTextField.text,
+              let email = self.registerIndexView?.emailTextField.text,
+              let password = self.registerIndexView?.passwordTextField.text,
+              let button = self.registerIndexView?.registerButton else {return}
         
-        self.registerIndexViewModel?.validateTextField(name: name, email: email, password: password, button: self.registerIndexView!.registerButton)
+        self.registerIndexViewModel?.validateTextField(name: name, email: email, password: password, button: button)
         
     }
     
