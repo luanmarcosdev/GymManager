@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     var homeView: HomeView?
     var coordinator: HomeCoordinator?
     var homeViewModel: HomeViewModel?
+    var idUserOn: String?
     var user: User? // ver se precisa dessa propriedade aqui
     
     override func loadView() {
@@ -23,6 +24,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.homeView?.setDelegate(delegate: self, collectionViewDelegate: self, collectionViewDataSource: self)
         self.homeViewModel = HomeViewModel()
+        let uid = self.homeViewModel?.getUserOn()
+        self.idUserOn = uid
+        Task {
+            var teste: ()? = await self.homeViewModel?.getUserData(uid: self.idUserOn!)
+            print(teste!)
+        }
         //to do carregar as informacoes do usuario logado
     }
 

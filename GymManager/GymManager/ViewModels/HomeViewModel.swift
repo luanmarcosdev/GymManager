@@ -8,21 +8,33 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewModel {
  
-    private var user: User?
-    
-    func getUserOn(userDB: @escaping () -> Void? ) {
-        userDB()
+    func getUserOn() -> String? {
+        var idUser: String?
+        if let currentUser = Auth.auth().currentUser {
+            idUser = currentUser.uid
+        }
+        return idUser
     }
     
-    private func setUserOn(user: User) {
-        self.user = user
-    }
-    
-    func showInfosUserOn() {
-        
+    func getUserData(uid: String) async {
+        let docRef = Firestore.firestore().collection("users").document(uid)
+
+        do {
+          let document = try await docRef.getDocument()
+          if document.exists {
+            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+            print("Document data: \(dataDescription)")
+          } else {
+            print("Document does not exist")
+          }
+        } catch {
+          print("Error getting document: \(error)")
+        }
+
     }
     
 }
