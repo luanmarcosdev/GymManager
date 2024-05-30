@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Gender: CustomStringConvertible {
+enum Gender: CustomStringConvertible, Codable {
     case man
     case woman
     
@@ -21,7 +21,7 @@ enum Gender: CustomStringConvertible {
     }
 }
 
-struct User {
+struct User: Codable {
     
     var worksheets: [Worksheet] = []
     var assessments: [Assessment] = []

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Worksheet {
+struct Worksheet: Codable {
     
 }

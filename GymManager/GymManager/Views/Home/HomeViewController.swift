@@ -27,10 +27,14 @@ class HomeViewController: UIViewController {
         let uid = self.homeViewModel?.getUserOn()
         self.idUserOn = uid
         Task {
-            var teste: ()? = await self.homeViewModel?.getUserData(uid: self.idUserOn!)
-            print(teste!)
+            if let idUser = self.idUserOn {
+                await self.homeViewModel?.getUserData(uid: idUser, onSucess: { user in
+                    self.user = user
+                    print(self.user!)
+                })
+            }
         }
-        //to do carregar as informacoes do usuario logado
+        
     }
 
 }

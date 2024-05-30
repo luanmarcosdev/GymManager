@@ -20,20 +20,44 @@ class HomeViewModel {
         return idUser
     }
     
-    func getUserData(uid: String) async {
+    func getUserData(uid: String, onSucess: @escaping (User) -> Void?) async {
+        
         let docRef = Firestore.firestore().collection("users").document(uid)
 
         do {
-          let document = try await docRef.getDocument()
-          if document.exists {
-            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-            print("Document data: \(dataDescription)")
-          } else {
-            print("Document does not exist")
+            
+            let document = try await docRef.getDocument()
+            
+            if document.exists {
+                
+                if let dataDescription = document.data() {
+                    if let user = self.decodeUserData(data: dataDescription) {
+                        onSucess(user)
+                    }
+                }
+                
+            }else {
+                print("Não foi encontrado dados salvos para o usuário")
           }
-        } catch {
-          print("Error getting document: \(error)")
+            
+        }catch {
+            print("Erro ao obter o documento")
         }
+        
+    }
+    
+    private func decodeUserData(data: [String: Any] ) -> User? {
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
+            let jsonDecoder = JSONDecoder()
+            let user = try jsonDecoder.decode(User.self, from: jsonData)
+            return user
+        } catch {
+            print("Erro ao decodificar dados do usuário.")
+            return nil
+        }
+        
 
     }
     

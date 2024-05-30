@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Assessment {
+struct Assessment: Codable {
     
 }
