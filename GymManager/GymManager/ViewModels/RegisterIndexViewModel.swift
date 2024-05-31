@@ -68,7 +68,7 @@ class RegisterIndexViewModel {
                 
                 guard let idUser = result?.user.uid else {return}
             
-                self.userBuilder.setMainInfos(name: name, email: email, password: password, idUser: idUser)
+                self.userBuilder.setMainInfos(name: name, email: email, idUser: idUser)
                 
                 onSucess()
             }

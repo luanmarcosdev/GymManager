@@ -7,18 +7,9 @@
 
 import Foundation
 
-enum Gender: CustomStringConvertible, Codable {
-    case man
-    case woman
-    
-    var description: String {
-        switch self {
-        case .man:
-            return "man"
-        case .woman:
-            return "woman"
-        }
-    }
+enum Gender: String, Codable {
+    case man = "man"
+    case woman = "woman"
 }
 
 struct User: Codable {
@@ -28,7 +19,6 @@ struct User: Codable {
     
     var name: String
     var email: String
-    var password: String
     var idUser: String
     var gender: Gender
     var age: Int

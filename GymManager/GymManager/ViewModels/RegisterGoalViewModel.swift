@@ -23,11 +23,13 @@ class RegisterGoalViewModel {
                 "name": user.name,
                 "email": user.email,
                 "idUser": user.idUser,
-                "gender": user.gender.description,
+                "gender": user.gender,
                 "age": user.age,
                 "height": user.height,
                 "weight": user.weight,
-                "goal": user.goal
+                "goal": user.goal,
+                "worksheets": [],
+                "assessments": []
             ])
         }
         

@@ -15,7 +15,7 @@ class UserBuilder {
     
     private var name: String?
     private var email: String?
-    private var password: String?
+    //private var password: String?
     private var idUser: String?
     private var gender: Gender?
     private var age: Int?
@@ -23,10 +23,10 @@ class UserBuilder {
     private var weight: Int?
     private var goal: Int?
     
-    func setMainInfos(name: String, email: String, password: String, idUser: String) {
+    func setMainInfos(name: String, email: String, idUser: String) {
         self.name = name
         self.email = email
-        self.password = password
+        //self.password = password
         self.idUser = idUser
     }
     
@@ -57,7 +57,7 @@ class UserBuilder {
     func reset() {
         self.name = nil
         self.email = nil
-        self.password = nil
+        //self.password = nil
         self.gender = nil
         self.age = nil
         self.height = nil
@@ -69,7 +69,7 @@ class UserBuilder {
         
         guard let name = self.name,
                 let email = self.email,
-                let password = self.password,
+                //let password = self.password,
                 let gender = self.gender,
                 let idUser = self.idUser,
                 let age = self.age,
@@ -80,7 +80,7 @@ class UserBuilder {
             return nil
         }
         
-        return User(name: name, email: email, password: password, idUser: idUser, gender: gender, age: age, height: height, weight: weight, goal: goal)
+        return User(name: name, email: email, idUser: idUser, gender: gender, age: age, height: height, weight: weight, goal: goal)
         
     }
     

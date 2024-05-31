@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     var coordinator: HomeCoordinator?
     var homeViewModel: HomeViewModel?
     var idUserOn: String?
-    var user: User? // ver se precisa dessa propriedade aqui
+    var user: User?
     
     override func loadView() {
         self.homeView = HomeView()
@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
             if let idUser = self.idUserOn {
                 await self.homeViewModel?.getUserData(uid: idUser, onSucess: { user in
                     self.user = user
-                    print(self.user!)
                 })
             }
         }
