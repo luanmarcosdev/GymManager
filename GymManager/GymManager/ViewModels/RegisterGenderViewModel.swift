@@ -12,18 +12,18 @@ class RegisterGenderViewModel {
     
     let userBuilder = UserBuilder.shared
     
-    func selectedGenderButton(manButton: UIButton, womanButton: UIButton ,gender: Gender, enableButton: UIButton) -> Gender {
+    func selectedGenderButton(manButton: UIButton, womanButton: UIButton ,gender: Gender, enableButton: UIButton) -> String {
         
         self.configButton(button: enableButton, enable: true)
         
         if gender == .man {
             manButton.setImage(UIImage(named: "ManSelected"), for: .normal)
             womanButton.setImage(UIImage(named: "Woman"), for: .normal)
-            return .man
+            return "man"
         } else {
             womanButton.setImage(UIImage(named: "WomanSelected"), for: .normal)
             manButton.setImage(UIImage(named: "Man"), for: .normal)
-            return .woman
+            return "woman"
         }
         
     }
@@ -44,7 +44,7 @@ class RegisterGenderViewModel {
         label.text = "Olá, \(self.userBuilder.getName())"
     }
     
-    func buildGender(gender: Gender, OnSucess: @escaping () -> Void?) {
+    func buildGender(gender: String, OnSucess: @escaping () -> Void?) {
         self.userBuilder.setGender(gender: gender)
         OnSucess()
     }

@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum Gender: String, Codable {
-    case man = "man"
-    case woman = "woman"
-}
-
 struct User: Codable {
     
     var worksheets: [Worksheet] = []
@@ -20,10 +15,11 @@ struct User: Codable {
     var name: String
     var email: String
     var idUser: String
-    var gender: Gender
+    var gender: String
     var age: Int
     var height: Int
     var weight: Int
     var goal: Int
+    var completedGoal: Int
 
 }

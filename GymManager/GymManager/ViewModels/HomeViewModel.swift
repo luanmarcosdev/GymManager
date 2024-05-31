@@ -61,4 +61,26 @@ class HomeViewModel {
 
     }
     
+    func updateUserScreen(for user: User, nameLabel: UILabel, goalDescription: UILabel, completedGoal: UILabel) {
+        self.setNameLabel(user, nameLabel)
+        self.setCompletedGoal(user, completedGoal)
+        self.setGoalDescription(user, goalDescription)
+    }
+    
+    private func setNameLabel(_ user: User, _ nameLabel: UILabel) {
+        nameLabel.text = "Olá \(user.name)"
+    }
+    
+    private func setCompletedGoal(_ user: User, _ completedGoal: UILabel) {
+        completedGoal.text = "\(user.completedGoal)"
+    }
+    
+    private func setGoalDescription(_ user: User, _ goalDescription: UILabel) {
+        let completedGoals = user.completedGoal
+        let goal = user.goal
+        let percentageCompleted = (completedGoals * 100) / goal
+        let text = "Você bateu \(percentageCompleted)% da sua meta (\(goal)). Faltam \(goal - completedGoals) treinos para completá-la."
+        goalDescription.text = text
+    }
+    
 }

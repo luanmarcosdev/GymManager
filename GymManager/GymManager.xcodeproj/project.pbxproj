@@ -13,6 +13,7 @@
 		CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24B4392BE12B6B0035C4AD /* SceneDelegate.swift */; };
 		CA24B4412BE12B6C0035C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4402BE12B6C0035C4AD /* Assets.xcassets */; };
 		CA24B4442BE12B6C0035C4AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4422BE12B6C0035C4AD /* LaunchScreen.storyboard */; };
+		CA380C4A2C0A0F9B008DE2C9 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA380C492C0A0F9B008DE2C9 /* Gender.swift */; };
 		CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E222BF2B50B0097FAA7 /* HomeView.swift */; };
 		CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */; };
 		CA486E272BF2B5260097FAA7 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */; };
@@ -97,6 +98,7 @@
 		CA24B4402BE12B6C0035C4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA24B4432BE12B6C0035C4AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA24B4452BE12B6C0035C4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA380C492C0A0F9B008DE2C9 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		CA486E222BF2B50B0097FAA7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 		CABB76442BF3962E00C946BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA380C492C0A0F9B008DE2C9 /* Gender.swift */,
 				CABB76452BF3964A00C946BC /* User.swift */,
 				CA940B812BF4DB5600548C36 /* Worksheet.swift */,
 				CA940B832BF4DB7500548C36 /* Assessment.swift */,
@@ -632,6 +635,7 @@
 				CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */,
 				CA486E2B2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift in Sources */,
 				CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */,
+				CA380C4A2C0A0F9B008DE2C9 /* Gender.swift in Sources */,
 				CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */,
 				CAFAD5A52C0672F9002DCF4D /* LoginViewModel.swift in Sources */,
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,

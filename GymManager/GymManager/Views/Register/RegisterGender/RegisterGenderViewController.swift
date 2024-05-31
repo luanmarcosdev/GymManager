@@ -12,7 +12,7 @@ class RegisterGenderViewController: UIViewController {
     var coordinator: RegisterGenderCoordinator?
     var registerGenderView: RegisterGenderView?
     var registerGenderViewModel: RegisterGenderViewModel?
-    var genderSelected: Gender?
+    var genderSelected: String?
     
     override func loadView() {
         self.registerGenderView = RegisterGenderView()

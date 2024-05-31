@@ -28,6 +28,7 @@ class RegisterGoalViewModel {
                 "height": user.height,
                 "weight": user.weight,
                 "goal": user.goal,
+                "completedGoal": user.completedGoal,
                 "worksheets": [],
                 "assessments": []
             ])
