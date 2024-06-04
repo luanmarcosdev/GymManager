@@ -124,4 +124,13 @@ class HomeViewModel {
         onSucess(user)
     }
     
+    func getRandomCardImage() -> String {
+        
+        let images = ["Card1", "Card2", "Card3", "Card4", "Card5"]
+        let randomNumber = Int.random(in: 0...4)
+        
+        return images[randomNumber]
+   
+    }
+    
 }

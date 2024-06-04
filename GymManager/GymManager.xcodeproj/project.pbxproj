@@ -418,7 +418,6 @@
 		CABB76442BF3962E00C946BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CA380C492C0A0F9B008DE2C9 /* Gender.swift */,
 				CABB76452BF3964A00C946BC /* User.swift */,
 				CA940B812BF4DB5600548C36 /* Worksheet.swift */,
 				CA940B832BF4DB7500548C36 /* Assessment.swift */,
@@ -457,6 +456,7 @@
 				CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */,
 				CAEE3B022BFED97F00034F1D /* HorizontalPickerView.swift */,
 				CAEFA5622C04C5E600E7BA95 /* Alert.swift */,
+				CA380C492C0A0F9B008DE2C9 /* Gender.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

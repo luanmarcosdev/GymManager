@@ -119,7 +119,12 @@ extension HomeViewController: UICollectionViewDataSource {
                 cell.worksheetTitleLabel.text = "Sem fichas cadastradas"
                 cell.worksheetDescriptionLabel.text = "Clique e cadastre"
             } else {
-                print("to do")
+                
+                //testar
+                
+                cell.worksheetImage.image = UIImage(named: self.homeViewModel!.getRandomCardImage())
+                cell.worksheetTitleLabel.text = user.worksheets[indexPath.row].title
+                cell.worksheetDescriptionLabel.text = user.worksheets[indexPath.row].description
             }
             
         }
