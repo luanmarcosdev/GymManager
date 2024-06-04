@@ -91,7 +91,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
         return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //to do
+        
+        print("teste")
+        
+    }
+        
 }
+    
 
 extension HomeViewController: UICollectionViewDataSource {
     
@@ -106,7 +115,7 @@ extension HomeViewController: UICollectionViewDataSource {
         if let user = user {
             
             if user.worksheets.isEmpty {
-                cell.worksheetButton.setImage(UIImage(named: "CardAdd"), for: .normal)
+                cell.worksheetImage.image = UIImage(named: "CardAdd")
                 cell.worksheetTitleLabel.text = "Sem fichas cadastradas"
                 cell.worksheetDescriptionLabel.text = "Clique e cadastre"
             } else {

@@ -79,7 +79,6 @@ class HomeViewModel {
             "assessments": user.assessments
         ])
         
-        print("dados salvo com sucesso!!")
     }
     
     func updateUserScreen(for user: User, nameLabel: UILabel, goalDescription: UILabel, completedGoal: UILabel) {

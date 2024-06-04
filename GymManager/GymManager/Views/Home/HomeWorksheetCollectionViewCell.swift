@@ -15,10 +15,10 @@ class HomeWorksheetCollectionViewCell: UICollectionViewCell {
     
     //MARK: Elements
     
-    lazy var worksheetButton: UIButton = {
-        let bt = UIButton()
+    lazy var worksheetImage: UIImageView = {
+        let bt = UIImageView()
         bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setImage(UIImage(named: "Card"), for: .normal)
+        bt.image = UIImage(named: "Card")
         return bt
     }()
 
@@ -55,20 +55,20 @@ class HomeWorksheetCollectionViewCell: UICollectionViewCell {
     //MARK: Setting elements
     
     func configSuperView() {
-        self.addSubview(self.worksheetButton)
-        self.worksheetButton.addSubview(self.worksheetTitleLabel)
-        self.worksheetButton.addSubview(self.worksheetDescriptionLabel)
+        self.addSubview(self.worksheetImage)
+        self.worksheetImage.addSubview(self.worksheetTitleLabel)
+        self.worksheetImage.addSubview(self.worksheetDescriptionLabel)
     }
     
     func configConstraints() {
         NSLayoutConstraint.activate([
             
-            self.worksheetButton.topAnchor.constraint(equalTo: self.topAnchor),
-            self.worksheetButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.worksheetButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.worksheetButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.worksheetImage.topAnchor.constraint(equalTo: self.topAnchor),
+            self.worksheetImage.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.worksheetImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.worksheetImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            self.worksheetDescriptionLabel.bottomAnchor.constraint(equalTo: self.worksheetButton.bottomAnchor, constant: -16),
+            self.worksheetDescriptionLabel.bottomAnchor.constraint(equalTo: self.worksheetImage.bottomAnchor, constant: -16),
             self.worksheetDescriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             
             self.worksheetTitleLabel.leadingAnchor.constraint(equalTo: self.worksheetDescriptionLabel.leadingAnchor),
