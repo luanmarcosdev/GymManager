@@ -69,10 +69,10 @@ class HomeWorksheetCollectionViewCell: UICollectionViewCell {
             self.worksheetButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
             self.worksheetDescriptionLabel.bottomAnchor.constraint(equalTo: self.worksheetButton.bottomAnchor, constant: -16),
-            self.worksheetDescriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            self.worksheetDescriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             
             self.worksheetTitleLabel.leadingAnchor.constraint(equalTo: self.worksheetDescriptionLabel.leadingAnchor),
-            self.worksheetTitleLabel.bottomAnchor.constraint(equalTo: self.worksheetDescriptionLabel.topAnchor, constant: -4)
+            self.worksheetTitleLabel.bottomAnchor.constraint(equalTo: self.worksheetDescriptionLabel.topAnchor, constant: -6)
             
         ])
     }

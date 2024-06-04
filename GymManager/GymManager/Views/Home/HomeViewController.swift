@@ -34,8 +34,7 @@ class HomeViewController: UIViewController {
             if let idUser = self.idUserOn {
                 await self.homeViewModel?.getUserData(uid: idUser, onSucess: { user in
                     self.user = user
-                    print(user)
-                    
+                                        
                     guard let user = self.user,
                           let nameLabel = self.homeView?.titleLabel,
                           let goalDescription = self.homeView?.emphasisSubtitleGoalLabel,
@@ -43,6 +42,7 @@ class HomeViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.homeViewModel?.updateUserScreen(for: user, nameLabel: nameLabel, goalDescription: goalDescription, completedGoal: completedGoal)
+                        self.homeView?.collectionView.reloadData()
                     }
                 })
             }
@@ -68,6 +68,15 @@ extension HomeViewController: HomeViewDelegate {
     
     func actionAddActivity() {
         print("tapped add activity")
+        
+        guard var user = self.user,
+              let goalDescription = self.homeView?.emphasisSubtitleGoalLabel,
+              let completedGoal = self.homeView?.emphasisNumberLabel,
+              let activityButton = self.homeView?.addActivityButton else {return}
+        
+        self.homeViewModel?.registerActivity(user: &user, completedGoal: completedGoal, goalDescription: goalDescription, activityButton: activityButton,onSucess: { user in
+            self.user = user
+        })
     }
     
     func actionAssessments() {
@@ -97,8 +106,9 @@ extension HomeViewController: UICollectionViewDataSource {
         if let user = user {
             
             if user.worksheets.isEmpty {
-                cell.worksheetButton.setImage(UIImage(named: "Card1"), for: .normal)
-                cell.worksheetTitleLabel.text = "teste"
+                cell.worksheetButton.setImage(UIImage(named: "CardAdd"), for: .normal)
+                cell.worksheetTitleLabel.text = "Sem fichas cadastradas"
+                cell.worksheetDescriptionLabel.text = "Clique e cadastre"
             } else {
                 print("to do")
             }

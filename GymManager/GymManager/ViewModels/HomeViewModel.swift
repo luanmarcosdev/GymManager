@@ -14,9 +14,11 @@ class HomeViewModel {
  
     func getUserOn() -> String? {
         var idUser: String?
+        
         if let currentUser = Auth.auth().currentUser {
             idUser = currentUser.uid
         }
+        
         return idUser
     }
     
@@ -61,10 +63,31 @@ class HomeViewModel {
 
     }
     
+    func saveData(for user: User) {
+        
+        Firestore.firestore().collection("users").document(user.idUser).setData([
+            "name": user.name,
+            "email": user.email,
+            "idUser": user.idUser,
+            "gender": user.gender,
+            "age": user.age,
+            "height": user.height,
+            "weight": user.weight,
+            "goal": user.goal,
+            "completedGoal": user.completedGoal,
+            "worksheets": user.worksheets,
+            "assessments": user.assessments
+        ])
+        
+        print("dados salvo com sucesso!!")
+    }
+    
     func updateUserScreen(for user: User, nameLabel: UILabel, goalDescription: UILabel, completedGoal: UILabel) {
+        
         self.setNameLabel(user, nameLabel)
         self.setCompletedGoal(user, completedGoal)
         self.setGoalDescription(user, goalDescription)
+        
     }
     
     private func setNameLabel(_ user: User, _ nameLabel: UILabel) {
@@ -79,8 +102,27 @@ class HomeViewModel {
         let completedGoals = user.completedGoal
         let goal = user.goal
         let percentageCompleted = (completedGoals * 100) / goal
-        let text = "Você bateu \(percentageCompleted)% da sua meta (\(goal)). Faltam \(goal - completedGoals) treinos para completá-la."
+        var text: String
+        if user.completedGoal < user.goal {
+            text = "Você bateu \(percentageCompleted)% da sua meta (\(goal)). Faltam \(goal - completedGoals) treinos para completá-la."
+        } else {
+            text = "Você bateu \(percentageCompleted)% da sua meta (\(goal)). Uau, você foi incrivel! Parabêns 🔥"
+        }
         goalDescription.text = text
+    }
+    
+    func registerActivity(user: inout User, completedGoal: UILabel, goalDescription: UILabel, activityButton: UIButton ,onSucess: @escaping (User) -> Void? ) {
+        
+        user.completedGoal += 1
+        
+        activityButton.isEnabled = false
+        activityButton.backgroundColor = CustomColor.gray
+        
+        self.setCompletedGoal(user, completedGoal)
+        self.setGoalDescription(user, goalDescription)
+        self.saveData(for: user)
+        
+        onSucess(user)
     }
     
 }
