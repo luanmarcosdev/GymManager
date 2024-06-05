@@ -28,6 +28,10 @@
 		CA5F96E02C108F9A0033420C /* AddWorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */; };
 		CA5F96E22C108FB20033420C /* AddWorksheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */; };
 		CA5F96E42C1091B40033420C /* AddWorksheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */; };
+		CA5F96E72C10AB100033420C /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E62C10AB100033420C /* EditGoalView.swift */; };
+		CA5F96E92C10AC580033420C /* EditGoalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E82C10AC580033420C /* EditGoalViewDelegate.swift */; };
+		CA5F96EB2C10ACDF0033420C /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96EA2C10ACDF0033420C /* EditGoalViewController.swift */; };
+		CA5F96ED2C10AD230033420C /* EditGoalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */; };
 		CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9242BED09F800221906 /* RegisterIndexView.swift */; };
 		CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */; };
 		CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */; };
@@ -117,6 +121,10 @@
 		CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetVC.swift; sourceTree = "<group>"; };
 		CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetCoordinator.swift; sourceTree = "<group>"; };
 		CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetViewDelegate.swift; sourceTree = "<group>"; };
+		CA5F96E62C10AB100033420C /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
+		CA5F96E82C10AC580033420C /* EditGoalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewDelegate.swift; sourceTree = "<group>"; };
+		CA5F96EA2C10ACDF0033420C /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
+		CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalCoordinator.swift; sourceTree = "<group>"; };
 		CA67B9242BED09F800221906 /* RegisterIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexView.swift; sourceTree = "<group>"; };
 		CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewController.swift; sourceTree = "<group>"; };
 		CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +274,7 @@
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
 				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
+				CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -278,6 +287,16 @@
 				CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */,
 			);
 			path = AddWorksheet;
+			sourceTree = "<group>";
+		};
+		CA5F96E52C10AAA60033420C /* EditGoal */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F96E62C10AB100033420C /* EditGoalView.swift */,
+				CA5F96EA2C10ACDF0033420C /* EditGoalViewController.swift */,
+				CA5F96E82C10AC580033420C /* EditGoalViewDelegate.swift */,
+			);
+			path = EditGoal;
 			sourceTree = "<group>";
 		};
 		CA67B9232BED09CE00221906 /* Register */ = {
@@ -386,6 +405,7 @@
 				CA67B9232BED09CE00221906 /* Register */,
 				CA486E212BF2B4C10097FAA7 /* Home */,
 				CA5F96DC2C108F1E0033420C /* AddWorksheet */,
+				CA5F96E52C10AAA60033420C /* EditGoal */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -634,6 +654,7 @@
 				CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */,
 				CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */,
 				CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */,
+				CA5F96ED2C10AD230033420C /* EditGoalCoordinator.swift in Sources */,
 				CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
@@ -646,6 +667,8 @@
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CAEE3B032BFED97F00034F1D /* HorizontalPickerView.swift in Sources */,
 				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
+				CA5F96E72C10AB100033420C /* EditGoalView.swift in Sources */,
+				CA5F96E92C10AC580033420C /* EditGoalViewDelegate.swift in Sources */,
 				CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */,
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
 				CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */,
@@ -683,6 +706,7 @@
 				CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */,
 				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
 				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,
+				CA5F96EB2C10ACDF0033420C /* EditGoalViewController.swift in Sources */,
 				CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */,
 				CA7AA8522BF2437D00A5DA33 /* RegisterGoalViewController.swift in Sources */,
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,

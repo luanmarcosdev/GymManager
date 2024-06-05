@@ -63,12 +63,10 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func actionEditGoal() {
-        print("tapped edit goal")
+        self.coordinator?.navigationToEditGoalScreen()
     }
     
     func actionAddActivity() {
-        print("tapped add activity")
-        
         guard var user = self.user,
               let goalDescription = self.homeView?.emphasisSubtitleGoalLabel,
               let completedGoal = self.homeView?.emphasisNumberLabel,
@@ -93,9 +91,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //to do
-        
-        print("teste")
+        if let user = self.user {
+            
+            if user.worksheets.isEmpty {
+                self.coordinator?.navigationToAddWorksheetScreen()
+                print("vazio vai preencher ficha")
+            } else {
+                print("\(user.worksheets[indexPath.row])")
+            }
+            
+        }
         
     }
         
