@@ -27,6 +27,7 @@
 		CA5F96DE2C108F7B0033420C /* AddWorksheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */; };
 		CA5F96E02C108F9A0033420C /* AddWorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */; };
 		CA5F96E22C108FB20033420C /* AddWorksheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */; };
+		CA5F96E42C1091B40033420C /* AddWorksheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */; };
 		CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9242BED09F800221906 /* RegisterIndexView.swift */; };
 		CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */; };
 		CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */; };
@@ -115,6 +116,7 @@
 		CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetView.swift; sourceTree = "<group>"; };
 		CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetVC.swift; sourceTree = "<group>"; };
 		CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetCoordinator.swift; sourceTree = "<group>"; };
+		CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetViewDelegate.swift; sourceTree = "<group>"; };
 		CA67B9242BED09F800221906 /* RegisterIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexView.swift; sourceTree = "<group>"; };
 		CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewController.swift; sourceTree = "<group>"; };
 		CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */,
 				CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */,
+				CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */,
 			);
 			path = AddWorksheet;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				CA7AA8492BF23A8900A5DA33 /* RegisterWeightView.swift in Sources */,
 				CA486E272BF2B5260097FAA7 /* HomeViewDelegate.swift in Sources */,
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
+				CA5F96E42C1091B40033420C /* AddWorksheetViewDelegate.swift in Sources */,
 				CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */,
 				CA7AA85E2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift in Sources */,
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
