@@ -24,6 +24,9 @@
 		CA4D22562BEA54D600DD7D06 /* IndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */; };
 		CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22572BEA551D00DD7D06 /* IndexViewController.swift */; };
 		CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */; };
+		CA5F96DE2C108F7B0033420C /* AddWorksheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */; };
+		CA5F96E02C108F9A0033420C /* AddWorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */; };
+		CA5F96E22C108FB20033420C /* AddWorksheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */; };
 		CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9242BED09F800221906 /* RegisterIndexView.swift */; };
 		CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */; };
 		CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */; };
@@ -109,6 +112,9 @@
 		CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCoordinator.swift; sourceTree = "<group>"; };
 		CA4D22572BEA551D00DD7D06 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		CA4D22592BEA5D4800DD7D06 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetView.swift; sourceTree = "<group>"; };
+		CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetVC.swift; sourceTree = "<group>"; };
+		CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetCoordinator.swift; sourceTree = "<group>"; };
 		CA67B9242BED09F800221906 /* RegisterIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexView.swift; sourceTree = "<group>"; };
 		CA67B9262BED0A3300221906 /* RegisterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewController.swift; sourceTree = "<group>"; };
 		CA67B9292BED0A7500221906 /* RegisterIndexViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterIndexViewDelegate.swift; sourceTree = "<group>"; };
@@ -257,8 +263,18 @@
 				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
+				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CA5F96DC2C108F1E0033420C /* AddWorksheet */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */,
+				CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */,
+			);
+			path = AddWorksheet;
 			sourceTree = "<group>";
 		};
 		CA67B9232BED09CE00221906 /* Register */ = {
@@ -366,6 +382,7 @@
 				CACAC1E22BEBD49F00B2FCFA /* Forgot */,
 				CA67B9232BED09CE00221906 /* Register */,
 				CA486E212BF2B4C10097FAA7 /* Home */,
+				CA5F96DC2C108F1E0033420C /* AddWorksheet */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -647,15 +664,18 @@
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
 				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
+				CA5F96DE2C108F7B0033420C /* AddWorksheetView.swift in Sources */,
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
 				CA940B882BF4E40200548C36 /* RegisterIndexViewModel.swift in Sources */,
 				CA4D225A2BEA5D4800DD7D06 /* UIViewExtension.swift in Sources */,
 				CA67B92A2BED0A7500221906 /* RegisterIndexViewDelegate.swift in Sources */,
 				CAEFA5652C0509BC00E7BA95 /* RegisterGenderViewModel.swift in Sources */,
 				CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */,
+				CA5F96E02C108F9A0033420C /* AddWorksheetVC.swift in Sources */,
 				CA7AA8502BF2436E00A5DA33 /* RegisterGoalView.swift in Sources */,
 				CACAC1E62BEBD64F00B2FCFA /* ForgotViewController.swift in Sources */,
 				CAEFA5672C050D7F00E7BA95 /* RegisterGoalViewModel.swift in Sources */,
+				CA5F96E22C108FB20033420C /* AddWorksheetCoordinator.swift in Sources */,
 				CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */,
 				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
 				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,

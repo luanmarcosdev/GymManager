@@ -23,4 +23,9 @@ class HomeCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
+    func navigationToAddWorksheetScreen() {
+        let addWorksheetCoordinator = AddWorksheetCoordinator(navigationController: self.navigationController)
+        addWorksheetCoordinator.start()
+    }
+    
 }

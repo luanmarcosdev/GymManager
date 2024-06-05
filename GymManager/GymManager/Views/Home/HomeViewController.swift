@@ -59,7 +59,7 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func actionAddWorksheets() {
-        print("tapped addWorksheets")
+        self.coordinator?.navigationToAddWorksheetScreen()
     }
     
     func actionEditGoal() {
