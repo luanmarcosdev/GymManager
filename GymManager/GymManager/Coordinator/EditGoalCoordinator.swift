@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class EditGoalCoordinator: CoordinatorProtocol {
+    
     var navigationController: UINavigationController
     
     required init(navigationController: UINavigationController) {
@@ -21,6 +22,12 @@ class EditGoalCoordinator: CoordinatorProtocol {
         self.navigationController.pushViewController(editGoalVC, animated: true)
         self.navigationController.isNavigationBarHidden = true
     }
+    
+//    func start(editGoalVC: EditGoalViewController) {
+//        editGoalVC.coordinator = self
+//        self.navigationController.pushViewController(editGoalVC, animated: true)
+//        self.navigationController.isNavigationBarHidden = true
+//    }
     
     func back() {
         self.navigationController.popViewController(animated: true)

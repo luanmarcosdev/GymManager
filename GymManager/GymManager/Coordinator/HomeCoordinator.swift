@@ -28,9 +28,10 @@ class HomeCoordinator: CoordinatorProtocol {
         addWorksheetCoordinator.start()
     }
     
-    func navigationToEditGoalScreen() {
-        let editGoalCoordinator = EditGoalCoordinator(navigationController: self.navigationController)
-        editGoalCoordinator.start()
+    func navigationToEditGoalScreen(editGoalVC: EditGoalViewController) {
+//        let editGoalCoordinator = EditGoalCoordinator(navigationController: self.navigationController)
+//        editGoalCoordinator.start()
+        self.navigationController.pushViewController(editGoalVC, animated: true)
     }
     
 }

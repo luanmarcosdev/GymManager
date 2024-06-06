@@ -11,6 +11,9 @@ class EditGoalViewController: UIViewController {
     
     var coordinator: EditGoalCoordinator?
     var editGoalView: EditGoalView?
+    var editGoalViewModel: EditGoalViewModel?
+    var user: User?
+    var newGoal: Int?
     
     override func loadView() {
         self.editGoalView = EditGoalView()
@@ -19,7 +22,8 @@ class EditGoalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.editGoalView?.setDelegate(delegate: self)
+        self.editGoalView?.setDelegate(delegate: self, TFDelegate: self)
+        self.editGoalViewModel = EditGoalViewModel()
     }
 
 }
@@ -30,8 +34,48 @@ extension EditGoalViewController: EditGoalViewDelegate {
     }
     
     func actionConfirm() {
-        print("to do")
+        
+        guard let goal = self.newGoal,
+              var user = self.user else {return}
+        
+        let validate = self.editGoalViewModel?.validateGoal(goal: goal, viewController: self)
+        
+        if validate! {
+            user.goal = goal
+            self.editGoalViewModel?.saveNewGoal(user: user)
+        }
+        
     }
     
+}
+
+extension EditGoalViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard let text = self.editGoalView?.goalTextField.text,
+              let button = self.editGoalView?.confirmButton else {return}
+        
+        let numberGoal = self.editGoalViewModel?.validateTextfield(goal: text, button: button)
+        
+        if let goal = numberGoal {
+            self.newGoal = goal
+        }
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let textField = self.editGoalView?.goalTextField {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
+
     
 }

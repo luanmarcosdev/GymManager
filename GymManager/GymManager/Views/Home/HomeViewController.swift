@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     var homeView: HomeView?
     var coordinator: HomeCoordinator?
     var homeViewModel: HomeViewModel?
+    var editGoalVC: EditGoalViewController?
     var idUserOn: String?
     var user: User?
     
@@ -63,7 +64,11 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func actionEditGoal() {
-        self.coordinator?.navigationToEditGoalScreen()
+        //TO DO ARRUMAR BUG PARA ENVIAR USER PARA OUTRA TELA
+        
+        self.editGoalVC = EditGoalViewController()
+        self.editGoalVC?.user = self.user
+        self.coordinator?.navigationToEditGoalScreen(editGoalVC: self.editGoalVC!)
     }
     
     func actionAddActivity() {

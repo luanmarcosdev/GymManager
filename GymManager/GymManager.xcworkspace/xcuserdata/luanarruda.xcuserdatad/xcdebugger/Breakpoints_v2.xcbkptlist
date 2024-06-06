@@ -3,4 +3,114 @@
    uuid = "B3A179D3-288A-4EE7-936F-5922531B5708"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymManager/Views/EditGoal/EditGoalViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "EditGoalViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - 3ee46bae7eadadf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.user.getter : Swift.Optional&lt;GymManager.User&gt;"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/GymManager/Views/EditGoal/EditGoalViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - a4273f83f1e18606"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.user.setter : Swift.Optional&lt;GymManager.User&gt;"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/GymManager/Views/EditGoal/EditGoalViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - c6453a86c45bcae4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.user.modify : Swift.Optional&lt;GymManager.User&gt;"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/GymManager/Views/EditGoal/EditGoalViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - 429c4edfcab4661c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.user.modify : Swift.Optional&lt;GymManager.User&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - 828ec3925856def1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GymManager.EditGoalViewController"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/GymManager/Views/EditGoal/EditGoalViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "0D1FD818-C904-4864-9CE4-A18A293FD91C - 4e2bd523cd568a83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymManager.EditGoalViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GymManager.EditGoalViewController&gt;"
+                  moduleName = "GymManager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luanarruda/Documents/GymManager/GymManager/GymManager/Views/EditGoal/EditGoalViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

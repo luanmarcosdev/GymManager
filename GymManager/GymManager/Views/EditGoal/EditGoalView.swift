@@ -13,8 +13,9 @@ class EditGoalView: UIView {
     
     private weak var delegate: EditGoalViewDelegate?
     
-    func setDelegate(delegate: EditGoalViewDelegate?){
+    func setDelegate(delegate: EditGoalViewDelegate?, TFDelegate: UITextFieldDelegate){
         self.delegate = delegate
+        self.goalTextField.delegate = TFDelegate
     }
     
     //MARK: Elements
@@ -72,9 +73,10 @@ class EditGoalView: UIView {
         bt.setTitle("Confirmar", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.green
+        bt.backgroundColor = CustomColor.gray
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24
+        bt.isEnabled = false
         bt.addTarget(self, action: #selector(self.tappedConfirmButton), for: .touchUpInside)
         return bt
     }()
