@@ -23,11 +23,13 @@ class EditGoalCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
-//    func start(editGoalVC: EditGoalViewController) {
-//        editGoalVC.coordinator = self
-//        self.navigationController.pushViewController(editGoalVC, animated: true)
-//        self.navigationController.isNavigationBarHidden = true
-//    }
+    func start(user: User) {
+        let editGoalVC = EditGoalViewController()
+        editGoalVC.coordinator = self
+        editGoalVC.user = user
+        self.navigationController.pushViewController(editGoalVC, animated: true)
+        self.navigationController.isNavigationBarHidden = true
+    }
     
     func back() {
         self.navigationController.popViewController(animated: true)

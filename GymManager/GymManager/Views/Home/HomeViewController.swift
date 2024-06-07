@@ -63,12 +63,10 @@ extension HomeViewController: HomeViewDelegate {
         self.coordinator?.navigationToAddWorksheetScreen()
     }
     
-    func actionEditGoal() {
-        //TO DO ARRUMAR BUG PARA ENVIAR USER PARA OUTRA TELA
-        
-        self.editGoalVC = EditGoalViewController()
-        self.editGoalVC?.user = self.user
-        self.coordinator?.navigationToEditGoalScreen(editGoalVC: self.editGoalVC!)
+    func actionEditGoal() {        
+        if let user = self.user {
+            self.coordinator?.navigationToEditGoalScreen(user: user)
+        }
     }
     
     func actionAddActivity() {

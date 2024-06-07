@@ -36,13 +36,17 @@ extension EditGoalViewController: EditGoalViewDelegate {
     func actionConfirm() {
         
         guard let goal = self.newGoal,
-              var user = self.user else {return}
+              var user = self.user,
+              let validate = self.editGoalViewModel?.validateGoal(goal: goal, viewController: self) else {return}
         
-        let validate = self.editGoalViewModel?.validateGoal(goal: goal, viewController: self)
-        
-        if validate! {
+        if validate {
             user.goal = goal
             self.editGoalViewModel?.saveNewGoal(user: user)
+            
+            // to do apresentar tela de confirmacão
+        } else {
+            
+            //to do apresentar tela alert de error
         }
         
     }
