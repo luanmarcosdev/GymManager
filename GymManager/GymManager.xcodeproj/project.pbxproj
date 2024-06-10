@@ -45,6 +45,9 @@
 		CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */; };
 		CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */; };
 		CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */; };
+		CA6ACB9E2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6ACB9D2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift */; };
+		CA6ACBA02C17A4A0004A7A67 /* EditGoalSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6ACB9F2C17A4A0004A7A67 /* EditGoalSuccessVC.swift */; };
+		CA6ACBA22C17A4DF004A7A67 /* EditGoalSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6ACBA12C17A4DF004A7A67 /* EditGoalSuccessView.swift */; };
 		CA7AA8472BF23A7400A5DA33 /* RegisterWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8462BF23A7400A5DA33 /* RegisterWeightViewController.swift */; };
 		CA7AA8492BF23A8900A5DA33 /* RegisterWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8482BF23A8900A5DA33 /* RegisterWeightView.swift */; };
 		CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA84A2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift */; };
@@ -139,6 +142,9 @@
 		CA67B9392BED456B00221906 /* RegisterAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewController.swift; sourceTree = "<group>"; };
 		CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeViewDelegate.swift; sourceTree = "<group>"; };
 		CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeCoordinator.swift; sourceTree = "<group>"; };
+		CA6ACB9D2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalSuccessViewDelegate.swift; sourceTree = "<group>"; };
+		CA6ACB9F2C17A4A0004A7A67 /* EditGoalSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalSuccessVC.swift; sourceTree = "<group>"; };
+		CA6ACBA12C17A4DF004A7A67 /* EditGoalSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalSuccessView.swift; sourceTree = "<group>"; };
 		CA7AA8462BF23A7400A5DA33 /* RegisterWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightViewController.swift; sourceTree = "<group>"; };
 		CA7AA8482BF23A8900A5DA33 /* RegisterWeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightView.swift; sourceTree = "<group>"; };
 		CA7AA84A2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWeightViewDelegate.swift; sourceTree = "<group>"; };
@@ -294,9 +300,8 @@
 		CA5F96E52C10AAA60033420C /* EditGoal */ = {
 			isa = PBXGroup;
 			children = (
-				CA5F96E62C10AB100033420C /* EditGoalView.swift */,
-				CA5F96EA2C10ACDF0033420C /* EditGoalViewController.swift */,
-				CA5F96E82C10AC580033420C /* EditGoalViewDelegate.swift */,
+				CA6ACB9B2C17A422004A7A67 /* EditGoal */,
+				CA6ACB9C2C17A432004A7A67 /* EditGoalSuccess */,
 			);
 			path = EditGoal;
 			sourceTree = "<group>";
@@ -343,6 +348,26 @@
 				CA67B93B2BED457C00221906 /* RegisterAgeViewDelegate.swift */,
 			);
 			path = RegisterAge;
+			sourceTree = "<group>";
+		};
+		CA6ACB9B2C17A422004A7A67 /* EditGoal */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F96E62C10AB100033420C /* EditGoalView.swift */,
+				CA5F96EA2C10ACDF0033420C /* EditGoalViewController.swift */,
+				CA5F96E82C10AC580033420C /* EditGoalViewDelegate.swift */,
+			);
+			path = EditGoal;
+			sourceTree = "<group>";
+		};
+		CA6ACB9C2C17A432004A7A67 /* EditGoalSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				CA6ACBA12C17A4DF004A7A67 /* EditGoalSuccessView.swift */,
+				CA6ACB9F2C17A4A0004A7A67 /* EditGoalSuccessVC.swift */,
+				CA6ACB9D2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift */,
+			);
+			path = EditGoalSuccess;
 			sourceTree = "<group>";
 		};
 		CA7AA8452BF23A2700A5DA33 /* RegisterWeight */ = {
@@ -654,6 +679,7 @@
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
 				CA7AA8542BF2438900A5DA33 /* RegisterGoalViewDelegate.swift in Sources */,
 				CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */,
+				CA6ACB9E2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift in Sources */,
 				CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */,
 				CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */,
 				CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */,
@@ -663,6 +689,7 @@
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
 				CA7AA85C2BF2495500A5DA33 /* RegisterSucessView.swift in Sources */,
+				CA6ACBA02C17A4A0004A7A67 /* EditGoalSuccessVC.swift in Sources */,
 				CA7AA8562BF244EC00A5DA33 /* RegisterGoalCoordinator.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
 				CA67B92F2BED2A7800221906 /* RegisterGenderViewController.swift in Sources */,
@@ -675,6 +702,7 @@
 				CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */,
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
 				CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */,
+				CA6ACBA22C17A4DF004A7A67 /* EditGoalSuccessView.swift in Sources */,
 				CA7AA85A2BF2493A00A5DA33 /* RegisterSucessViewController.swift in Sources */,
 				CA971F9D2BEA908C00D03161 /* IndexViewDelegate.swift in Sources */,
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
