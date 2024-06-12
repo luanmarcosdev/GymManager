@@ -35,5 +35,10 @@ class EditGoalCoordinator: CoordinatorProtocol {
         self.navigationController.popViewController(animated: true)
     }
     
+    func navigationToEditGoalSuccessScreen() {
+        let editGoalSuccessCoordinator = EditGoalSuccessCoordinator(navigationController: self.navigationController)
+        editGoalSuccessCoordinator.start()
+    }
+    
     
 }

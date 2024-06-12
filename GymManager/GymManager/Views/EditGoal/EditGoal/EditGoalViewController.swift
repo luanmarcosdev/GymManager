@@ -42,12 +42,8 @@ extension EditGoalViewController: EditGoalViewDelegate {
         if validate {
             user.goal = goal
             self.editGoalViewModel?.saveNewGoal(user: user)
-            
-            // to do apresentar tela de confirmacão
-        } else {
-            
-            //to do apresentar tela alert de error
-        }
+            self.coordinator?.navigationToEditGoalSuccessScreen()
+        } 
         
     }
     

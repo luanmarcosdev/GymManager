@@ -7,8 +7,9 @@
 
 import UIKit
 
-class EditGoalSucessVC: UIViewController {
+class EditGoalSuccessVC: UIViewController {
     
+    var coordinator: EditGoalSuccessCoordinator?
     var editGoalSuccessView: EditGoalSuccessView?
     
     override func loadView() {
@@ -18,7 +19,15 @@ class EditGoalSucessVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.editGoalSuccessView?.setDelegate(delegate: self)
     }
+
+}
+
+extension EditGoalSuccessVC: EditGoalSuccessViewDelegate {
     
+    func actionSuccess() {
+        self.coordinator?.navigationToHomeScreen()
+    }
 
 }

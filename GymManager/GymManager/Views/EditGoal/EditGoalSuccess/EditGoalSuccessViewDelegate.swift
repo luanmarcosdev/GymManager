@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol EditGoalSuccessViewDelegate {
+protocol EditGoalSuccessViewDelegate: AnyObject {
     func actionSuccess()
 }

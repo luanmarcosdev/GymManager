@@ -83,7 +83,7 @@ class RegisterSucessView: UIView {
     //MARK: Action Buttons
     
     @objc func tappedFinishButton(){
-        self.delegate?.actionSucess()
+        self.delegate?.actionSuccess()
     }
 
     //MARK: Init

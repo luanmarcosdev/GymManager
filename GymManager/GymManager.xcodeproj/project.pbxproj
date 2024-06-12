@@ -96,6 +96,7 @@
 		CAF066F82BEE8F3B000C3649 /* RegisterHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */; };
 		CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */; };
 		CAF066FC2BEE902E000C3649 /* RegisterHeightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */; };
+		CAF12A392C192DDD00896121 /* EditGoalSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */; };
 		CAFAD5A52C0672F9002DCF4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAD5A42C0672F9002DCF4D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		CAF066F72BEE8F3B000C3649 /* RegisterHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightView.swift; sourceTree = "<group>"; };
 		CAF066F92BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightViewDelegate.swift; sourceTree = "<group>"; };
 		CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHeightCoordinator.swift; sourceTree = "<group>"; };
+		CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalSuccessCoordinator.swift; sourceTree = "<group>"; };
 		CAFAD5A42C0672F9002DCF4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +285,7 @@
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
 				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
 				CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */,
+				CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				CA7AA8562BF244EC00A5DA33 /* RegisterGoalCoordinator.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
 				CA67B92F2BED2A7800221906 /* RegisterGenderViewController.swift in Sources */,
+				CAF12A392C192DDD00896121 /* EditGoalSuccessCoordinator.swift in Sources */,
 				CA67B9272BED0A3300221906 /* RegisterIndexViewController.swift in Sources */,
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CAEE3B032BFED97F00034F1D /* HorizontalPickerView.swift in Sources */,

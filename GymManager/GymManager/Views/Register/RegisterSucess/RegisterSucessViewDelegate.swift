@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RegisterSucessViewDelegate: AnyObject {
-    func actionSucess()
+    func actionSuccess()
 }
