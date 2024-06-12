@@ -11,6 +11,7 @@ class AddWorksheetVC: UIViewController {
     
     var coordinator: AddWorksheetCoordinator?
     var addWorksheetView: AddWorksheetView?
+    var exercises: [String:Int]?
     
     override func loadView() {
         self.addWorksheetView = AddWorksheetView()

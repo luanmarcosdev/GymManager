@@ -7,13 +7,13 @@
 
 import UIKit
 
-class RegisterSucessView: UIView {
+class RegisterSuccessView: UIView {
 
     //MARK: Delegate
     
-    private weak var delegate: RegisterSucessViewDelegate?
+    private weak var delegate: RegisterSuccessViewDelegate?
     
-    func setDelegate(delegate: RegisterSucessViewDelegate?){
+    func setDelegate(delegate: RegisterSuccessViewDelegate?){
         self.delegate = delegate
     }
     
@@ -58,7 +58,7 @@ class RegisterSucessView: UIView {
     lazy var subtitleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Antes de continuar preencha mais algumas informações para personalizar sua conta."
+        lb.text = "Aproveite tudo que nosso app tem para te oferecer."
         lb.font = UIFont(name: CustomFont.robotRegular, size: 14)
         lb.textColor = CustomColor.green
         lb.textAlignment = .center

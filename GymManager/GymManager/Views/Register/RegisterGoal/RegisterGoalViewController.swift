@@ -39,7 +39,7 @@ extension RegisterGoalViewController: RegisterGoalViewDelegate {
         let selectedRow = self.registerGoalView?.goalPickerView.selectedRow(inComponent: 0)
         self.userBuilder.setGoal(goal: self.goalNumbers[selectedRow!])
         self.registerGoalViewModel?.createNewUser()
-        self.coordinator?.navigationToHomeScreen()
+        self.coordinator?.navigationToRegisterSuccess()
     }
     
 }

@@ -66,7 +66,6 @@ class AddWorksheetView: UIView {
         tf.textColor = CustomColor.white
         tf.borderStyle = .none
         tf.keyboardType = .default
-        tf.isSecureTextEntry = true
         return tf
     }()
     

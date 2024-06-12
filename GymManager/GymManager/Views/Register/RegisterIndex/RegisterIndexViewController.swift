@@ -46,7 +46,7 @@ extension RegisterIndexViewController: RegisterIndexViewDelegate {
         
         if validate {
             self.registerIndexViewModel?.createNewUser(name: name, email: email, password: password, viewController: self, onSucess: {
-                self.coordinator?.navigationToRegisterSucess()
+                self.coordinator?.navigationToRegisterGender()
             })
         }
         

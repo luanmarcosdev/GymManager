@@ -27,9 +27,9 @@ class RegisterIndexCoordinator: CoordinatorProtocol {
         self.navigationController.popViewController(animated: true)
     }
     
-    func navigationToRegisterSucess() {
-        let registerSucessCoordinator = RegisterSucessCoordinator(navigationController: self.navigationController)
-        registerSucessCoordinator.start()
+    func navigationToRegisterGender() {
+        let registerGenderCoordinator = RegisterGenderCoordinator(navigationController: self.navigationController)
+        registerGenderCoordinator.start()
     }
     
     

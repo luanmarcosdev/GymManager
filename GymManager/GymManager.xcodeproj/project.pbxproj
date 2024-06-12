@@ -56,10 +56,10 @@
 		CA7AA8522BF2437D00A5DA33 /* RegisterGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8512BF2437D00A5DA33 /* RegisterGoalViewController.swift */; };
 		CA7AA8542BF2438900A5DA33 /* RegisterGoalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8532BF2438900A5DA33 /* RegisterGoalViewDelegate.swift */; };
 		CA7AA8562BF244EC00A5DA33 /* RegisterGoalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8552BF244EC00A5DA33 /* RegisterGoalCoordinator.swift */; };
-		CA7AA85A2BF2493A00A5DA33 /* RegisterSucessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8592BF2493A00A5DA33 /* RegisterSucessViewController.swift */; };
-		CA7AA85C2BF2495500A5DA33 /* RegisterSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85B2BF2495500A5DA33 /* RegisterSucessView.swift */; };
-		CA7AA85E2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85D2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift */; };
-		CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */; };
+		CA7AA85A2BF2493A00A5DA33 /* RegisterSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA8592BF2493A00A5DA33 /* RegisterSuccessViewController.swift */; };
+		CA7AA85C2BF2495500A5DA33 /* RegisterSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85B2BF2495500A5DA33 /* RegisterSuccessView.swift */; };
+		CA7AA85E2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */; };
+		CA7AA8602BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85F2BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift */; };
 		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
 		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
 		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
@@ -154,10 +154,10 @@
 		CA7AA8512BF2437D00A5DA33 /* RegisterGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGoalViewController.swift; sourceTree = "<group>"; };
 		CA7AA8532BF2438900A5DA33 /* RegisterGoalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGoalViewDelegate.swift; sourceTree = "<group>"; };
 		CA7AA8552BF244EC00A5DA33 /* RegisterGoalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGoalCoordinator.swift; sourceTree = "<group>"; };
-		CA7AA8592BF2493A00A5DA33 /* RegisterSucessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewController.swift; sourceTree = "<group>"; };
-		CA7AA85B2BF2495500A5DA33 /* RegisterSucessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessView.swift; sourceTree = "<group>"; };
-		CA7AA85D2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewDelegate.swift; sourceTree = "<group>"; };
-		CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessCoordinator.swift; sourceTree = "<group>"; };
+		CA7AA8592BF2493A00A5DA33 /* RegisterSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewController.swift; sourceTree = "<group>"; };
+		CA7AA85B2BF2495500A5DA33 /* RegisterSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessView.swift; sourceTree = "<group>"; };
+		CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewDelegate.swift; sourceTree = "<group>"; };
+		CA7AA85F2BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessCoordinator.swift; sourceTree = "<group>"; };
 		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
@@ -313,12 +313,12 @@
 			isa = PBXGroup;
 			children = (
 				CA67B9282BED0A4E00221906 /* RegisterIndex */,
-				CA7AA8582BF2491900A5DA33 /* RegisterSucess */,
 				CA67B92D2BED2A2600221906 /* RegisterGender */,
 				CA67B9362BED453800221906 /* RegisterAge */,
 				CAF066F42BEE8EEB000C3649 /* RegisterHeight */,
 				CA7AA8452BF23A2700A5DA33 /* RegisterWeight */,
 				CA7AA84E2BF2433100A5DA33 /* RegisterGoal */,
+				CA7AA8582BF2491900A5DA33 /* RegisterSuccess */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -397,24 +397,24 @@
 			isa = PBXGroup;
 			children = (
 				CA67B92B2BED0A8B00221906 /* RegisterIndexCoordinator.swift */,
-				CA7AA85F2BF24A6300A5DA33 /* RegisterSucessCoordinator.swift */,
 				CA67B9342BED2AE500221906 /* RegisterGenderCoordinator.swift */,
 				CA67B93D2BED45A200221906 /* RegisterAgeCoordinator.swift */,
 				CAF066FB2BEE902E000C3649 /* RegisterHeightCoordinator.swift */,
 				CA7AA84C2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift */,
 				CA7AA8552BF244EC00A5DA33 /* RegisterGoalCoordinator.swift */,
+				CA7AA85F2BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift */,
 			);
 			path = RegisterCoordinators;
 			sourceTree = "<group>";
 		};
-		CA7AA8582BF2491900A5DA33 /* RegisterSucess */ = {
+		CA7AA8582BF2491900A5DA33 /* RegisterSuccess */ = {
 			isa = PBXGroup;
 			children = (
-				CA7AA85B2BF2495500A5DA33 /* RegisterSucessView.swift */,
-				CA7AA8592BF2493A00A5DA33 /* RegisterSucessViewController.swift */,
-				CA7AA85D2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift */,
+				CA7AA85B2BF2495500A5DA33 /* RegisterSuccessView.swift */,
+				CA7AA8592BF2493A00A5DA33 /* RegisterSuccessViewController.swift */,
+				CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */,
 			);
-			path = RegisterSucess;
+			path = RegisterSuccess;
 			sourceTree = "<group>";
 		};
 		CA940B7E2BF4DAAA00548C36 /* Service */ = {
@@ -678,20 +678,20 @@
 				CACAC1EA2BEBD68E00B2FCFA /* ForgotCoordinator.swift in Sources */,
 				CA5F96E42C1091B40033420C /* AddWorksheetViewDelegate.swift in Sources */,
 				CA67B9332BED2A9E00221906 /* RegisterGenderDelegate.swift in Sources */,
-				CA7AA85E2BF2496B00A5DA33 /* RegisterSucessViewDelegate.swift in Sources */,
+				CA7AA85E2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift in Sources */,
 				CA67B9312BED2A8B00221906 /* RegisterGenderView.swift in Sources */,
 				CA7AA8542BF2438900A5DA33 /* RegisterGoalViewDelegate.swift in Sources */,
 				CA67B93A2BED456B00221906 /* RegisterAgeViewController.swift in Sources */,
 				CA6ACB9E2C17A492004A7A67 /* EditGoalSuccessViewDelegate.swift in Sources */,
 				CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */,
 				CA7AA84B2BF23A9F00A5DA33 /* RegisterWeightViewDelegate.swift in Sources */,
-				CA7AA8602BF24A6300A5DA33 /* RegisterSucessCoordinator.swift in Sources */,
+				CA7AA8602BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift in Sources */,
 				CA5F96ED2C10AD230033420C /* EditGoalCoordinator.swift in Sources */,
 				CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
-				CA7AA85C2BF2495500A5DA33 /* RegisterSucessView.swift in Sources */,
+				CA7AA85C2BF2495500A5DA33 /* RegisterSuccessView.swift in Sources */,
 				CA6ACBA02C17A4A0004A7A67 /* EditGoalSuccessVC.swift in Sources */,
 				CA7AA8562BF244EC00A5DA33 /* RegisterGoalCoordinator.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
@@ -707,7 +707,7 @@
 				CA971FA42BEA97E400D03161 /* AboutView.swift in Sources */,
 				CA67B93C2BED457C00221906 /* RegisterAgeViewDelegate.swift in Sources */,
 				CA6ACBA22C17A4DF004A7A67 /* EditGoalSuccessView.swift in Sources */,
-				CA7AA85A2BF2493A00A5DA33 /* RegisterSucessViewController.swift in Sources */,
+				CA7AA85A2BF2493A00A5DA33 /* RegisterSuccessViewController.swift in Sources */,
 				CA971F9D2BEA908C00D03161 /* IndexViewDelegate.swift in Sources */,
 				CA971FA62BEA9B1C00D03161 /* CustomText.swift in Sources */,
 				CAEFA5632C04C5E600E7BA95 /* Alert.swift in Sources */,

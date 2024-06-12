@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RegisterSucessViewDelegate: AnyObject {
+protocol RegisterSuccessViewDelegate: AnyObject {
     func actionSuccess()
 }
