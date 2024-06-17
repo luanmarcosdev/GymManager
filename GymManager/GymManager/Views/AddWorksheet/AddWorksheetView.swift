@@ -13,10 +13,12 @@ class AddWorksheetView: UIView {
     
     private var delegete: AddWorksheetViewDelegate?
     
-    func setDelegate(delegate: AddWorksheetViewDelegate, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource ) {
+    func setDelegate(delegate: AddWorksheetViewDelegate, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource, tfDelegate: UITextFieldDelegate) {
         self.delegete = delegate
         self.exercisesTableView.delegate = tableViewDelegate
         self.exercisesTableView.dataSource = tableViewDataSource
+        self.idTextField.delegate = tfDelegate
+        self.descriptionTextField.delegate = tfDelegate
     }
     
     //MARK: Elements
@@ -103,7 +105,8 @@ class AddWorksheetView: UIView {
         bt.setTitle("Salvar ficha", for: .normal)
         bt.setTitleColor(CustomColor.black, for: .normal)
         bt.titleLabel?.font = UIFont(name: CustomFont.robotSemiBold, size: 17)
-        bt.backgroundColor = CustomColor.green
+        bt.backgroundColor = CustomColor.gray
+        bt.isEnabled = false
         bt.isEnabled = true
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 24

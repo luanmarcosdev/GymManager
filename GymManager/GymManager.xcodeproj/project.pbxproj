@@ -298,8 +298,8 @@
 				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
-				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
 				CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */,
+				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
 				CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */,
 				CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */,
 			);

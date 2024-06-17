@@ -47,19 +47,7 @@ class EditGoalViewModel {
     }
     
     func saveNewGoal(user: User) {
-            Firestore.firestore().collection("users").document(user.idUser).setData([
-                "name": user.name,
-                "email": user.email,
-                "idUser": user.idUser,
-                "gender": user.gender,
-                "age": user.age,
-                "height": user.height,
-                "weight": user.weight,
-                "goal": user.goal,
-                "completedGoal": user.completedGoal,
-                "worksheets": user.worksheets,
-                "assessments": user.assessments
-            ])
+            Firestore.firestore().collection("users").document(user.idUser).updateData(["goal": user.goal])
     }
     
     private func errorMessage(viewController: UIViewController) {

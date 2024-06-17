@@ -22,6 +22,14 @@ class AddWorksheetCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
+    func start(user: User) {
+        let addWorksheetVC = AddWorksheetVC()
+        addWorksheetVC.coordinator = self
+        addWorksheetVC.user = user
+        self.navigationController.pushViewController(addWorksheetVC, animated: true)
+        self.navigationController.isNavigationBarHidden = true
+    }
+    
     func back() {
         self.navigationController.popViewController(animated: true)
     }

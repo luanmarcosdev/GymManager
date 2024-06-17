@@ -63,22 +63,8 @@ class HomeViewModel {
 
     }
     
-    func saveData(for user: User) {
-        
-        Firestore.firestore().collection("users").document(user.idUser).setData([
-            "name": user.name,
-            "email": user.email,
-            "idUser": user.idUser,
-            "gender": user.gender,
-            "age": user.age,
-            "height": user.height,
-            "weight": user.weight,
-            "goal": user.goal,
-            "completedGoal": user.completedGoal,
-            "worksheets": user.worksheets,
-            "assessments": user.assessments
-        ])
-        
+    func updateCompletedGoalData(for user: User) {
+        Firestore.firestore().collection("users").document(user.idUser).updateData(["completedGoal": user.completedGoal])
     }
     
     func updateUserScreen(for user: User, nameLabel: UILabel, goalDescription: UILabel, completedGoal: UILabel) {
@@ -119,7 +105,7 @@ class HomeViewModel {
         
         self.setCompletedGoal(user, completedGoal)
         self.setGoalDescription(user, goalDescription)
-        self.saveData(for: user)
+        self.updateCompletedGoalData(for: user)
         
         onSucess(user)
     }

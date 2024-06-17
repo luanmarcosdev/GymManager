@@ -60,7 +60,9 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func actionAddWorksheets() {
-        self.coordinator?.navigationToAddWorksheetScreen()
+        if let user = self.user {
+            self.coordinator?.navigationToAddWorksheetScreen(user: user)
+        }
     }
     
     func actionEditGoal() {        
@@ -99,7 +101,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
         if let user = self.user {
             
             if user.worksheets.isEmpty {
-                self.coordinator?.navigationToAddWorksheetScreen()
+                self.coordinator?.navigationToAddWorksheetScreen(user: user)
                 print("vazio vai preencher ficha")
             } else {
                 print("\(user.worksheets[indexPath.row])")
