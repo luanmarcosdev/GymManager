@@ -64,6 +64,8 @@
 		CA822B2A2C205D9400B0AC8E /* AddActivitySuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B292C205D9400B0AC8E /* AddActivitySuccessView.swift */; };
 		CA822B2C2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2B2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift */; };
 		CA822B2E2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */; };
+		CA822B302C2061B500B0AC8E /* AddWorksheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2F2C2061B500B0AC8E /* AddWorksheetViewModel.swift */; };
+		CA822B322C206E6500B0AC8E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B312C206E6400B0AC8E /* Exercise.swift */; };
 		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
 		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
 		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
@@ -166,6 +168,8 @@
 		CA822B292C205D9400B0AC8E /* AddActivitySuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySuccessView.swift; sourceTree = "<group>"; };
 		CA822B2B2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySuccessViewDelegate.swift; sourceTree = "<group>"; };
 		CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivySuccessCoordinator.swift; sourceTree = "<group>"; };
+		CA822B2F2C2061B500B0AC8E /* AddWorksheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetViewModel.swift; sourceTree = "<group>"; };
+		CA822B312C206E6400B0AC8E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
@@ -469,6 +473,7 @@
 				CAFAD5A42C0672F9002DCF4D /* LoginViewModel.swift */,
 				CA0185982C00FE6600F1ADF0 /* HomeViewModel.swift */,
 				CA5F96EE2C10D5620033420C /* EditGoalViewModel.swift */,
+				CA822B2F2C2061B500B0AC8E /* AddWorksheetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 			children = (
 				CABB76452BF3964A00C946BC /* User.swift */,
 				CA940B812BF4DB5600548C36 /* Worksheet.swift */,
+				CA822B312C206E6400B0AC8E /* Exercise.swift */,
 				CA940B832BF4DB7500548C36 /* Assessment.swift */,
 			);
 			path = Models;
@@ -763,6 +769,7 @@
 				CAEFA5672C050D7F00E7BA95 /* RegisterGoalViewModel.swift in Sources */,
 				CA5F96E22C108FB20033420C /* AddWorksheetCoordinator.swift in Sources */,
 				CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */,
+				CA822B322C206E6500B0AC8E /* Exercise.swift in Sources */,
 				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
 				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,
 				CA5F96EB2C10ACDF0033420C /* EditGoalViewController.swift in Sources */,
@@ -771,6 +778,7 @@
 				CA4D22512BEA53EF00DD7D06 /* IndexView.swift in Sources */,
 				CAF066FC2BEE902E000C3649 /* RegisterHeightCoordinator.swift in Sources */,
 				CAF066F82BEE8F3B000C3649 /* RegisterHeightView.swift in Sources */,
+				CA822B302C2061B500B0AC8E /* AddWorksheetViewModel.swift in Sources */,
 				CA67B9382BED455C00221906 /* RegisterAgeView.swift in Sources */,
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,

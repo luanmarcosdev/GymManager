@@ -11,7 +11,8 @@ class AddWorksheetVC: UIViewController {
     
     var coordinator: AddWorksheetCoordinator?
     var addWorksheetView: AddWorksheetView?
-    var exercises: [String:Int]?
+    var addWorksheetViewModel: AddWorksheetViewModel?
+    var exercises: [Exercise]?
     
     override func loadView() {
         self.addWorksheetView = AddWorksheetView()
@@ -21,6 +22,8 @@ class AddWorksheetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addWorksheetView?.setDelegate(delegate: self)
+        self.addWorksheetViewModel = AddWorksheetViewModel()
+        self.exercises = []
     }
     
 }
@@ -32,7 +35,13 @@ extension AddWorksheetVC: AddWorksheetViewDelegate {
     }
     
     func actionAddExercise() {
-        print("tapped add exercise")
+         
+        self.addWorksheetViewModel?.addExercise(viewController: self, completion: { exercise in
+            if let exercise = exercise {
+                self.exercises?.append(exercise)
+            }
+        })
+        
     }
     
     func actionSaveButton() {

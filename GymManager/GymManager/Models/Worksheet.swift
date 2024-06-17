@@ -10,5 +10,5 @@ import Foundation
 struct Worksheet: Codable {
     var title: String
     var description: String
-    var exercises: [String: Int]
+    var exercises: [Exercise]
 }
