@@ -77,7 +77,9 @@ extension HomeViewController: HomeViewDelegate {
         
         self.homeViewModel?.registerActivity(user: &user, completedGoal: completedGoal, goalDescription: goalDescription, activityButton: activityButton,onSucess: { user in
             self.user = user
+            self.coordinator?.navigationToAddActivitySuccessScreen()
         })
+        
     }
     
     func actionAssessments() {

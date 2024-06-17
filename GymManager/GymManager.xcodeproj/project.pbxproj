@@ -60,6 +60,10 @@
 		CA7AA85C2BF2495500A5DA33 /* RegisterSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85B2BF2495500A5DA33 /* RegisterSuccessView.swift */; };
 		CA7AA85E2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */; };
 		CA7AA8602BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AA85F2BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift */; };
+		CA822B282C205D8200B0AC8E /* AddActivitySuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B272C205D8200B0AC8E /* AddActivitySuccessVC.swift */; };
+		CA822B2A2C205D9400B0AC8E /* AddActivitySuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B292C205D9400B0AC8E /* AddActivitySuccessView.swift */; };
+		CA822B2C2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2B2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift */; };
+		CA822B2E2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */; };
 		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
 		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
 		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
@@ -158,6 +162,10 @@
 		CA7AA85B2BF2495500A5DA33 /* RegisterSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessView.swift; sourceTree = "<group>"; };
 		CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewDelegate.swift; sourceTree = "<group>"; };
 		CA7AA85F2BF24A6300A5DA33 /* RegisterSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessCoordinator.swift; sourceTree = "<group>"; };
+		CA822B272C205D8200B0AC8E /* AddActivitySuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySuccessVC.swift; sourceTree = "<group>"; };
+		CA822B292C205D9400B0AC8E /* AddActivitySuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySuccessView.swift; sourceTree = "<group>"; };
+		CA822B2B2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySuccessViewDelegate.swift; sourceTree = "<group>"; };
+		CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivySuccessCoordinator.swift; sourceTree = "<group>"; };
 		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
@@ -255,6 +263,7 @@
 		CA486E212BF2B4C10097FAA7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CA822B262C205D5A00B0AC8E /* AddActivitySuccess */,
 				CA486E222BF2B50B0097FAA7 /* HomeView.swift */,
 				CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */,
 				CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */,
@@ -284,6 +293,7 @@
 				CACAC1E92BEBD68E00B2FCFA /* ForgotCoordinator.swift */,
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
 				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
+				CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */,
 				CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */,
 				CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */,
 			);
@@ -415,6 +425,16 @@
 				CA7AA85D2BF2496B00A5DA33 /* RegisterSuccessViewDelegate.swift */,
 			);
 			path = RegisterSuccess;
+			sourceTree = "<group>";
+		};
+		CA822B262C205D5A00B0AC8E /* AddActivitySuccess */ = {
+			isa = PBXGroup;
+			children = (
+				CA822B292C205D9400B0AC8E /* AddActivitySuccessView.swift */,
+				CA822B272C205D8200B0AC8E /* AddActivitySuccessVC.swift */,
+				CA822B2B2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift */,
+			);
+			path = AddActivitySuccess;
 			sourceTree = "<group>";
 		};
 		CA940B7E2BF4DAAA00548C36 /* Service */ = {
@@ -690,8 +710,10 @@
 				CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */,
 				CA67B9252BED09F800221906 /* RegisterIndexView.swift in Sources */,
 				CA24B4382BE12B6B0035C4AD /* AppDelegate.swift in Sources */,
+				CA822B2E2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift in Sources */,
 				CAC219522BE97C3E0023EB1C /* CustomFont.swift in Sources */,
 				CA7AA85C2BF2495500A5DA33 /* RegisterSuccessView.swift in Sources */,
+				CA822B2C2C205DD600B0AC8E /* AddActivitySuccessViewDelegate.swift in Sources */,
 				CA6ACBA02C17A4A0004A7A67 /* EditGoalSuccessVC.swift in Sources */,
 				CA7AA8562BF244EC00A5DA33 /* RegisterGoalCoordinator.swift in Sources */,
 				CACAC1E42BEBD64300B2FCFA /* ForgotView.swift in Sources */,
@@ -715,6 +737,7 @@
 				CA486E2B2BF2C6BD0097FAA7 /* HomeWorksheetCollectionViewCell.swift in Sources */,
 				CA4D22582BEA551D00DD7D06 /* IndexViewController.swift in Sources */,
 				CA380C4A2C0A0F9B008DE2C9 /* Gender.swift in Sources */,
+				CA822B282C205D8200B0AC8E /* AddActivitySuccessVC.swift in Sources */,
 				CA67B92C2BED0A8B00221906 /* RegisterIndexCoordinator.swift in Sources */,
 				CAFAD5A52C0672F9002DCF4D /* LoginViewModel.swift in Sources */,
 				CA971FAF2BEAA83400D03161 /* LoginViewDelegate.swift in Sources */,
@@ -752,6 +775,7 @@
 				CA24B43A2BE12B6B0035C4AD /* SceneDelegate.swift in Sources */,
 				CA971FB12BEAA8B900D03161 /* LoginCoordinator.swift in Sources */,
 				CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */,
+				CA822B2A2C205D9400B0AC8E /* AddActivitySuccessView.swift in Sources */,
 				CABB76462BF3964A00C946BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

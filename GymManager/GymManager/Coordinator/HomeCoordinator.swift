@@ -33,4 +33,8 @@ class HomeCoordinator: CoordinatorProtocol {
         editGoalCoordinator.start(user: user)
     }
     
+    func navigationToAddActivitySuccessScreen() {
+        let addActivitySuccessCoordinator = AddActivitySuccessCoordinator(navigationController: self.navigationController)
+        addActivitySuccessCoordinator.start()
+    }
 }
