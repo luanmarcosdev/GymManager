@@ -87,6 +87,13 @@ class AddWorksheetView: UIView {
         return bt
     }()
     
+    lazy var exercisesTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        //tableView.backgroundColor = .red
+        return tableView
+    }()
+    
     lazy var saveButton: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
@@ -143,6 +150,7 @@ class AddWorksheetView: UIView {
         self.addSubview(self.descriptionTextField)
         self.addSubview(self.lineDescriptionView)
         self.addSubview(self.addButton)
+        self.addSubview(self.exercisesTableView)
         self.addSubview(self.saveButton)
     }
     
@@ -177,6 +185,11 @@ class AddWorksheetView: UIView {
             
             self.addButton.topAnchor.constraint(equalTo: self.lineDescriptionView.bottomAnchor, constant: 20),
             self.addButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            self.exercisesTableView.topAnchor.constraint(equalTo: self.addButton.bottomAnchor, constant: 20),
+            self.exercisesTableView.leadingAnchor.constraint(equalTo: self.idTextField.leadingAnchor),
+            self.exercisesTableView.trailingAnchor.constraint(equalTo: self.idTextField.trailingAnchor),
+            self.exercisesTableView.bottomAnchor.constraint(equalTo: self.saveButton.topAnchor, constant: -20),
             
             self.saveButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             self.saveButton.heightAnchor.constraint(equalToConstant: 48),

@@ -66,6 +66,7 @@
 		CA822B2E2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */; };
 		CA822B302C2061B500B0AC8E /* AddWorksheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B2F2C2061B500B0AC8E /* AddWorksheetViewModel.swift */; };
 		CA822B322C206E6500B0AC8E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B312C206E6400B0AC8E /* Exercise.swift */; };
+		CA822B342C2074B600B0AC8E /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA822B332C2074B600B0AC8E /* ExerciseTableViewCell.swift */; };
 		CA940B802BF4DAD500548C36 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */; };
 		CA940B822BF4DB5600548C36 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B812BF4DB5600548C36 /* Worksheet.swift */; };
 		CA940B842BF4DB7500548C36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA940B832BF4DB7500548C36 /* Assessment.swift */; };
@@ -170,6 +171,7 @@
 		CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivySuccessCoordinator.swift; sourceTree = "<group>"; };
 		CA822B2F2C2061B500B0AC8E /* AddWorksheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetViewModel.swift; sourceTree = "<group>"; };
 		CA822B312C206E6400B0AC8E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		CA822B332C2074B600B0AC8E /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		CA940B7F2BF4DAD500548C36 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		CA940B812BF4DB5600548C36 /* Worksheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worksheet.swift; sourceTree = "<group>"; };
 		CA940B832BF4DB7500548C36 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */,
 				CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */,
 				CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */,
+				CA822B332C2074B600B0AC8E /* ExerciseTableViewCell.swift */,
 			);
 			path = AddWorksheet;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
 				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
+				CA822B342C2074B600B0AC8E /* ExerciseTableViewCell.swift in Sources */,
 				CA5F96DE2C108F7B0033420C /* AddWorksheetView.swift in Sources */,
 				CA5F96EF2C10D5620033420C /* EditGoalViewModel.swift in Sources */,
 				CA971FAB2BEAA76C00D03161 /* LoginViewController.swift in Sources */,
