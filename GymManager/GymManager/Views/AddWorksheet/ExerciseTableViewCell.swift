@@ -25,7 +25,7 @@ class ExerciseTableViewCell: UITableViewCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: CustomFont.robotBold, size: 12)
+        label.font = UIFont(name: CustomFont.robotBold, size: 17)
         label.textColor = CustomColor.white
         return label
     }()
@@ -42,7 +42,7 @@ class ExerciseTableViewCell: UITableViewCell {
     lazy var weightLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: CustomFont.robotBold, size: 12)
+        label.font = UIFont(name: CustomFont.robotBold, size: 17)
         label.textColor = CustomColor.black
         return label
     }()
@@ -55,19 +55,13 @@ class ExerciseTableViewCell: UITableViewCell {
         self.configViewBackgroundColor()
         self.configSuperView()
         self.configConstraints()
+        
+        self.selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
     
     //MARK: Setting elements
     
@@ -77,9 +71,6 @@ class ExerciseTableViewCell: UITableViewCell {
     
     private func configSuperView() {
         self.contentView.addSubview(self.cellBackgroundView)
-//        self.contentView.addSubview(self.nameLabel)
-//        self.contentView.addSubview(self.weightContainerView)
-//        self.contentView.addSubview(self.weightLabel)
         self.cellBackgroundView.addSubview(nameLabel)
         self.cellBackgroundView.addSubview(weightContainerView)
         self.weightContainerView.addSubview(weightLabel)
@@ -88,10 +79,10 @@ class ExerciseTableViewCell: UITableViewCell {
     private func configConstraints() {
         NSLayoutConstraint.activate([
         
-            self.cellBackgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            self.cellBackgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.cellBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.cellBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.cellBackgroundView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            self.cellBackgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
+            self.cellBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            self.cellBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             
             self.nameLabel.leadingAnchor.constraint(equalTo: self.cellBackgroundView.leadingAnchor, constant: 17),
             self.nameLabel.centerYAnchor.constraint(equalTo: self.cellBackgroundView.centerYAnchor),

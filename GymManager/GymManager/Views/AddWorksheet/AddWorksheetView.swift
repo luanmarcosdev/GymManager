@@ -13,8 +13,10 @@ class AddWorksheetView: UIView {
     
     private var delegete: AddWorksheetViewDelegate?
     
-    func setDelegate(delegate: AddWorksheetViewDelegate) {
+    func setDelegate(delegate: AddWorksheetViewDelegate, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource ) {
         self.delegete = delegate
+        self.exercisesTableView.delegate = tableViewDelegate
+        self.exercisesTableView.dataSource = tableViewDataSource
     }
     
     //MARK: Elements
@@ -90,7 +92,8 @@ class AddWorksheetView: UIView {
     lazy var exercisesTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        //tableView.backgroundColor = .red
+        tableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.identifier)
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
