@@ -75,6 +75,7 @@ class HomeView: UIView {
         cv.backgroundColor = .none
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
+        cv.indicatorStyle = .white
         cv.setCollectionViewLayout(layout, animated: false)
         cv.register(HomeWorksheetCollectionViewCell.self, forCellWithReuseIdentifier: HomeWorksheetCollectionViewCell.identifier)
         return cv

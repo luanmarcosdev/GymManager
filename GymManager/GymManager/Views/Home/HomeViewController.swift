@@ -117,7 +117,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return user?.worksheets.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -131,9 +131,6 @@ extension HomeViewController: UICollectionViewDataSource {
                 cell.worksheetTitleLabel.text = "Sem fichas cadastradas"
                 cell.worksheetDescriptionLabel.text = "Clique e cadastre"
             } else {
-                
-                //testar
-                
                 cell.worksheetImage.image = UIImage(named: self.homeViewModel!.getRandomCardImage())
                 cell.worksheetTitleLabel.text = user.worksheets[indexPath.row].title
                 cell.worksheetDescriptionLabel.text = user.worksheets[indexPath.row].description
