@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
                     self.user = user
                                         
                     guard let user = self.user,
-                          let nameLabel = self.homeView?.titleLabel,
                           let goalDescription = self.homeView?.emphasisSubtitleGoalLabel,
                           let completedGoal = self.homeView?.emphasisNumberLabel else {return}
                     

@@ -14,6 +14,10 @@
 		CA24B4412BE12B6C0035C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4402BE12B6C0035C4AD /* Assets.xcassets */; };
 		CA24B4442BE12B6C0035C4AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA24B4422BE12B6C0035C4AD /* LaunchScreen.storyboard */; };
 		CA380C4A2C0A0F9B008DE2C9 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA380C492C0A0F9B008DE2C9 /* Gender.swift */; };
+		CA43387E2C23876D00FAA098 /* AddWorksheetSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA43387D2C23876D00FAA098 /* AddWorksheetSuccessView.swift */; };
+		CA4338802C23877900FAA098 /* AddWorksheetSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA43387F2C23877900FAA098 /* AddWorksheetSuccessVC.swift */; };
+		CA4338822C23879E00FAA098 /* AddWorksheetSuccessViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4338812C23879E00FAA098 /* AddWorksheetSuccessViewDelegate.swift */; };
+		CA4338842C23892600FAA098 /* AddWorksheetSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4338832C23892600FAA098 /* AddWorksheetSuccessCoordinator.swift */; };
 		CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E222BF2B50B0097FAA7 /* HomeView.swift */; };
 		CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */; };
 		CA486E272BF2B5260097FAA7 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */; };
@@ -119,6 +123,10 @@
 		CA24B4432BE12B6C0035C4AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA24B4452BE12B6C0035C4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA380C492C0A0F9B008DE2C9 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		CA43387D2C23876D00FAA098 /* AddWorksheetSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetSuccessView.swift; sourceTree = "<group>"; };
+		CA43387F2C23877900FAA098 /* AddWorksheetSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetSuccessVC.swift; sourceTree = "<group>"; };
+		CA4338812C23879E00FAA098 /* AddWorksheetSuccessViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetSuccessViewDelegate.swift; sourceTree = "<group>"; };
+		CA4338832C23892600FAA098 /* AddWorksheetSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksheetSuccessCoordinator.swift; sourceTree = "<group>"; };
 		CA486E222BF2B50B0097FAA7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CA486E242BF2B51A0097FAA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CA486E262BF2B5260097FAA7 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +274,27 @@
 			path = GymManager;
 			sourceTree = "<group>";
 		};
+		CA43387B2C23872E00FAA098 /* AddWorksheet */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */,
+				CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */,
+				CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */,
+				CA822B332C2074B600B0AC8E /* ExerciseTableViewCell.swift */,
+			);
+			path = AddWorksheet;
+			sourceTree = "<group>";
+		};
+		CA43387C2C23873F00FAA098 /* AddWorksheetSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				CA43387D2C23876D00FAA098 /* AddWorksheetSuccessView.swift */,
+				CA43387F2C23877900FAA098 /* AddWorksheetSuccessVC.swift */,
+				CA4338812C23879E00FAA098 /* AddWorksheetSuccessViewDelegate.swift */,
+			);
+			path = AddWorksheetSuccess;
+			sourceTree = "<group>";
+		};
 		CA486E212BF2B4C10097FAA7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +320,8 @@
 		CA4D22522BEA543700DD7D06 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				CA4D22532BEA547E00DD7D06 /* CoordinatorProtocol.swift */,
 				CA7AA8572BF2489600A5DA33 /* RegisterCoordinators */,
+				CA4D22532BEA547E00DD7D06 /* CoordinatorProtocol.swift */,
 				CA4D22552BEA54D600DD7D06 /* IndexCoordinator.swift */,
 				CA971FA12BEA92D400D03161 /* AboutCoordinator.swift */,
 				CA971FB02BEAA8B900D03161 /* LoginCoordinator.swift */,
@@ -300,6 +329,7 @@
 				CA486E282BF2BDC80097FAA7 /* HomeCoordinator.swift */,
 				CA822B2D2C205F3900B0AC8E /* AddActivySuccessCoordinator.swift */,
 				CA5F96E12C108FB20033420C /* AddWorksheetCoordinator.swift */,
+				CA4338832C23892600FAA098 /* AddWorksheetSuccessCoordinator.swift */,
 				CA5F96EC2C10AD230033420C /* EditGoalCoordinator.swift */,
 				CAF12A382C192DDD00896121 /* EditGoalSuccessCoordinator.swift */,
 			);
@@ -309,10 +339,8 @@
 		CA5F96DC2C108F1E0033420C /* AddWorksheet */ = {
 			isa = PBXGroup;
 			children = (
-				CA5F96DD2C108F7B0033420C /* AddWorksheetView.swift */,
-				CA5F96DF2C108F9A0033420C /* AddWorksheetVC.swift */,
-				CA5F96E32C1091B40033420C /* AddWorksheetViewDelegate.swift */,
-				CA822B332C2074B600B0AC8E /* ExerciseTableViewCell.swift */,
+				CA43387B2C23872E00FAA098 /* AddWorksheet */,
+				CA43387C2C23873F00FAA098 /* AddWorksheetSuccess */,
 			);
 			path = AddWorksheet;
 			sourceTree = "<group>";
@@ -732,6 +760,7 @@
 				CA971FA02BEA92AB00D03161 /* AboutViewController.swift in Sources */,
 				CAEE3B032BFED97F00034F1D /* HorizontalPickerView.swift in Sources */,
 				CACAC1E82BEBD66500B2FCFA /* ForgotViewDelegate.swift in Sources */,
+				CA43387E2C23876D00FAA098 /* AddWorksheetSuccessView.swift in Sources */,
 				CA5F96E72C10AB100033420C /* EditGoalView.swift in Sources */,
 				CA5F96E92C10AC580033420C /* EditGoalViewDelegate.swift in Sources */,
 				CA486E252BF2B51A0097FAA7 /* HomeViewController.swift in Sources */,
@@ -755,9 +784,11 @@
 				CA0185992C00FE6600F1ADF0 /* HomeViewModel.swift in Sources */,
 				CA7AA84D2BF23B7300A5DA33 /* RegisterWeightCoordinator.swift in Sources */,
 				CA971FAD2BEAA78400D03161 /* LoginView.swift in Sources */,
+				CA4338822C23879E00FAA098 /* AddWorksheetSuccessViewDelegate.swift in Sources */,
 				CAD8B9F82BE45CD700506275 /* CustomColor.swift in Sources */,
 				CA67B93E2BED45A200221906 /* RegisterAgeCoordinator.swift in Sources */,
 				CA971FA82BEAA2EB00D03161 /* AboutViewDelegate.swift in Sources */,
+				CA4338802C23877900FAA098 /* AddWorksheetSuccessVC.swift in Sources */,
 				CA822B342C2074B600B0AC8E /* ExerciseTableViewCell.swift in Sources */,
 				CA5F96DE2C108F7B0033420C /* AddWorksheetView.swift in Sources */,
 				CA5F96EF2C10D5620033420C /* EditGoalViewModel.swift in Sources */,
@@ -775,6 +806,7 @@
 				CA486E232BF2B50B0097FAA7 /* HomeView.swift in Sources */,
 				CA822B322C206E6500B0AC8E /* Exercise.swift in Sources */,
 				CAF066FA2BEE8F4A000C3649 /* RegisterHeightViewDelegate.swift in Sources */,
+				CA4338842C23892600FAA098 /* AddWorksheetSuccessCoordinator.swift in Sources */,
 				CAF066F62BEE8F1F000C3649 /* RegisterHeightViewController.swift in Sources */,
 				CA5F96EB2C10ACDF0033420C /* EditGoalViewController.swift in Sources */,
 				CA67B9352BED2AE500221906 /* RegisterGenderCoordinator.swift in Sources */,

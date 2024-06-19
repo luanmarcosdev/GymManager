@@ -30,6 +30,11 @@ class AddWorksheetCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
+    func navigationToSuccessScreen() {
+        let addWorksheetSuccessCoordinator = AddWorksheetSuccessCoordinator(navigationController: self.navigationController)
+        addWorksheetSuccessCoordinator.start()
+    }
+    
     func back() {
         self.navigationController.popViewController(animated: true)
     }

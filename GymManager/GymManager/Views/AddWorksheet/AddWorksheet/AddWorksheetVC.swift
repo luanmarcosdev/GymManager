@@ -54,6 +54,7 @@ extension AddWorksheetVC: AddWorksheetViewDelegate {
               let exercises = self.exercises else {return}
         
         self.addWorksheetViewModel?.saveNewWorksheet(title: title, description: description, exercises: exercises, user: user)
+        self.coordinator?.navigationToSuccessScreen()
         
     }
     
