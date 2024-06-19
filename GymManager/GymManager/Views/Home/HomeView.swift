@@ -24,9 +24,9 @@ class HomeView: UIView {
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Olá Fulano,"
-        lb.font = UIFont(name: CustomFont.robotBlack, size: 32)
-        lb.textColor = CustomColor.white
+        lb.text = "Gym Manager"
+        lb.font = UIFont(name: CustomFont.robotBold, size: 32)
+        lb.textColor = CustomColor.green
         return lb
     }()
     
@@ -255,6 +255,8 @@ class HomeView: UIView {
             self.subtitleLabel.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
             
             self.userButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
+//            self.userButton.heightAnchor.constraint(equalToConstant: 24),
+//            self.userButton.widthAnchor.constraint(equalToConstant: 24),
             self.userButton.topAnchor.constraint(equalTo: self.titleLabel.topAnchor),
             self.userButton.centerYAnchor.constraint(equalTo: self.titleLabel.centerYAnchor),
             

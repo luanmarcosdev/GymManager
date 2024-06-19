@@ -11,4 +11,5 @@ protocol LoginViewDelegate: AnyObject {
     func registerButton()
     func forgotButton()
     func loginButton()
+    func actionBackButton()
 }

@@ -67,16 +67,11 @@ class HomeViewModel {
         Firestore.firestore().collection("users").document(user.idUser).updateData(["completedGoal": user.completedGoal])
     }
     
-    func updateUserScreen(for user: User, nameLabel: UILabel, goalDescription: UILabel, completedGoal: UILabel) {
+    func updateUserScreen(for user: User, goalDescription: UILabel, completedGoal: UILabel) {
         
-        self.setNameLabel(user, nameLabel)
         self.setCompletedGoal(user, completedGoal)
         self.setGoalDescription(user, goalDescription)
         
-    }
-    
-    private func setNameLabel(_ user: User, _ nameLabel: UILabel) {
-        nameLabel.text = "Olá \(user.name)"
     }
     
     private func setCompletedGoal(_ user: User, _ completedGoal: UILabel) {

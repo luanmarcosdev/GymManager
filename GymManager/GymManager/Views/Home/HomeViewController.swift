@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
                           let completedGoal = self.homeView?.emphasisNumberLabel else {return}
                     
                     DispatchQueue.main.async {
-                        self.homeViewModel?.updateUserScreen(for: user, nameLabel: nameLabel, goalDescription: goalDescription, completedGoal: completedGoal)
+                        self.homeViewModel?.updateUserScreen(for: user, goalDescription: goalDescription, completedGoal: completedGoal)
                         self.homeView?.collectionView.reloadData()
                     }
                 })

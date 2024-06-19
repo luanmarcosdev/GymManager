@@ -23,6 +23,10 @@ class LoginCoordinator: CoordinatorProtocol {
         self.navigationController.isNavigationBarHidden = true
     }
     
+    func back() {
+        self.navigationController.popViewController(animated: true)
+    }
+    
     func navigationToForgotScreen() {
         let forgotCoordinator = ForgotCoordinator(navigationController: self.navigationController)
         forgotCoordinator.start()

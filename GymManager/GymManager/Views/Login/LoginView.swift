@@ -30,6 +30,14 @@ class LoginView: UIView {
         return image
     }()
     
+    lazy var backButton: UIButton = {
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setImage(UIImage(named: "BackButton"), for: .normal)
+        bt.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
+        return bt
+    }()
+    
     lazy var titleLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
@@ -120,6 +128,10 @@ class LoginView: UIView {
     
     //MARK: Action Buttons
     
+    @objc func tappedBackButton() {
+        self.delegate?.actionBackButton()
+    }
+    
     @objc func tappedRegisterButton(){
         self.delegate?.registerButton()
     }
@@ -153,6 +165,7 @@ class LoginView: UIView {
     
     func configSuperView() {
         self.addSubview(self.backgroundImage)
+        self.addSubview(self.backButton)
         self.addSubview(self.titleLabel)
         self.addSubview(self.emailTextField)
         self.addSubview(self.lineEmailView)
@@ -169,6 +182,9 @@ class LoginView: UIView {
             self.backgroundImage.topAnchor.constraint(equalTo: self.topAnchor),
             self.backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            
+            self.backButton.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             
             self.titleLabel.bottomAnchor.constraint(equalTo: self.backgroundImage.bottomAnchor, constant: -76),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48),

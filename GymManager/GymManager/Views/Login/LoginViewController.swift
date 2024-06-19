@@ -27,6 +27,10 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewDelegate {
+    
+    func actionBackButton() {
+        self.coordinator?.back()
+    }
    
     func registerButton() {
         self.coordinator?.navigationToRegisterScreen()
